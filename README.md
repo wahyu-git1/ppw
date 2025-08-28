@@ -1,3 +1,0 @@
-# ppw
-
-hello wahyu
