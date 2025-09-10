@@ -1,0 +1,2009 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>02_1_crawlingPTAUTM &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_1_crawlingPTAUTM';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="02_1_crawlingPTAUTM" href="02_2_crawlingBerita.html" />
+    <link rel="prev" title="crawling" href="crawling.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pengantar.html">pengantar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawling.html">crawling</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">02_1_crawlingPTAUTM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_2_crawlingBerita.html">02_1_crawlingPTAUTM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_3_itb_link_mapping.html">02_3_itb_link_mapping</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F02_1_crawlingPTAUTM.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/02_1_crawlingPTAUTM.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>02_1_crawlingPTAUTM</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="crawlingptautm">
+<h1>02_1_crawlingPTAUTM<a class="headerlink" href="#crawlingptautm" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">bs4</span>
+<span class="err">!</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span>
+<span class="err">!</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">ptaa</span><span class="p">():</span>
+  <span class="c1"># Membuat dictionary untuk menyimpan data</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nama_prodi&quot;</span><span class="p">:</span> <span class="p">[],</span><span class="s2">&quot;penulis&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;judul&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;pembimbing_pertama&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;pembimbing_kedua&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;abstrak&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;abstrak_en&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+            <span class="c1"># Loop berdasarkan program studi (1-40, misalnya)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span><span class="mi">41</span><span class="p">):</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod/</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+
+        <span class="n">nama_prodi_tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s2">&quot;div#begin h2&quot;</span><span class="p">)</span>
+        <span class="n">nama_prodi</span> <span class="o">=</span> <span class="n">nama_prodi_tag</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">if</span> <span class="n">nama_prodi_tag</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;Prodi </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Kategori </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> → </span><span class="si">{</span><span class="n">nama_prodi</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># cari jumlah halaman (pagination)</span>
+        <span class="n">page_links</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;a.pag_button&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">page_links</span><span class="p">:</span>
+            <span class="n">jumlahPage</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">page_links</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;href&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># ambil angka terakhir</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">jumlahPage</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># kalau cuma 1 halaman</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Kategori </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> memiliki </span><span class="si">{</span><span class="n">jumlahPage</span><span class="si">}</span><span class="s2"> halaman.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># loop tiap halaman</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">jumlahPage</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;literasi ke&quot;</span><span class="p">,</span><span class="n">j</span><span class="p">)</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod/</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">request</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">content</span>
+            <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+            <span class="n">jurnals</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;li[data-cat=&quot;#luxury&quot;]&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah jurnal pada halaman </span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">jurnals</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">jurnal</span> <span class="ow">in</span> <span class="n">jurnals</span><span class="p">:</span>
+                <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">jurnal</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;a.gray.button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">])</span> <span class="c1">#loncat ke halaman detail</span>
+                <span class="n">soup1</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>  <span class="c1">#parsing halaman detail</span>
+                <span class="n">isi</span> <span class="o">=</span> <span class="n">soup1</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;div#content_journal&#39;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;berjalan&quot;</span><span class="p">)</span>
+
+                <span class="n">isi</span> <span class="o">=</span> <span class="n">soup1</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s2">&quot;div#content_journal&quot;</span><span class="p">)</span>
+
+                <span class="c1"># Judul</span>
+                <span class="n">judul</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s2">&quot;a.title&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">if</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s2">&quot;a.title&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+
+
+                <span class="c1"># Penulis</span>
+                <span class="n">penulis</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                <span class="k">for</span> <span class="n">span</span> <span class="ow">in</span> <span class="n">isi</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="s2">&quot;Penulis&quot;</span> <span class="ow">in</span> <span class="n">span</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+                        <span class="n">penulis</span> <span class="o">=</span> <span class="n">span</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; : &quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">nama_prodi</span><span class="p">)</span>
+                <span class="c1"># Pembimbing 1</span>
+                <span class="n">pembimbing_pertama</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                <span class="k">for</span> <span class="n">span</span> <span class="ow">in</span> <span class="n">isi</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="s2">&quot;Dosen Pembimbing I&quot;</span> <span class="ow">in</span> <span class="n">span</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+                        <span class="n">pembimbing_pertama</span> <span class="o">=</span> <span class="n">span</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; : &quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+                <span class="c1"># Pembimbing 2</span>
+                <span class="n">pembimbing_kedua</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                <span class="k">for</span> <span class="n">span</span> <span class="ow">in</span> <span class="n">isi</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="s2">&quot;Dosen Pembimbing II&quot;</span> <span class="ow">in</span> <span class="n">span</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+                        <span class="n">pembimbing_kedua</span> <span class="o">=</span> <span class="n">span</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; : &quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+                <span class="c1"># Abstrak</span>
+                <span class="n">abstrak</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                <span class="n">abstrak_en</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                <span class="n">paras</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s2">&quot;justify&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">paras</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">abstrak</span> <span class="o">=</span> <span class="n">paras</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">paras</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="n">abstrak_en</span> <span class="o">=</span> <span class="n">paras</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;nama_prodi&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nama_prodi</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;penulis&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">penulis</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;judul&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">judul</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;pembimbing_pertama&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pembimbing_pertama</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;pembimbing_kedua&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pembimbing_kedua</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;abstrak&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">abstrak</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;abstrak_en&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">abstrak_en</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;judul&quot;</span><span class="p">]))</span>
+
+        <span class="n">dfSementara</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">dfSementara</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pta3_prodi_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sementara disimpan untuk Prodi </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;pta3.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+
+
+<span class="c1"># Jalankan</span>
+<span class="n">df_hasil</span> <span class="o">=</span> <span class="n">ptaa</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_hasil</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kategori 28 → Journal Jurusan Pendidikan Informatika
+Kategori 28 memiliki 70 halaman.
+literasi ke 1
+Jumlah jurnal pada halaman 1: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+1
+berjalan
+Journal Jurusan Pendidikan Informatika
+2
+berjalan
+Journal Jurusan Pendidikan Informatika
+3
+berjalan
+Journal Jurusan Pendidikan Informatika
+4
+berjalan
+Journal Jurusan Pendidikan Informatika
+5
+literasi ke 2
+Jumlah jurnal pada halaman 2: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+6
+berjalan
+Journal Jurusan Pendidikan Informatika
+7
+berjalan
+Journal Jurusan Pendidikan Informatika
+8
+berjalan
+Journal Jurusan Pendidikan Informatika
+9
+berjalan
+Journal Jurusan Pendidikan Informatika
+10
+literasi ke 3
+Jumlah jurnal pada halaman 3: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+11
+berjalan
+Journal Jurusan Pendidikan Informatika
+12
+berjalan
+Journal Jurusan Pendidikan Informatika
+13
+berjalan
+Journal Jurusan Pendidikan Informatika
+14
+berjalan
+Journal Jurusan Pendidikan Informatika
+15
+literasi ke 4
+Jumlah jurnal pada halaman 4: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+16
+berjalan
+Journal Jurusan Pendidikan Informatika
+17
+berjalan
+Journal Jurusan Pendidikan Informatika
+18
+berjalan
+Journal Jurusan Pendidikan Informatika
+19
+berjalan
+Journal Jurusan Pendidikan Informatika
+20
+literasi ke 5
+Jumlah jurnal pada halaman 5: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+21
+berjalan
+Journal Jurusan Pendidikan Informatika
+22
+berjalan
+Journal Jurusan Pendidikan Informatika
+23
+berjalan
+Journal Jurusan Pendidikan Informatika
+24
+berjalan
+Journal Jurusan Pendidikan Informatika
+25
+literasi ke 6
+Jumlah jurnal pada halaman 6: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+26
+berjalan
+Journal Jurusan Pendidikan Informatika
+27
+berjalan
+Journal Jurusan Pendidikan Informatika
+28
+berjalan
+Journal Jurusan Pendidikan Informatika
+29
+berjalan
+Journal Jurusan Pendidikan Informatika
+30
+literasi ke 7
+Jumlah jurnal pada halaman 7: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+31
+berjalan
+Journal Jurusan Pendidikan Informatika
+32
+berjalan
+Journal Jurusan Pendidikan Informatika
+33
+berjalan
+Journal Jurusan Pendidikan Informatika
+34
+berjalan
+Journal Jurusan Pendidikan Informatika
+35
+literasi ke 8
+Jumlah jurnal pada halaman 8: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+36
+berjalan
+Journal Jurusan Pendidikan Informatika
+37
+berjalan
+Journal Jurusan Pendidikan Informatika
+38
+berjalan
+Journal Jurusan Pendidikan Informatika
+39
+berjalan
+Journal Jurusan Pendidikan Informatika
+40
+literasi ke 9
+Jumlah jurnal pada halaman 9: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+41
+berjalan
+Journal Jurusan Pendidikan Informatika
+42
+berjalan
+Journal Jurusan Pendidikan Informatika
+43
+berjalan
+Journal Jurusan Pendidikan Informatika
+44
+berjalan
+Journal Jurusan Pendidikan Informatika
+45
+literasi ke 10
+Jumlah jurnal pada halaman 10: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+46
+berjalan
+Journal Jurusan Pendidikan Informatika
+47
+berjalan
+Journal Jurusan Pendidikan Informatika
+48
+berjalan
+Journal Jurusan Pendidikan Informatika
+49
+berjalan
+Journal Jurusan Pendidikan Informatika
+50
+literasi ke 11
+Jumlah jurnal pada halaman 11: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+51
+berjalan
+Journal Jurusan Pendidikan Informatika
+52
+berjalan
+Journal Jurusan Pendidikan Informatika
+53
+berjalan
+Journal Jurusan Pendidikan Informatika
+54
+berjalan
+Journal Jurusan Pendidikan Informatika
+55
+literasi ke 12
+Jumlah jurnal pada halaman 12: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+56
+berjalan
+Journal Jurusan Pendidikan Informatika
+57
+berjalan
+Journal Jurusan Pendidikan Informatika
+58
+berjalan
+Journal Jurusan Pendidikan Informatika
+59
+berjalan
+Journal Jurusan Pendidikan Informatika
+60
+literasi ke 13
+Jumlah jurnal pada halaman 13: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+61
+berjalan
+Journal Jurusan Pendidikan Informatika
+62
+berjalan
+Journal Jurusan Pendidikan Informatika
+63
+berjalan
+Journal Jurusan Pendidikan Informatika
+64
+berjalan
+Journal Jurusan Pendidikan Informatika
+65
+literasi ke 14
+Jumlah jurnal pada halaman 14: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+66
+berjalan
+Journal Jurusan Pendidikan Informatika
+67
+berjalan
+Journal Jurusan Pendidikan Informatika
+68
+berjalan
+Journal Jurusan Pendidikan Informatika
+69
+berjalan
+Journal Jurusan Pendidikan Informatika
+70
+literasi ke 15
+Jumlah jurnal pada halaman 15: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+71
+berjalan
+Journal Jurusan Pendidikan Informatika
+72
+berjalan
+Journal Jurusan Pendidikan Informatika
+73
+berjalan
+Journal Jurusan Pendidikan Informatika
+74
+berjalan
+Journal Jurusan Pendidikan Informatika
+75
+literasi ke 16
+Jumlah jurnal pada halaman 16: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+76
+berjalan
+Journal Jurusan Pendidikan Informatika
+77
+berjalan
+Journal Jurusan Pendidikan Informatika
+78
+berjalan
+Journal Jurusan Pendidikan Informatika
+79
+berjalan
+Journal Jurusan Pendidikan Informatika
+80
+literasi ke 17
+Jumlah jurnal pada halaman 17: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+81
+berjalan
+Journal Jurusan Pendidikan Informatika
+82
+berjalan
+Journal Jurusan Pendidikan Informatika
+83
+berjalan
+Journal Jurusan Pendidikan Informatika
+84
+berjalan
+Journal Jurusan Pendidikan Informatika
+85
+literasi ke 18
+Jumlah jurnal pada halaman 18: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+86
+berjalan
+Journal Jurusan Pendidikan Informatika
+87
+berjalan
+Journal Jurusan Pendidikan Informatika
+88
+berjalan
+Journal Jurusan Pendidikan Informatika
+89
+berjalan
+Journal Jurusan Pendidikan Informatika
+90
+literasi ke 19
+Jumlah jurnal pada halaman 19: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+91
+berjalan
+Journal Jurusan Pendidikan Informatika
+92
+berjalan
+Journal Jurusan Pendidikan Informatika
+93
+berjalan
+Journal Jurusan Pendidikan Informatika
+94
+berjalan
+Journal Jurusan Pendidikan Informatika
+95
+literasi ke 20
+Jumlah jurnal pada halaman 20: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+96
+berjalan
+Journal Jurusan Pendidikan Informatika
+97
+berjalan
+Journal Jurusan Pendidikan Informatika
+98
+berjalan
+Journal Jurusan Pendidikan Informatika
+99
+berjalan
+Journal Jurusan Pendidikan Informatika
+100
+literasi ke 21
+Jumlah jurnal pada halaman 21: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+101
+berjalan
+Journal Jurusan Pendidikan Informatika
+102
+berjalan
+Journal Jurusan Pendidikan Informatika
+103
+berjalan
+Journal Jurusan Pendidikan Informatika
+104
+berjalan
+Journal Jurusan Pendidikan Informatika
+105
+literasi ke 22
+Jumlah jurnal pada halaman 22: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+106
+berjalan
+Journal Jurusan Pendidikan Informatika
+107
+berjalan
+Journal Jurusan Pendidikan Informatika
+108
+berjalan
+Journal Jurusan Pendidikan Informatika
+109
+berjalan
+Journal Jurusan Pendidikan Informatika
+110
+literasi ke 23
+Jumlah jurnal pada halaman 23: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+111
+berjalan
+Journal Jurusan Pendidikan Informatika
+112
+berjalan
+Journal Jurusan Pendidikan Informatika
+113
+berjalan
+Journal Jurusan Pendidikan Informatika
+114
+berjalan
+Journal Jurusan Pendidikan Informatika
+115
+literasi ke 24
+Jumlah jurnal pada halaman 24: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+116
+berjalan
+Journal Jurusan Pendidikan Informatika
+117
+berjalan
+Journal Jurusan Pendidikan Informatika
+118
+berjalan
+Journal Jurusan Pendidikan Informatika
+119
+berjalan
+Journal Jurusan Pendidikan Informatika
+120
+literasi ke 25
+Jumlah jurnal pada halaman 25: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+121
+berjalan
+Journal Jurusan Pendidikan Informatika
+122
+berjalan
+Journal Jurusan Pendidikan Informatika
+123
+berjalan
+Journal Jurusan Pendidikan Informatika
+124
+berjalan
+Journal Jurusan Pendidikan Informatika
+125
+literasi ke 26
+Jumlah jurnal pada halaman 26: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+126
+berjalan
+Journal Jurusan Pendidikan Informatika
+127
+berjalan
+Journal Jurusan Pendidikan Informatika
+128
+berjalan
+Journal Jurusan Pendidikan Informatika
+129
+berjalan
+Journal Jurusan Pendidikan Informatika
+130
+literasi ke 27
+Jumlah jurnal pada halaman 27: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+131
+berjalan
+Journal Jurusan Pendidikan Informatika
+132
+berjalan
+Journal Jurusan Pendidikan Informatika
+133
+berjalan
+Journal Jurusan Pendidikan Informatika
+134
+berjalan
+Journal Jurusan Pendidikan Informatika
+135
+literasi ke 28
+Jumlah jurnal pada halaman 28: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+136
+berjalan
+Journal Jurusan Pendidikan Informatika
+137
+berjalan
+Journal Jurusan Pendidikan Informatika
+138
+berjalan
+Journal Jurusan Pendidikan Informatika
+139
+berjalan
+Journal Jurusan Pendidikan Informatika
+140
+literasi ke 29
+Jumlah jurnal pada halaman 29: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+141
+berjalan
+Journal Jurusan Pendidikan Informatika
+142
+berjalan
+Journal Jurusan Pendidikan Informatika
+143
+berjalan
+Journal Jurusan Pendidikan Informatika
+144
+berjalan
+Journal Jurusan Pendidikan Informatika
+145
+literasi ke 30
+Jumlah jurnal pada halaman 30: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+146
+berjalan
+Journal Jurusan Pendidikan Informatika
+147
+berjalan
+Journal Jurusan Pendidikan Informatika
+148
+berjalan
+Journal Jurusan Pendidikan Informatika
+149
+berjalan
+Journal Jurusan Pendidikan Informatika
+150
+literasi ke 31
+Jumlah jurnal pada halaman 31: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+151
+berjalan
+Journal Jurusan Pendidikan Informatika
+152
+berjalan
+Journal Jurusan Pendidikan Informatika
+153
+berjalan
+Journal Jurusan Pendidikan Informatika
+154
+berjalan
+Journal Jurusan Pendidikan Informatika
+155
+literasi ke 32
+Jumlah jurnal pada halaman 32: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+156
+berjalan
+Journal Jurusan Pendidikan Informatika
+157
+berjalan
+Journal Jurusan Pendidikan Informatika
+158
+berjalan
+Journal Jurusan Pendidikan Informatika
+159
+berjalan
+Journal Jurusan Pendidikan Informatika
+160
+literasi ke 33
+Jumlah jurnal pada halaman 33: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+161
+berjalan
+Journal Jurusan Pendidikan Informatika
+162
+berjalan
+Journal Jurusan Pendidikan Informatika
+163
+berjalan
+Journal Jurusan Pendidikan Informatika
+164
+berjalan
+Journal Jurusan Pendidikan Informatika
+165
+literasi ke 34
+Jumlah jurnal pada halaman 34: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+166
+berjalan
+Journal Jurusan Pendidikan Informatika
+167
+berjalan
+Journal Jurusan Pendidikan Informatika
+168
+berjalan
+Journal Jurusan Pendidikan Informatika
+169
+berjalan
+Journal Jurusan Pendidikan Informatika
+170
+literasi ke 35
+Jumlah jurnal pada halaman 35: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+171
+berjalan
+Journal Jurusan Pendidikan Informatika
+172
+berjalan
+Journal Jurusan Pendidikan Informatika
+173
+berjalan
+Journal Jurusan Pendidikan Informatika
+174
+berjalan
+Journal Jurusan Pendidikan Informatika
+175
+literasi ke 36
+Jumlah jurnal pada halaman 36: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+176
+berjalan
+Journal Jurusan Pendidikan Informatika
+177
+berjalan
+Journal Jurusan Pendidikan Informatika
+178
+berjalan
+Journal Jurusan Pendidikan Informatika
+179
+berjalan
+Journal Jurusan Pendidikan Informatika
+180
+literasi ke 37
+Jumlah jurnal pada halaman 37: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+181
+berjalan
+Journal Jurusan Pendidikan Informatika
+182
+berjalan
+Journal Jurusan Pendidikan Informatika
+183
+berjalan
+Journal Jurusan Pendidikan Informatika
+184
+berjalan
+Journal Jurusan Pendidikan Informatika
+185
+literasi ke 38
+Jumlah jurnal pada halaman 38: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+186
+berjalan
+Journal Jurusan Pendidikan Informatika
+187
+berjalan
+Journal Jurusan Pendidikan Informatika
+188
+berjalan
+Journal Jurusan Pendidikan Informatika
+189
+berjalan
+Journal Jurusan Pendidikan Informatika
+190
+literasi ke 39
+Jumlah jurnal pada halaman 39: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+191
+berjalan
+Journal Jurusan Pendidikan Informatika
+192
+berjalan
+Journal Jurusan Pendidikan Informatika
+193
+berjalan
+Journal Jurusan Pendidikan Informatika
+194
+berjalan
+Journal Jurusan Pendidikan Informatika
+195
+literasi ke 40
+Jumlah jurnal pada halaman 40: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+196
+berjalan
+Journal Jurusan Pendidikan Informatika
+197
+berjalan
+Journal Jurusan Pendidikan Informatika
+198
+berjalan
+Journal Jurusan Pendidikan Informatika
+199
+berjalan
+Journal Jurusan Pendidikan Informatika
+200
+literasi ke 41
+Jumlah jurnal pada halaman 41: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+201
+berjalan
+Journal Jurusan Pendidikan Informatika
+202
+berjalan
+Journal Jurusan Pendidikan Informatika
+203
+berjalan
+Journal Jurusan Pendidikan Informatika
+204
+berjalan
+Journal Jurusan Pendidikan Informatika
+205
+literasi ke 42
+Jumlah jurnal pada halaman 42: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+206
+berjalan
+Journal Jurusan Pendidikan Informatika
+207
+berjalan
+Journal Jurusan Pendidikan Informatika
+208
+berjalan
+Journal Jurusan Pendidikan Informatika
+209
+berjalan
+Journal Jurusan Pendidikan Informatika
+210
+literasi ke 43
+Jumlah jurnal pada halaman 43: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+211
+berjalan
+Journal Jurusan Pendidikan Informatika
+212
+berjalan
+Journal Jurusan Pendidikan Informatika
+213
+berjalan
+Journal Jurusan Pendidikan Informatika
+214
+berjalan
+Journal Jurusan Pendidikan Informatika
+215
+literasi ke 44
+Jumlah jurnal pada halaman 44: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+216
+berjalan
+Journal Jurusan Pendidikan Informatika
+217
+berjalan
+Journal Jurusan Pendidikan Informatika
+218
+berjalan
+Journal Jurusan Pendidikan Informatika
+219
+berjalan
+Journal Jurusan Pendidikan Informatika
+220
+literasi ke 45
+Jumlah jurnal pada halaman 45: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+221
+berjalan
+Journal Jurusan Pendidikan Informatika
+222
+berjalan
+Journal Jurusan Pendidikan Informatika
+223
+berjalan
+Journal Jurusan Pendidikan Informatika
+224
+berjalan
+Journal Jurusan Pendidikan Informatika
+225
+literasi ke 46
+Jumlah jurnal pada halaman 46: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+226
+berjalan
+Journal Jurusan Pendidikan Informatika
+227
+berjalan
+Journal Jurusan Pendidikan Informatika
+228
+berjalan
+Journal Jurusan Pendidikan Informatika
+229
+berjalan
+Journal Jurusan Pendidikan Informatika
+230
+literasi ke 47
+Jumlah jurnal pada halaman 47: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+231
+berjalan
+Journal Jurusan Pendidikan Informatika
+232
+berjalan
+Journal Jurusan Pendidikan Informatika
+233
+berjalan
+Journal Jurusan Pendidikan Informatika
+234
+berjalan
+Journal Jurusan Pendidikan Informatika
+235
+literasi ke 48
+Jumlah jurnal pada halaman 48: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+236
+berjalan
+Journal Jurusan Pendidikan Informatika
+237
+berjalan
+Journal Jurusan Pendidikan Informatika
+238
+berjalan
+Journal Jurusan Pendidikan Informatika
+239
+berjalan
+Journal Jurusan Pendidikan Informatika
+240
+literasi ke 49
+Jumlah jurnal pada halaman 49: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+241
+berjalan
+Journal Jurusan Pendidikan Informatika
+242
+berjalan
+Journal Jurusan Pendidikan Informatika
+243
+berjalan
+Journal Jurusan Pendidikan Informatika
+244
+berjalan
+Journal Jurusan Pendidikan Informatika
+245
+literasi ke 50
+Jumlah jurnal pada halaman 50: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+246
+berjalan
+Journal Jurusan Pendidikan Informatika
+247
+berjalan
+Journal Jurusan Pendidikan Informatika
+248
+berjalan
+Journal Jurusan Pendidikan Informatika
+249
+berjalan
+Journal Jurusan Pendidikan Informatika
+250
+literasi ke 51
+Jumlah jurnal pada halaman 51: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+251
+berjalan
+Journal Jurusan Pendidikan Informatika
+252
+berjalan
+Journal Jurusan Pendidikan Informatika
+253
+berjalan
+Journal Jurusan Pendidikan Informatika
+254
+berjalan
+Journal Jurusan Pendidikan Informatika
+255
+literasi ke 52
+Jumlah jurnal pada halaman 52: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+256
+berjalan
+Journal Jurusan Pendidikan Informatika
+257
+berjalan
+Journal Jurusan Pendidikan Informatika
+258
+berjalan
+Journal Jurusan Pendidikan Informatika
+259
+berjalan
+Journal Jurusan Pendidikan Informatika
+260
+literasi ke 53
+Jumlah jurnal pada halaman 53: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+261
+berjalan
+Journal Jurusan Pendidikan Informatika
+262
+berjalan
+Journal Jurusan Pendidikan Informatika
+263
+berjalan
+Journal Jurusan Pendidikan Informatika
+264
+berjalan
+Journal Jurusan Pendidikan Informatika
+265
+literasi ke 54
+Jumlah jurnal pada halaman 54: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+266
+berjalan
+Journal Jurusan Pendidikan Informatika
+267
+berjalan
+Journal Jurusan Pendidikan Informatika
+268
+berjalan
+Journal Jurusan Pendidikan Informatika
+269
+berjalan
+Journal Jurusan Pendidikan Informatika
+270
+literasi ke 55
+Jumlah jurnal pada halaman 55: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+271
+berjalan
+Journal Jurusan Pendidikan Informatika
+272
+berjalan
+Journal Jurusan Pendidikan Informatika
+273
+berjalan
+Journal Jurusan Pendidikan Informatika
+274
+berjalan
+Journal Jurusan Pendidikan Informatika
+275
+literasi ke 56
+Jumlah jurnal pada halaman 56: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+276
+berjalan
+Journal Jurusan Pendidikan Informatika
+277
+berjalan
+Journal Jurusan Pendidikan Informatika
+278
+berjalan
+Journal Jurusan Pendidikan Informatika
+279
+berjalan
+Journal Jurusan Pendidikan Informatika
+280
+literasi ke 57
+Jumlah jurnal pada halaman 57: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+281
+berjalan
+Journal Jurusan Pendidikan Informatika
+282
+berjalan
+Journal Jurusan Pendidikan Informatika
+283
+berjalan
+Journal Jurusan Pendidikan Informatika
+284
+berjalan
+Journal Jurusan Pendidikan Informatika
+285
+literasi ke 58
+Jumlah jurnal pada halaman 58: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+286
+berjalan
+Journal Jurusan Pendidikan Informatika
+287
+berjalan
+Journal Jurusan Pendidikan Informatika
+288
+berjalan
+Journal Jurusan Pendidikan Informatika
+289
+berjalan
+Journal Jurusan Pendidikan Informatika
+290
+literasi ke 59
+Jumlah jurnal pada halaman 59: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+291
+berjalan
+Journal Jurusan Pendidikan Informatika
+292
+berjalan
+Journal Jurusan Pendidikan Informatika
+293
+berjalan
+Journal Jurusan Pendidikan Informatika
+294
+berjalan
+Journal Jurusan Pendidikan Informatika
+295
+literasi ke 60
+Jumlah jurnal pada halaman 60: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+296
+berjalan
+Journal Jurusan Pendidikan Informatika
+297
+berjalan
+Journal Jurusan Pendidikan Informatika
+298
+berjalan
+Journal Jurusan Pendidikan Informatika
+299
+berjalan
+Journal Jurusan Pendidikan Informatika
+300
+literasi ke 61
+Jumlah jurnal pada halaman 61: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+301
+berjalan
+Journal Jurusan Pendidikan Informatika
+302
+berjalan
+Journal Jurusan Pendidikan Informatika
+303
+berjalan
+Journal Jurusan Pendidikan Informatika
+304
+berjalan
+Journal Jurusan Pendidikan Informatika
+305
+literasi ke 62
+Jumlah jurnal pada halaman 62: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+306
+berjalan
+Journal Jurusan Pendidikan Informatika
+307
+berjalan
+Journal Jurusan Pendidikan Informatika
+308
+berjalan
+Journal Jurusan Pendidikan Informatika
+309
+berjalan
+Journal Jurusan Pendidikan Informatika
+310
+literasi ke 63
+Jumlah jurnal pada halaman 63: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+311
+berjalan
+Journal Jurusan Pendidikan Informatika
+312
+berjalan
+Journal Jurusan Pendidikan Informatika
+313
+berjalan
+Journal Jurusan Pendidikan Informatika
+314
+berjalan
+Journal Jurusan Pendidikan Informatika
+315
+literasi ke 64
+Jumlah jurnal pada halaman 64: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+316
+berjalan
+Journal Jurusan Pendidikan Informatika
+317
+berjalan
+Journal Jurusan Pendidikan Informatika
+318
+berjalan
+Journal Jurusan Pendidikan Informatika
+319
+berjalan
+Journal Jurusan Pendidikan Informatika
+320
+literasi ke 65
+Jumlah jurnal pada halaman 65: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+321
+berjalan
+Journal Jurusan Pendidikan Informatika
+322
+berjalan
+Journal Jurusan Pendidikan Informatika
+323
+berjalan
+Journal Jurusan Pendidikan Informatika
+324
+berjalan
+Journal Jurusan Pendidikan Informatika
+325
+literasi ke 66
+Jumlah jurnal pada halaman 66: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+326
+berjalan
+Journal Jurusan Pendidikan Informatika
+327
+berjalan
+Journal Jurusan Pendidikan Informatika
+328
+berjalan
+Journal Jurusan Pendidikan Informatika
+329
+berjalan
+Journal Jurusan Pendidikan Informatika
+330
+literasi ke 67
+Jumlah jurnal pada halaman 67: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+331
+berjalan
+Journal Jurusan Pendidikan Informatika
+332
+berjalan
+Journal Jurusan Pendidikan Informatika
+333
+berjalan
+Journal Jurusan Pendidikan Informatika
+334
+berjalan
+Journal Jurusan Pendidikan Informatika
+335
+literasi ke 68
+Jumlah jurnal pada halaman 68: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+336
+berjalan
+Journal Jurusan Pendidikan Informatika
+337
+berjalan
+Journal Jurusan Pendidikan Informatika
+338
+berjalan
+Journal Jurusan Pendidikan Informatika
+339
+berjalan
+Journal Jurusan Pendidikan Informatika
+340
+literasi ke 69
+Jumlah jurnal pada halaman 69: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+341
+berjalan
+Journal Jurusan Pendidikan Informatika
+342
+berjalan
+Journal Jurusan Pendidikan Informatika
+343
+berjalan
+Journal Jurusan Pendidikan Informatika
+344
+berjalan
+Journal Jurusan Pendidikan Informatika
+345
+literasi ke 70
+Jumlah jurnal pada halaman 70: 5
+berjalan
+Journal Jurusan Pendidikan Informatika
+346
+berjalan
+Journal Jurusan Pendidikan Informatika
+347
+berjalan
+Journal Jurusan Pendidikan Informatika
+348
+berjalan
+Journal Jurusan Pendidikan Informatika
+349
+berjalan
+Journal Jurusan Pendidikan Informatika
+350
+Sementara disimpan untuk Prodi 28
+Kategori 29 → Journal Jurusan Pendidikan Ipa
+Kategori 29 memiliki 84 halaman.
+literasi ke 1
+Jumlah jurnal pada halaman 1: 5
+berjalan
+Journal Jurusan Pendidikan Ipa
+351
+berjalan
+Journal Jurusan Pendidikan Ipa
+352
+berjalan
+Journal Jurusan Pendidikan Ipa
+353
+berjalan
+Journal Jurusan Pendidikan Ipa
+354
+berjalan
+Journal Jurusan Pendidikan Ipa
+355
+literasi ke 2
+Jumlah jurnal pada halaman 2: 5
+berjalan
+Journal Jurusan Pendidikan Ipa
+356
+berjalan
+Journal Jurusan Pendidikan Ipa
+357
+berjalan
+Journal Jurusan Pendidikan Ipa
+358
+berjalan
+Journal Jurusan Pendidikan Ipa
+359
+berjalan
+Journal Jurusan Pendidikan Ipa
+360
+literasi ke 3
+Jumlah jurnal pada halaman 3: 5
+berjalan
+Journal Jurusan Pendidikan Ipa
+361
+berjalan
+Journal Jurusan Pendidikan Ipa
+362
+berjalan
+Journal Jurusan Pendidikan Ipa
+363
+berjalan
+Journal Jurusan Pendidikan Ipa
+364
+berjalan
+Journal Jurusan Pendidikan Ipa
+365
+literasi ke 4
+Jumlah jurnal pada halaman 4: 5
+berjalan
+Journal Jurusan Pendidikan Ipa
+366
+berjalan
+Journal Jurusan Pendidikan Ipa
+367
+berjalan
+Journal Jurusan Pendidikan Ipa
+368
+berjalan
+Journal Jurusan Pendidikan Ipa
+369
+berjalan
+Journal Jurusan Pendidikan Ipa
+370
+literasi ke 5
+Jumlah jurnal pada halaman 5: 5
+berjalan
+Journal Jurusan Pendidikan Ipa
+371
+berjalan
+Journal Jurusan Pendidikan Ipa
+372
+berjalan
+Journal Jurusan Pendidikan Ipa
+373
+berjalan
+Journal Jurusan Pendidikan Ipa
+374
+berjalan
+Journal Jurusan Pendidikan Ipa
+375
+literasi ke 6
+Jumlah jurnal pada halaman 6: 5
+berjalan
+Journal Jurusan Pendidikan Ipa
+376
+berjalan
+Journal Jurusan Pendidikan Ipa
+377
+berjalan
+Journal Jurusan Pendidikan Ipa
+378
+berjalan
+Journal Jurusan Pendidikan Ipa
+379
+berjalan
+Journal Jurusan Pendidikan Ipa
+380
+literasi ke 7
+Jumlah jurnal pada halaman 7: 5
+berjalan
+Journal Jurusan Pendidikan Ipa
+381
+berjalan
+Journal Jurusan Pendidikan Ipa
+382
+berjalan
+Journal Jurusan Pendidikan Ipa
+383
+berjalan
+Journal Jurusan Pendidikan Ipa
+384
+berjalan
+Journal Jurusan Pendidikan Ipa
+385
+literasi ke 8
+Jumlah jurnal pada halaman 8: 5
+berjalan
+Journal Jurusan Pendidikan Ipa
+386
+berjalan
+Journal Jurusan Pendidikan Ipa
+387
+berjalan
+Journal Jurusan Pendidikan Ipa
+388
+berjalan
+Journal Jurusan Pendidikan Ipa
+389
+berjalan
+Journal Jurusan Pendidikan Ipa
+390
+literasi ke 9
+Jumlah jurnal pada halaman 9: 5
+berjalan
+Journal Jurusan Pendidikan Ipa
+391
+berjalan
+Journal Jurusan Pendidikan Ipa
+392
+berjalan
+Journal Jurusan Pendidikan Ipa
+393
+berjalan
+Journal Jurusan Pendidikan Ipa
+394
+berjalan
+Journal Jurusan Pendidikan Ipa
+395
+literasi ke 10
+Jumlah jurnal pada halaman 10: 5
+berjalan
+Journal Jurusan Pendidikan Ipa
+396
+berjalan
+Journal Jurusan Pendidikan Ipa
+397
+berjalan
+Journal Jurusan Pendidikan Ipa
+398
+berjalan
+Journal Jurusan Pendidikan Ipa
+399
+berjalan
+Journal Jurusan Pendidikan Ipa
+400
+literasi ke 11
+Jumlah jurnal pada halaman 11: 5
+berjalan
+Journal Jurusan Pendidikan Ipa
+401
+berjalan
+Journal Jurusan Pendidikan Ipa
+402
+berjalan
+Journal Jurusan Pendidikan Ipa
+403
+berjalan
+Journal Jurusan Pendidikan Ipa
+404
+berjalan
+Journal Jurusan Pendidikan Ipa
+405
+literasi ke 12
+Jumlah jurnal pada halaman 12: 5
+berjalan
+Journal Jurusan Pendidikan Ipa
+406
+berjalan
+Journal Jurusan Pendidikan Ipa
+407
+berjalan
+Journal Jurusan Pendidikan Ipa
+408
+berjalan
+Journal Jurusan Pendidikan Ipa
+409
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="crawling.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">crawling</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02_2_crawlingBerita.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">02_1_crawlingPTAUTM</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,820 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>02_3_itb_link_mapping &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_3_itb_link_mapping';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="02_1_crawlingPTAUTM" href="02_2_crawlingBerita.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pengantar.html">pengantar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawling.html">crawling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_1_crawlingPTAUTM.html">02_1_crawlingPTAUTM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_2_crawlingBerita.html">02_1_crawlingPTAUTM</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">02_3_itb_link_mapping</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F02_3_itb_link_mapping.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/02_3_itb_link_mapping.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>02_3_itb_link_mapping</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-for-knowing-this-architecture-a-website">Crawling for knowing this architecture a website</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="itb-link-mapping">
+<h1>02_3_itb_link_mapping<a class="headerlink" href="#itb-link-mapping" title="Link to this heading">#</a></h1>
+<section id="crawling-for-knowing-this-architecture-a-website">
+<h2>Crawling for knowing this architecture a website<a class="headerlink" href="#crawling-for-knowing-this-architecture-a-website" title="Link to this heading">#</a></h2>
+<p>this code for knowing an architecture a website yaitu <a class="reference external" href="https://www.itb.ac.id/">https://www.itb.ac.id/</a> yang mana kita membaca setiap href yang ada di setiap page kemudian dipilih hanya page yang berdomain internal yaitu <a class="reference external" href="http://itb.ac.id">itb.ac.id</a> kemudian didapatkan link keluarnya nah dari link keluarnya itu kemudian di search link apa aja yang ada dalam page tersebut, dilakukan berulang kali untuk semua link hrefnya yang ada dalam page</p>
+<p>Hasil dari this code dapat dilihat dalam link <a class="reference external" href="https://drive.google.com/file/d/1TISHRRxZ47QrKTTlm77P-rNRauj611IV/view?usp=drive_link">architecture web</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>requests
+<span class="o">!</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>bs4
+<span class="o">!</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pandas
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">urllib.parse</span><span class="w"> </span><span class="kn">import</span> <span class="n">urljoin</span><span class="p">,</span> <span class="n">urlparse</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">deque</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">crawl_itb_website</span><span class="p">(</span><span class="n">max_pages</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Fungsi untuk melakukan crawling pada website ITB dan memetakan semua link internal</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Header untuk mensimulasikan browser</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36&#39;</span>
+    <span class="p">}</span>
+    
+    <span class="c1"># URL awal (homepage ITB)</span>
+    <span class="n">start_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.itb.ac.id/&quot;</span>
+    
+    <span class="c1"># Menyimpan base domain untuk memfilter link internal</span>
+    <span class="n">base_domain</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">start_url</span><span class="p">)</span><span class="o">.</span><span class="n">netloc</span>
+    
+    <span class="c1"># Inisialisasi struktur data</span>
+    <span class="n">visited</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>  <span class="c1"># Halaman yang sudah dikunjungi</span>
+    <span class="n">to_visit</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([</span><span class="n">start_url</span><span class="p">])</span>  <span class="c1"># Antrian halaman yang akan dikunjungi</span>
+    <span class="n">link_data</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># Data link yang akan disimpan</span>
+    
+    <span class="c1"># Counter untuk ID</span>
+    <span class="n">link_id</span> <span class="o">=</span> <span class="mi">1</span>
+    
+    <span class="c1"># Loop sampai tidak ada lagi halaman untuk dikunjungi atau mencapai batas maksimal</span>
+    <span class="k">while</span> <span class="n">to_visit</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">visited</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">max_pages</span><span class="p">:</span>
+        <span class="c1"># Ambil URL berikutnya dari antrian</span>
+        <span class="n">current_url</span> <span class="o">=</span> <span class="n">to_visit</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+        
+        <span class="c1"># Skip jika sudah dikunjungi</span>
+        <span class="k">if</span> <span class="n">current_url</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>
+            <span class="k">continue</span>
+            
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mengunjungi: </span><span class="si">{</span><span class="n">current_url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Request halaman</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">current_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+            <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+            
+            <span class="c1"># Parse HTML</span>
+            <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+            
+            <span class="c1"># Temukan semua link di halaman</span>
+            <span class="n">links</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            
+            <span class="c1"># Filter dan proses setiap link</span>
+            <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">links</span><span class="p">:</span>
+                <span class="n">href</span> <span class="o">=</span> <span class="n">link</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+                
+                <span class="c1"># Skip anchor links dan javascript</span>
+                <span class="k">if</span> <span class="n">href</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">href</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;javascript:&#39;</span><span class="p">):</span>
+                    <span class="k">continue</span>
+                
+                <span class="c1"># Buat URL absolut</span>
+                <span class="n">absolute_url</span> <span class="o">=</span> <span class="n">urljoin</span><span class="p">(</span><span class="n">current_url</span><span class="p">,</span> <span class="n">href</span><span class="p">)</span>
+                
+                <span class="c1"># Parse URL untuk mendapatkan komponen</span>
+                <span class="n">parsed_url</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">absolute_url</span><span class="p">)</span>
+                
+                <span class="c1"># Hanya pertimbangkan link internal (dalam domain ITB)</span>
+                <span class="k">if</span> <span class="n">parsed_url</span><span class="o">.</span><span class="n">netloc</span> <span class="o">==</span> <span class="n">base_domain</span><span class="p">:</span>
+                    <span class="c1"># Tambahkan ke data</span>
+                    <span class="n">link_data</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="n">link_id</span><span class="p">,</span>
+                        <span class="s1">&#39;Halaman yang Dikunjungi (Page)&#39;</span><span class="p">:</span> <span class="n">current_url</span><span class="p">,</span>
+                        <span class="s1">&#39;Link yang Ditemukan (Link Keluar)&#39;</span><span class="p">:</span> <span class="n">absolute_url</span>
+                    <span class="p">})</span>
+                    <span class="n">link_id</span> <span class="o">+=</span> <span class="mi">1</span>
+                    
+                    <span class="c1"># Tambahkan ke antrian jika belum dikunjungi</span>
+                    <span class="k">if</span> <span class="n">absolute_url</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span> <span class="ow">and</span> <span class="n">absolute_url</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">to_visit</span><span class="p">:</span>
+                        <span class="n">to_visit</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">absolute_url</span><span class="p">)</span>
+            
+            <span class="c1"># Tandai halaman saat ini sebagai telah dikunjungi</span>
+            <span class="n">visited</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">current_url</span><span class="p">)</span>
+            
+            <span class="c1"># Delay untuk tidak membebani server</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error saat mengakses </span><span class="si">{</span><span class="n">current_url</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error tidak terduga: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+    
+    <span class="c1"># Buat DataFrame dari data yang dikumpulkan</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">link_data</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="c1"># Menjalankan crawler</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Memulai crawling website ITB...&quot;</span><span class="p">)</span>
+    <span class="n">hasil_crawling</span> <span class="o">=</span> <span class="n">crawl_itb_website</span><span class="p">(</span><span class="n">max_pages</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">hasil_crawling</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+        <span class="c1"># Simpan hasil ke CSV</span>
+        <span class="n">hasil_crawling</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;itb_link_mapping.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Berhasil memetakan </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">hasil_crawling</span><span class="p">)</span><span class="si">}</span><span class="s2"> link. Data disimpan ke itb_link_mapping.csv&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># Tampilkan preview</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Preview data:&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">hasil_crawling</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tidak ada data yang berhasil dikumpulkan.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Memulai crawling website ITB...
+Mengunjungi: https://www.itb.ac.id/
+Mengunjungi: https://www.itb.ac.id/myitb
+Mengunjungi: https://www.itb.ac.id/staff/
+Mengunjungi: https://www.itb.ac.id/kehidupan-kampus
+Mengunjungi: https://www.itb.ac.id/alumni
+Mengunjungi: https://www.itb.ac.id/berita/qs-wur-2025-itb-raih-peringkat-256-dunia/60769
+Mengunjungi: https://www.itb.ac.id/contact
+Error saat mengakses https://www.itb.ac.id/contact: HTTPSConnectionPool(host=&#39;www.itb.ac.id&#39;, port=443): Read timed out. (read timeout=10)
+Mengunjungi: https://www.itb.ac.id/directories
+Mengunjungi: https://www.itb.ac.id/agenda/academic
+Mengunjungi: https://www.itb.ac.id/staff/campus-life
+Error saat mengakses https://www.itb.ac.id/staff/campus-life: 404 Client Error: Not Found for url: https://itb.ac.id:443/staff/campus-life
+Mengunjungi: https://www.itb.ac.id/staf/listby/
+Mengunjungi: https://www.itb.ac.id/researchers-profilei
+Error saat mengakses https://www.itb.ac.id/researchers-profilei: 404 Client Error: Not Found for url: https://itb.ac.id:443/researchers-profilei
+Mengunjungi: https://www.itb.ac.id/administration-staff-profilen
+Error saat mengakses https://www.itb.ac.id/administration-staff-profilen: 404 Client Error: Not Found for url: https://itb.ac.id:443/administration-staff-profilen
+Mengunjungi: https://www.itb.ac.id/administration-staff-profile
+Mengunjungi: https://www.itb.ac.id/keluarga-mahasiswa-itb
+Mengunjungi: https://www.itb.ac.id/unit-kemahasiswaan
+Mengunjungi: https://www.itb.ac.id/himpunan
+Mengunjungi: https://www.itb.ac.id/kampus-ganesha
+Mengunjungi: https://www.itb.ac.id/campus-life/explore/itb
+Mengunjungi: https://www.itb.ac.id/campus-life/explore/bandung
+Mengunjungi: https://www.itb.ac.id/berita/qs-wur-2025-itb-raih-peringkat-256-dunia/kehidupan-kampus
+Error saat mengakses https://www.itb.ac.id/berita/qs-wur-2025-itb-raih-peringkat-256-dunia/kehidupan-kampus: 404 Client Error: Not Found for url: https://itb.ac.id:443/berita/qs-wur-2025-itb-raih-peringkat-256-dunia/kehidupan-kampus
+Mengunjungi: https://www.itb.ac.id/contact
+Mengunjungi: https://www.itb.ac.id/agenda/kehidupan-kampus
+Error saat mengakses https://www.itb.ac.id/agenda/kehidupan-kampus: 404 Client Error: Not Found for url: https://itb.ac.id:443/agenda/kehidupan-kampus
+Mengunjungi: https://www.itb.ac.id/staf/listby/kehidupan-kampus
+Error saat mengakses https://www.itb.ac.id/staf/listby/kehidupan-kampus: 404 Client Error: Not Found for url: https://itb.ac.id:443/staf/listby/kehidupan-kampus
+Mengunjungi: https://www.itb.ac.id/campus-life
+Mengunjungi: https://www.itb.ac.id/asrama
+Mengunjungi: https://www.itb.ac.id/perpustakaan
+Mengunjungi: https://www.itb.ac.id/transportasi
+Mengunjungi: https://www.itb.ac.id/kesehatan
+Mengunjungi: https://www.itb.ac.id/toko
+Mengunjungi: https://www.itb.ac.id/kantin
+Mengunjungi: https://www.itb.ac.id/bank-dan-atm
+Mengunjungi: https://www.itb.ac.id/sarana-olahraga
+Mengunjungi: https://www.itb.ac.id/kunjungan
+Mengunjungi: https://www.itb.ac.id/files/map-itb-ganesha.pdf
+Mengunjungi: https://www.itb.ac.id/sejarah
+Mengunjungi: https://www.itb.ac.id/visi-dan-misi
+Mengunjungi: https://www.itb.ac.id/rektor
+Mengunjungi: https://www.itb.ac.id/wakil-rektor
+Mengunjungi: https://www.itb.ac.id/pimpinan
+Mengunjungi: https://www.itb.ac.id/majelis-wali-amanat
+Mengunjungi: https://www.itb.ac.id/senat-akademik
+Mengunjungi: https://www.itb.ac.id/aura-biru
+Error saat mengakses https://www.itb.ac.id/aura-biru: HTTPSConnectionPool(host=&#39;www.itb.ac.id&#39;, port=443): Read timed out. (read timeout=10)
+Mengunjungi: https://www.itb.ac.id/multi-kampus
+Mengunjungi: https://www.itb.ac.id/km-itb
+Error saat mengakses https://www.itb.ac.id/km-itb: HTTPSConnectionPool(host=&#39;www.itb.ac.id&#39;, port=443): Read timed out. (read timeout=10)
+Mengunjungi: https://www.itb.ac.id/campus-club
+Error saat mengakses https://www.itb.ac.id/campus-club: 404 Client Error: Not Found for url: https://itb.ac.id:443/campus-club
+Mengunjungi: https://www.itb.ac.id/student-union
+Error saat mengakses https://www.itb.ac.id/student-union: HTTPSConnectionPool(host=&#39;www.itb.ac.id&#39;, port=443): Read timed out. (read timeout=10)
+Mengunjungi: https://www.itb.ac.id/kunjungan-sekolah
+Mengunjungi: https://www.itb.ac.id/kampus-ganesha/
+Mengunjungi: https://www.itb.ac.id/kampus-jatinangor
+Mengunjungi: https://www.itb.ac.id/observatorium-bosscha
+Mengunjungi: https://www.itb.ac.id/pusat-informasi-kampus
+Mengunjungi: https://www.itb.ac.id/soemardja-gallery
+Mengunjungi: https://www.itb.ac.id/landasan-hukum
+Mengunjungi: https://www.itb.ac.id/staf/profil/tutun-juhana
+Mengunjungi: https://www.itb.ac.id/staf/profil/irawati
+Error saat mengakses https://www.itb.ac.id/staf/profil/irawati: HTTPSConnectionPool(host=&#39;itb.ac.id&#39;, port=443): Read timed out. (read timeout=10)
+Mengunjungi: https://www.itb.ac.id/staf/profil/edy-tri-baskoro
+Error saat mengakses https://www.itb.ac.id/staf/profil/edy-tri-baskoro: HTTPSConnectionPool(host=&#39;itb.ac.id&#39;, port=443): Read timed out. (read timeout=10)
+Mengunjungi: https://www.itb.ac.id/staf/profil/akbar-adhi-utama
+Mengunjungi: https://www.itb.ac.id/kampus-jatinangor/
+Mengunjungi: https://www.itb.ac.id/kampus-cirebon/
+Mengunjungi: https://www.itb.ac.id/kampus-jakarta/
+Mengunjungi: https://www.itb.ac.id/entrepreneurial-university
+Error saat mengakses https://www.itb.ac.id/entrepreneurial-university: 500 Server Error: Internal Server Error for url: https://itb.ac.id:443/entrepreneurial-university
+Mengunjungi: https://www.itb.ac.id/aura-biru
+Mengunjungi: https://www.itb.ac.id/kampus-ganesha/kehidupan-kampus
+Error saat mengakses https://www.itb.ac.id/kampus-ganesha/kehidupan-kampus: 404 Client Error: Not Found for url: https://itb.ac.id:443/kampus-ganesha/kehidupan-kampus
+Mengunjungi: https://www.itb.ac.id/kampus-ganesha/kunjungan
+Error saat mengakses https://www.itb.ac.id/kampus-ganesha/kunjungan: 404 Client Error: Not Found for url: https://itb.ac.id:443/kampus-ganesha/kunjungan
+Mengunjungi: https://www.itb.ac.id/kampus-ganesha/directories
+Error saat mengakses https://www.itb.ac.id/kampus-ganesha/directories: 404 Client Error: Not Found for url: https://itb.ac.id:443/kampus-ganesha/directories
+Mengunjungi: https://www.itb.ac.id/kampus-ganesha/files/map-itb-ganesha.pdf
+Error saat mengakses https://www.itb.ac.id/kampus-ganesha/files/map-itb-ganesha.pdf: 404 Client Error: Not Found for url: https://itb.ac.id:443/kampus-ganesha/files/map-itb-ganesha.pdf
+Mengunjungi: https://www.itb.ac.id/files/map-itb-jatinangor.pdf
+Error saat mengakses https://www.itb.ac.id/files/map-itb-jatinangor.pdf: (&#39;Connection broken: IncompleteRead(2178464 bytes read, 3164428 more expected)&#39;, IncompleteRead(2178464 bytes read, 3164428 more expected))
+Mengunjungi: https://www.itb.ac.id/history
+Mengunjungi: https://www.itb.ac.id/vision-and-mission
+Mengunjungi: https://www.itb.ac.id/rector
+Mengunjungi: https://www.itb.ac.id/vice-rector
+Mengunjungi: https://www.itb.ac.id/board-of-officials
+Mengunjungi: https://www.itb.ac.id/board-of-trustees
+Mengunjungi: https://www.itb.ac.id/academic-senate
+Mengunjungi: https://www.itb.ac.id/multi-campus
+Error saat mengakses https://www.itb.ac.id/multi-campus: 404 Client Error: Not Found for url: https://itb.ac.id:443/multi-campus
+Mengunjungi: https://www.itb.ac.id/visit
+Mengunjungi: https://www.itb.ac.id/staf/profil/kehidupan-kampus
+Error saat mengakses https://www.itb.ac.id/staf/profil/kehidupan-kampus: 404 Client Error: Not Found for url: https://itb.ac.id:443/staf/profil/kehidupan-kampus
+Mengunjungi: https://www.itb.ac.id/kampus-jatinangor/kehidupan-kampus
+Error saat mengakses https://www.itb.ac.id/kampus-jatinangor/kehidupan-kampus: 404 Client Error: Not Found for url: https://itb.ac.id:443/kampus-jatinangor/kehidupan-kampus
+Mengunjungi: https://www.itb.ac.id/kampus-jatinangor/kunjungan
+Error saat mengakses https://www.itb.ac.id/kampus-jatinangor/kunjungan: 404 Client Error: Not Found for url: https://itb.ac.id:443/kampus-jatinangor/kunjungan
+Mengunjungi: https://www.itb.ac.id/kampus-jatinangor/directories
+Error saat mengakses https://www.itb.ac.id/kampus-jatinangor/directories: 404 Client Error: Not Found for url: https://itb.ac.id:443/kampus-jatinangor/directories
+Mengunjungi: https://www.itb.ac.id/kampus-jatinangor/files/map-itb-jatinangor.pdf
+Error saat mengakses https://www.itb.ac.id/kampus-jatinangor/files/map-itb-jatinangor.pdf: 404 Client Error: Not Found for url: https://itb.ac.id:443/kampus-jatinangor/files/map-itb-jatinangor.pdf
+Mengunjungi: https://www.itb.ac.id/kampus-cirebon/kehidupan-kampus
+Error saat mengakses https://www.itb.ac.id/kampus-cirebon/kehidupan-kampus: 404 Client Error: Not Found for url: https://itb.ac.id:443/kampus-cirebon/kehidupan-kampus
+Mengunjungi: https://www.itb.ac.id/kampus-cirebon/directories
+Error saat mengakses https://www.itb.ac.id/kampus-cirebon/directories: 404 Client Error: Not Found for url: https://itb.ac.id:443/kampus-cirebon/directories
+Mengunjungi: https://www.itb.ac.id/kampus-jakarta/kehidupan-kampus
+Error saat mengakses https://www.itb.ac.id/kampus-jakarta/kehidupan-kampus: 404 Client Error: Not Found for url: https://itb.ac.id:443/kampus-jakarta/kehidupan-kampus
+Mengunjungi: https://www.itb.ac.id/kampus-jakarta/kampusjakarta@itb.ac.id
+Error saat mengakses https://www.itb.ac.id/kampus-jakarta/kampusjakarta@itb.ac.id: 404 Client Error: Not Found for url: https://itb.ac.id:443/kampus-jakarta/kampusjakarta@itb.ac.id
+Mengunjungi: https://www.itb.ac.id/kampus-jakarta/directories
+Error saat mengakses https://www.itb.ac.id/kampus-jakarta/directories: 404 Client Error: Not Found for url: https://itb.ac.id:443/kampus-jakarta/directories
+Mengunjungi: https://www.itb.ac.id/legal-foundation
+Mengunjungi: https://www.itb.ac.id/staf/profil/irawati
+Mengunjungi: https://www.itb.ac.id/staf/profil/edy-tri-baskoro
+Mengunjungi: https://www.itb.ac.id/school-visits
+Mengunjungi: https://www.itb.ac.id/ganesha-campus
+Mengunjungi: https://www.itb.ac.id/jatinangor-campus
+Mengunjungi: https://www.itb.ac.id/bosscha-observatorium
+Mengunjungi: https://www.itb.ac.id/center-of-campus-information-services
+Error saat mengakses https://www.itb.ac.id/center-of-campus-information-services: 404 Client Error: Not Found for url: https://itb.ac.id:443/center-of-campus-information-services
+Mengunjungi: https://www.itb.ac.id/staf/profil/kehidupan-kampus
+Error saat mengakses https://www.itb.ac.id/staf/profil/kehidupan-kampus: 404 Client Error: Not Found for url: https://itb.ac.id:443/staf/profil/kehidupan-kampus
+Mengunjungi: https://www.itb.ac.id/entrepreneurial-university
+Error saat mengakses https://www.itb.ac.id/entrepreneurial-university: 500 Server Error: Internal Server Error for url: https://itb.ac.id:443/entrepreneurial-university
+Mengunjungi: https://www.itb.ac.id/multi-campus
+Error saat mengakses https://www.itb.ac.id/multi-campus: 404 Client Error: Not Found for url: https://itb.ac.id:443/multi-campus
+Mengunjungi: https://www.itb.ac.id/multicampus
+Mengunjungi: https://www.itb.ac.id/files/map-itb-jatinangor.pdf
+Error saat mengakses https://www.itb.ac.id/files/map-itb-jatinangor.pdf: (&#39;Connection broken: IncompleteRead(2850208 bytes read, 2492684 more expected)&#39;, IncompleteRead(2850208 bytes read, 2492684 more expected))
+Mengunjungi: https://www.itb.ac.id/cirebon-campus/
+Mengunjungi: https://www.itb.ac.id/jakarta-campus
+Error saat mengakses https://www.itb.ac.id/jakarta-campus: HTTPSConnectionPool(host=&#39;www.itb.ac.id&#39;, port=443): Read timed out. (read timeout=10)
+Mengunjungi: https://www.itb.ac.id/cirebon-campus/campus-life
+Error saat mengakses https://www.itb.ac.id/cirebon-campus/campus-life: 404 Client Error: Not Found for url: https://itb.ac.id:443/cirebon-campus/campus-life
+Mengunjungi: https://www.itb.ac.id/cirebon-campus/directories
+Error saat mengakses https://www.itb.ac.id/cirebon-campus/directories: 404 Client Error: Not Found for url: https://itb.ac.id:443/cirebon-campus/directories
+Mengunjungi: https://www.itb.ac.id/multi-campus
+Error saat mengakses https://www.itb.ac.id/multi-campus: 404 Client Error: Not Found for url: https://itb.ac.id:443/multi-campus
+Berhasil memetakan 847 link. Data disimpan ke itb_link_mapping.csv
+
+Preview data:
+   id Halaman yang Dikunjungi (Page)  \
+0   1         https://www.itb.ac.id/   
+1   2         https://www.itb.ac.id/   
+2   3         https://www.itb.ac.id/   
+3   4         https://www.itb.ac.id/   
+4   5         https://www.itb.ac.id/   
+5   6         https://www.itb.ac.id/   
+6   7         https://www.itb.ac.id/   
+7   8         https://www.itb.ac.id/   
+8   9         https://www.itb.ac.id/   
+9  10         https://www.itb.ac.id/   
+
+                   Link yang Ditemukan (Link Keluar)  
+0                        https://www.itb.ac.id/myitb  
+1                       https://www.itb.ac.id/staff/  
+2             https://www.itb.ac.id/kehidupan-kampus  
+3                       https://www.itb.ac.id/alumni  
+4  https://www.itb.ac.id/berita/qs-wur-2025-itb-r...  
+5                             https://www.itb.ac.id/  
+6                             https://www.itb.ac.id/  
+7                             https://www.itb.ac.id/  
+8                             https://www.itb.ac.id/  
+9                      https://www.itb.ac.id/contact  
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02_2_crawlingBerita.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">02_1_crawlingPTAUTM</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-for-knowing-this-architecture-a-website">Crawling for knowing this architecture a website</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
