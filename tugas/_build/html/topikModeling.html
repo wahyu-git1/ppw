@@ -1,0 +1,793 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Load Data dati yang sudah di preprocessing sebelumnya &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'topikModeling';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="preProcessingAbstrakIDN" href="preProcessingAbstrakIDN.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pengantar.html">pengantar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawling.html">crawling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_1_crawlingPTAUTM.html">02_1_crawlingPTAUTM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_2_crawlingBerita.html">02_1_crawlingPTAUTM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_3_itb_link_mapping.html">02_3_itb_link_mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preProcessingAbstrakIDN.html">preProcessingAbstrakIDN</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Load Data dati yang sudah di preprocessing sebelumnya</a></li>
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FtopikModeling.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/topikModeling.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Load Data dati yang sudah di preprocessing sebelumnya</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Load Data dati yang sudah di preprocessing sebelumnya</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#create-document-menjadi-term-document-matrix">Create document menjadi term document Matrix</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gunakne-hasil-tf-idf">Gunakne Hasil TF-IDF</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lda-model-menggunakan-tf-idf">LDA Model menggunakan tf-IDF</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-lda-model-topic-conherence">Evaluation LDA Model_Topic conherence</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># topikModeling</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>gensim
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: gensim in /usr/local/lib/python3.12/dist-packages (4.3.3)
+Requirement already satisfied: numpy&lt;2.0,&gt;=1.18.5 in /usr/local/lib/python3.12/dist-packages (from gensim) (1.26.4)
+Requirement already satisfied: scipy&lt;1.14.0,&gt;=1.7.0 in /usr/local/lib/python3.12/dist-packages (from gensim) (1.13.1)
+Requirement already satisfied: smart-open&gt;=1.8.1 in /usr/local/lib/python3.12/dist-packages (from gensim) (7.3.1)
+Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages (from smart-open&gt;=1.8.1-&gt;gensim) (1.17.3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="load-data-dati-yang-sudah-di-preprocessing-sebelumnya">
+<h1>Load Data dati yang sudah di preprocessing sebelumnya<a class="headerlink" href="#load-data-dati-yang-sudah-di-preprocessing-sebelumnya" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/Semester 7/PPW/Tugas5_tfIDF/hasil_stemm_berita400_sting.csv&#39;</span><span class="p">)</span>
+<span class="n">cleanText</span> <span class="o">=</span> <span class="n">load</span><span class="p">[</span><span class="s1">&#39;stemmed_text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="n">corpusClean</span> <span class="o">=</span> <span class="p">[</span><span class="n">doc</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">cleanText</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">corpusClean</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3919
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">corpusClean</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1035
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-document-menjadi-term-document-matrix">
+<h1>Create document menjadi term document Matrix<a class="headerlink" href="#create-document-menjadi-term-document-matrix" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># converted to a term-document matrix</span>
+<span class="c1"># menghitung kemunculan setiap istilah dalam setiap dokumen dan kemudian menormalkan hitungan tersebut untuk membuat matriks nilai yang dapat digunakan untuk analisis</span>
+
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">gensim</span><span class="w"> </span><span class="kn">import</span> <span class="n">corpora</span>
+
+<span class="c1"># Creating document-term matrix</span>
+<span class="n">dictionary</span> <span class="o">=</span> <span class="n">corpora</span><span class="o">.</span><span class="n">Dictionary</span><span class="p">(</span><span class="n">corpusClean</span><span class="p">)</span>
+<span class="n">doc_term_matrix</span> <span class="o">=</span> <span class="p">[</span><span class="n">dictionary</span><span class="o">.</span><span class="n">doc2bow</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">corpusClean</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">doc_term_matrix</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3919
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="gunakne-hasil-tf-idf">
+<h1>Gunakne Hasil TF-IDF<a class="headerlink" href="#gunakne-hasil-tf-idf" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># untuk menggunakn LDA gunakan hasil TF-IDF</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gensim</span><span class="w"> </span><span class="kn">import</span> <span class="n">models</span>
+<span class="n">tfidf</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TfidfModel</span><span class="p">(</span><span class="n">doc_term_matrix</span><span class="p">)</span>
+<span class="n">corpus_tfidf</span> <span class="o">=</span> <span class="n">tfidf</span><span class="p">[</span><span class="n">doc_term_matrix</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">corpus_tfidf</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+    <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(0, 0.04023954076490745), (1, 0.0169495418025809), (2, 0.06153005131956023), (3, 0.060390710803988855), (4, 0.15176334182457987), (5, 0.02986903961952067), (6, 0.09399794987090349), (7, 0.10946779531409039), (8, 0.02246249766136611), (9, 0.3861160540905391), (10, 0.1010560524939497), (11, 0.009770130222808192), (12, 0.03925436707517151), (13, 0.008758258888650613), (14, 0.11853622277250607), (15, 0.0791225577967082), (16, 0.6210230405313014), (17, 0.059268111386253035), (18, 0.18985910376968984), (19, 0.03205560666822206), (20, 0.004022319196019467), (21, 0.047945174842063946), (22, 0.03912854352492092), (23, 0.13495461271102996), (24, 0.026709853855062176), (25, 0.04585794914416631), (26, 0.10554631827544941), (27, 0.05645664004830013), (28, 0.034834903340633716), (29, 0.01649966103892267), (30, 0.0394940222762072), (31, 0.3769234014975554), (32, 0.16690731792889224), (33, 0.0255355454777706), (34, 0.02951732723786247), (35, 0.016411451180514788), (36, 0.08467418396274953), (37, 0.004653046379284988), (38, 0.031619133927978764), (39, 0.06424716572251292), (40, 0.017847822751810113), (41, 0.022078255744768637), (42, 0.00774843712583248), (43, 0.06282056691625923), (44, 0.044049912004957545), (45, 0.05486183826686208), (46, 0.052144723863909385), (47, 0.05154064378208032), (48, 0.0791225577967082), (49, 0.017170507512060784), (50, 0.08491022044703901), (51, 0.044744431693715954), (52, 0.09399794987090349), (53, 0.020074259117407862), (54, 0.11853622277250607), (55, 0.047945174842063946), (56, 0.08786348224566096), (57, 0.04547651081121124), (58, 0.04275939640825854), (59, 0.049882783930602186), (60, 0.020967340909265133), (61, 0.030727074672069064), (62, 0.13114670984065255), (63, 0.04510552416953342), (64, 0.07220589437191006), (65, 0.002693773208634758), (66, 0.03511533049512097), (67, 0.022147393295306562), (68, 0.02198972565746711), (69, 0.11119714932982012), (70, 0.023167874091620824)]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="lda-model-menggunakan-tf-idf">
+<h1>LDA Model menggunakan tf-IDF<a class="headerlink" href="#lda-model-menggunakan-tf-idf" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># menggunakan LDA Model menggunakan tf-IDF</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gensim.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">LdaModel</span>
+
+<span class="c1"># LDA model</span>
+<span class="n">lda</span> <span class="o">=</span> <span class="n">LdaModel</span><span class="p">(</span><span class="n">corpus_tfidf</span><span class="p">,</span> <span class="n">num_topics</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">id2word</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">,</span> <span class="n">passes</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lda</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;gensim.models.ldamodel.LdaModel at 0x7b3d933bf800&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">topic</span> <span class="ow">in</span> <span class="n">lda</span><span class="o">.</span><span class="n">print_topics</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Topic: </span><span class="si">{}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">Words: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">topic</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Topic: 1 
+Words: 0.071*&quot;undang&quot; + 0.070*&quot;keras&quot; + 0.040*&quot;sanksi&quot; + 0.035*&quot;narapidana&quot; + 0.022*&quot;seksual&quot; + 0.019*&quot;konsep&quot; + 0.016*&quot;berat&quot; + 0.016*&quot;tuju&quot; + 0.015*&quot;pidana&quot; + 0.015*&quot;bina&quot;
+
+
+Topic: 42 
+Words: 0.000*&quot;immaterill&quot; + 0.000*&quot;bpk&quot; + 0.000*&quot;juurusita&quot; + 0.000*&quot;menag&quot; + 0.000*&quot;sampaipelaksanaan&quot; + 0.000*&quot;bioskop&quot; + 0.000*&quot;ekstensif&quot; + 0.000*&quot;majemuk&quot; + 0.000*&quot;atb&quot; + 0.000*&quot;rir&quot;
+
+
+Topic: 23 
+Words: 0.000*&quot;immaterill&quot; + 0.000*&quot;bpk&quot; + 0.000*&quot;juurusita&quot; + 0.000*&quot;menag&quot; + 0.000*&quot;sampaipelaksanaan&quot; + 0.000*&quot;bioskop&quot; + 0.000*&quot;ekstensif&quot; + 0.000*&quot;majemuk&quot; + 0.000*&quot;atb&quot; + 0.000*&quot;rir&quot;
+
+
+Topic: 33 
+Words: 0.000*&quot;immaterill&quot; + 0.000*&quot;bpk&quot; + 0.000*&quot;juurusita&quot; + 0.000*&quot;menag&quot; + 0.000*&quot;sampaipelaksanaan&quot; + 0.000*&quot;bioskop&quot; + 0.000*&quot;ekstensif&quot; + 0.000*&quot;majemuk&quot; + 0.000*&quot;atb&quot; + 0.000*&quot;rir&quot;
+
+
+Topic: 76 
+Words: 0.052*&quot;lindung&quot; + 0.044*&quot;pidana&quot; + 0.044*&quot;negara&quot; + 0.040*&quot;indonesia&quot; + 0.031*&quot;bahan&quot; + 0.029*&quot;tindak&quot; + 0.028*&quot;buat&quot; + 0.026*&quot;masyarakat&quot; + 0.026*&quot;republik&quot; + 0.025*&quot;polisi&quot;
+
+
+Topic: 73 
+Words: 0.000*&quot;immaterill&quot; + 0.000*&quot;bpk&quot; + 0.000*&quot;juurusita&quot; + 0.000*&quot;menag&quot; + 0.000*&quot;sampaipelaksanaan&quot; + 0.000*&quot;bioskop&quot; + 0.000*&quot;ekstensif&quot; + 0.000*&quot;majemuk&quot; + 0.000*&quot;atb&quot; + 0.000*&quot;rir&quot;
+
+
+Topic: 74 
+Words: 0.000*&quot;immaterill&quot; + 0.000*&quot;bpk&quot; + 0.000*&quot;juurusita&quot; + 0.000*&quot;menag&quot; + 0.000*&quot;sampaipelaksanaan&quot; + 0.000*&quot;bioskop&quot; + 0.000*&quot;ekstensif&quot; + 0.000*&quot;majemuk&quot; + 0.000*&quot;atb&quot; + 0.000*&quot;rir&quot;
+
+
+Topic: 91 
+Words: 0.000*&quot;immaterill&quot; + 0.000*&quot;bpk&quot; + 0.000*&quot;juurusita&quot; + 0.000*&quot;menag&quot; + 0.000*&quot;sampaipelaksanaan&quot; + 0.000*&quot;bioskop&quot; + 0.000*&quot;ekstensif&quot; + 0.000*&quot;majemuk&quot; + 0.000*&quot;atb&quot; + 0.000*&quot;rir&quot;
+
+
+Topic: 94 
+Words: 0.000*&quot;immaterill&quot; + 0.000*&quot;bpk&quot; + 0.000*&quot;juurusita&quot; + 0.000*&quot;menag&quot; + 0.000*&quot;sampaipelaksanaan&quot; + 0.000*&quot;bioskop&quot; + 0.000*&quot;ekstensif&quot; + 0.000*&quot;majemuk&quot; + 0.000*&quot;atb&quot; + 0.000*&quot;rir&quot;
+
+
+Topic: 32 
+Words: 0.032*&quot;mati&quot; + 0.027*&quot;penjara&quot; + 0.018*&quot;dakwa&quot; + 0.017*&quot;ancam&quot; + 0.011*&quot;maksimal&quot; + 0.006*&quot;bin&quot; + 0.005*&quot;putus&quot; + 0.005*&quot;berat&quot; + 0.004*&quot;keras&quot; + 0.002*&quot;sebelas&quot;
+
+
+Topic: 41 
+Words: 0.000*&quot;immaterill&quot; + 0.000*&quot;bpk&quot; + 0.000*&quot;juurusita&quot; + 0.000*&quot;menag&quot; + 0.000*&quot;sampaipelaksanaan&quot; + 0.000*&quot;bioskop&quot; + 0.000*&quot;ekstensif&quot; + 0.000*&quot;majemuk&quot; + 0.000*&quot;atb&quot; + 0.000*&quot;rir&quot;
+
+
+Topic: 96 
+Words: 0.000*&quot;immaterill&quot; + 0.000*&quot;bpk&quot; + 0.000*&quot;juurusita&quot; + 0.000*&quot;menag&quot; + 0.000*&quot;sampaipelaksanaan&quot; + 0.000*&quot;bioskop&quot; + 0.000*&quot;ekstensif&quot; + 0.000*&quot;majemuk&quot; + 0.000*&quot;atb&quot; + 0.000*&quot;rir&quot;
+
+
+Topic: 62 
+Words: 0.000*&quot;immaterill&quot; + 0.000*&quot;bpk&quot; + 0.000*&quot;juurusita&quot; + 0.000*&quot;menag&quot; + 0.000*&quot;sampaipelaksanaan&quot; + 0.000*&quot;bioskop&quot; + 0.000*&quot;ekstensif&quot; + 0.000*&quot;majemuk&quot; + 0.000*&quot;atb&quot; + 0.000*&quot;rir&quot;
+
+
+Topic: 84 
+Words: 0.000*&quot;immaterill&quot; + 0.000*&quot;bpk&quot; + 0.000*&quot;juurusita&quot; + 0.000*&quot;menag&quot; + 0.000*&quot;sampaipelaksanaan&quot; + 0.000*&quot;bioskop&quot; + 0.000*&quot;ekstensif&quot; + 0.000*&quot;majemuk&quot; + 0.000*&quot;atb&quot; + 0.000*&quot;rir&quot;
+
+
+Topic: 82 
+Words: 0.000*&quot;immaterill&quot; + 0.000*&quot;bpk&quot; + 0.000*&quot;juurusita&quot; + 0.000*&quot;menag&quot; + 0.000*&quot;sampaipelaksanaan&quot; + 0.000*&quot;bioskop&quot; + 0.000*&quot;ekstensif&quot; + 0.000*&quot;majemuk&quot; + 0.000*&quot;atb&quot; + 0.000*&quot;rir&quot;
+
+
+Topic: 81 
+Words: 0.000*&quot;immaterill&quot; + 0.000*&quot;bpk&quot; + 0.000*&quot;juurusita&quot; + 0.000*&quot;menag&quot; + 0.000*&quot;sampaipelaksanaan&quot; + 0.000*&quot;bioskop&quot; + 0.000*&quot;ekstensif&quot; + 0.000*&quot;majemuk&quot; + 0.000*&quot;atb&quot; + 0.000*&quot;rir&quot;
+
+
+Topic: 7 
+Words: 0.097*&quot;kawin&quot; + 0.040*&quot;agama&quot; + 0.031*&quot;nikah&quot; + 0.025*&quot;anak&quot; + 0.023*&quot;tua&quot; + 0.018*&quot;usia&quot; + 0.017*&quot;keluarga&quot; + 0.010*&quot;bawah&quot; + 0.008*&quot;meni&quot; + 0.004*&quot;umur&quot;
+
+
+Topic: 95 
+Words: 0.000*&quot;immaterill&quot; + 0.000*&quot;bpk&quot; + 0.000*&quot;juurusita&quot; + 0.000*&quot;menag&quot; + 0.000*&quot;sampaipelaksanaan&quot; + 0.000*&quot;bioskop&quot; + 0.000*&quot;ekstensif&quot; + 0.000*&quot;majemuk&quot; + 0.000*&quot;atb&quot; + 0.000*&quot;rir&quot;
+
+
+Topic: 88 
+Words: 0.003*&quot;hasana&quot; + 0.003*&quot;marsiati&quot; + 0.003*&quot;riyadi&quot; + 0.003*&quot;binti&quot; + 0.003*&quot;abdullah&quot; + 0.002*&quot;pebruari&quot; + 0.002*&quot;nopidbpnsmp&quot; + 0.002*&quot;dr&quot; + 0.002*&quot;kelamin&quot; + 0.002*&quot;amar&quot;
+
+
+Topic: 37 
+Words: 0.000*&quot;immaterill&quot; + 0.000*&quot;bpk&quot; + 0.000*&quot;juurusita&quot; + 0.000*&quot;menag&quot; + 0.000*&quot;sampaipelaksanaan&quot; + 0.000*&quot;bioskop&quot; + 0.000*&quot;ekstensif&quot; + 0.000*&quot;majemuk&quot; + 0.000*&quot;atb&quot; + 0.000*&quot;rir&quot;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="evaluation-lda-model-topic-conherence">
+<h1>Evaluation LDA Model_Topic conherence<a class="headerlink" href="#evaluation-lda-model-topic-conherence" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">gensim.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">CoherenceModel</span>
+
+<span class="n">coherence_model_lda</span> <span class="o">=</span> <span class="n">CoherenceModel</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">lda</span><span class="p">,</span> <span class="n">texts</span><span class="o">=</span><span class="n">corpusClean</span><span class="p">,</span> <span class="n">dictionary</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span> <span class="n">coherence</span><span class="o">=</span><span class="s1">&#39;c_v&#39;</span><span class="p">)</span>
+<span class="n">coherence_lda</span> <span class="o">=</span> <span class="n">coherence_model_lda</span><span class="o">.</span><span class="n">get_coherence</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Coherence Score: &#39;</span><span class="p">,</span> <span class="n">coherence_lda</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">/tmp/ipython-input-1863154290.py</span> in <span class="ni">&lt;cell line: 0&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">gensim.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">CoherenceModel</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">coherence_model_lda</span> <span class="o">=</span> <span class="n">CoherenceModel</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">lda</span><span class="p">,</span> <span class="n">texts</span><span class="o">=</span><span class="n">corpusClean</span><span class="p">,</span> <span class="n">dictionary</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span> <span class="n">coherence</span><span class="o">=</span><span class="s1">&#39;c_v&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">coherence_lda</span> <span class="o">=</span> <span class="n">coherence_model_lda</span><span class="o">.</span><span class="n">get_coherence</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Coherence Score: &#39;</span><span class="p">,</span> <span class="n">coherence_lda</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;lda&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nilai 0.4813 menunjukkan bahwa:</p>
+<p>Model sudah menghasilkan topik yang cukup masuk akal, tetapi Masih ada ruang untuk perbaikan agar kata-kata dalam topik lebih saling berkaitan.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="preProcessingAbstrakIDN.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">preProcessingAbstrakIDN</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Load Data dati yang sudah di preprocessing sebelumnya</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#create-document-menjadi-term-document-matrix">Create document menjadi term document Matrix</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gunakne-hasil-tf-idf">Gunakne Hasil TF-IDF</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lda-model-menggunakan-tf-idf">LDA Model menggunakan tf-IDF</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-lda-model-topic-conherence">Evaluation LDA Model_Topic conherence</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
