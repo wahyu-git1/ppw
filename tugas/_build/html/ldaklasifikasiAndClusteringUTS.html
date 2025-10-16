@@ -1,0 +1,1966 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ldaklasifikasiAndClusteringUTS &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ldaklasifikasiAndClusteringUTS';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Load Data dati yang sudah di preprocessing sebelumnya" href="topikModeling.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pengantar.html">pengantar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawling.html">crawling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_1_crawlingPTAUTM.html">02_1_crawlingPTAUTM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_2_crawlingBerita.html">02_1_crawlingPTAUTM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_3_itb_link_mapping.html">02_3_itb_link_mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preProcessingAbstrakIDN.html">preProcessingAbstrakIDN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topikModeling.html">Load Data dati yang sudah di preprocessing sebelumnya</a></li>
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">ldaklasifikasiAndClusteringUTS</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FldaklasifikasiAndClusteringUTS.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/ldaklasifikasiAndClusteringUTS.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ldaklasifikasiAndClusteringUTS</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uts-ppw">UTS PPW</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nama-wahyu-rohmatul-abidin">Nama : Wahyu Rohmatul Abidin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nim-220411100198">Nim  : 220411100198</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-1">Tugas 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-yang-diperlukan">1. Import Library yang Diperlukan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-dan-eksplorasi-data">2. Load dan Eksplorasi Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data">3.Preprocessing Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#persiapan-untuk-training">4. Persiapan Untuk training</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ekstraksi-fitur-dengan-lda">5. Ekstraksi Fitur dengan LDA</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#training-dengan-naive-bayes">6. Training dengan naive bayes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#training-dengan-svm">7. Training dengan SVM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model">8. Evaluasi Model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-2">Tugas 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1. Preprocessing data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eksplorasi-data">2. Eksplorasi Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ekstraksi-fitur-dengan-tf-idf">3. Ekstraksi Fitur dengan TF-IDF</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-jumlah-cluster-optimal">4. Menentukan Jumlah Cluster Optimal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clustering-dengan-beberapa-algoritma">5. Clustering dengan beberapa algoritma</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-hasil-clustering">7. Visualisasi hasil clustering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-cluster-dengan-kmeans">8. Analisis Cluster dengan KMeans</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretasi-cluster">9. Interpretasi Cluster</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-akhir-dengan-interpretasi">10. Visualisasi Akhir dengan Interpretasi</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ldaklasifikasiandclusteringuts">
+<h1>ldaklasifikasiAndClusteringUTS<a class="headerlink" href="#ldaklasifikasiandclusteringuts" title="Link to this heading">#</a></h1>
+<section id="uts-ppw">
+<h2>UTS PPW<a class="headerlink" href="#uts-ppw" title="Link to this heading">#</a></h2>
+<section id="nama-wahyu-rohmatul-abidin">
+<h3>Nama : Wahyu Rohmatul Abidin<a class="headerlink" href="#nama-wahyu-rohmatul-abidin" title="Link to this heading">#</a></h3>
+</section>
+<section id="nim-220411100198">
+<h3>Nim  : 220411100198<a class="headerlink" href="#nim-220411100198" title="Link to this heading">#</a></h3>
+</section>
+</section>
+<section id="tugas-1">
+<h2>Tugas 1<a class="headerlink" href="#tugas-1" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Lakukan analisa klasifikasikan berita dengan extraksi fitur model topik modelling dengan classifier naïve bayes dan SVM (data <a class="reference external" href="https://drive.google.com/file/d/1a776C4mmVbC-84gx_No0is9QDfpWFIme/view?usp=drive_link">https://drive.google.com/file/d/1a776C4mmVbC-84gx_No0is9QDfpWFIme/view?usp=drive_link</a>)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">gensim</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting gensim
+  Downloading gensim-4.3.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+Collecting numpy&lt;2.0,&gt;=1.18.5 (from gensim)
+  Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">61.0/61.0 kB</span> <span class=" -Color -Color-Red">1.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting scipy&lt;1.14.0,&gt;=1.7.0 (from gensim)
+  Downloading scipy-1.13.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">60.6/60.6 kB</span> <span class=" -Color -Color-Red">3.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: smart-open&gt;=1.8.1 in /usr/local/lib/python3.12/dist-packages (from gensim) (7.3.1)
+Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages (from smart-open&gt;=1.8.1-&gt;gensim) (1.17.3)
+Downloading gensim-4.3.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (26.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">26.6/26.6 MB</span> <span class=" -Color -Color-Red">62.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hDownloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">18.0/18.0 MB</span> <span class=" -Color -Color-Red">97.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hDownloading scipy-1.13.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">38.2/38.2 MB</span> <span class=" -Color -Color-Red">21.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: numpy, scipy, gensim
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.0.2
+    Uninstalling numpy-2.0.2:
+      Successfully uninstalled numpy-2.0.2
+  Attempting uninstall: scipy
+    Found existing installation: scipy 1.16.2
+    Uninstalling scipy-1.16.2:
+      Successfully uninstalled scipy-1.16.2
+<span class=" -Color -Color-Red">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.</span>
+<span class=" -Color -Color-Red">opencv-contrib-python 4.12.0.88 requires numpy&lt;2.3.0,&gt;=2; python_version &gt;= &quot;3.9&quot;, but you have numpy 1.26.4 which is incompatible.</span>
+<span class=" -Color -Color-Red">thinc 8.3.6 requires numpy&lt;3.0.0,&gt;=2.0.0, but you have numpy 1.26.4 which is incompatible.</span>
+<span class=" -Color -Color-Red">opencv-python 4.12.0.88 requires numpy&lt;2.3.0,&gt;=2; python_version &gt;= &quot;3.9&quot;, but you have numpy 1.26.4 which is incompatible.</span>
+<span class=" -Color -Color-Red">opencv-python-headless 4.12.0.88 requires numpy&lt;2.3.0,&gt;=2; python_version &gt;= &quot;3.9&quot;, but you have numpy 1.26.4 which is incompatible.</span>
+<span class=" -Color -Color-Red">tsfresh 0.21.1 requires scipy&gt;=1.14.0; python_version &gt;= &quot;3.10&quot;, but you have scipy 1.13.1 which is incompatible.</span>
+Successfully installed gensim-4.3.3 numpy-1.26.4 scipy-1.13.1
+</pre></div>
+</div>
+</div>
+</div>
+<section id="import-library-yang-diperlukan">
+<h3>1. Import Library yang Diperlukan<a class="headerlink" href="#import-library-yang-diperlukan" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gensim</span><span class="w"> </span><span class="kn">import</span> <span class="n">corpora</span><span class="p">,</span> <span class="n">models</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gensim.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">LdaModel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.feature_extraction.text</span><span class="w"> </span><span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.naive_bayes</span><span class="w"> </span><span class="kn">import</span> <span class="n">MultinomialNB</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.svm</span><span class="w"> </span><span class="kn">import</span> <span class="n">SVC</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">accuracy_score</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">LabelEncoder</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+
+<span class="c1"># Download stopwords jika belum</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Unzipping corpora/stopwords.zip.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="load-dan-eksplorasi-data">
+<h3>2. Load dan Eksplorasi Data<a class="headerlink" href="#load-dan-eksplorasi-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load dataset</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">load_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Informasi Dataset:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Shape: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Kolom: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Sample data:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+    <span class="c1"># Cek distribusi kategori</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Distribusi Kategori:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;kategori&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="c1"># Load data</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/MyDrive/Semester 7/PPW/UTS/BeritaUTS.csv&#39;</span>  <span class="c1"># Ganti dengan path Anda</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Informasi Dataset:
+Shape: (1500, 6)
+Kolom: [&#39;No&#39;, &#39;judul&#39;, &#39;berita&#39;, &#39;tanggal&#39;, &#39;kategori&#39;, &#39;link&#39;]
+
+Sample data:
+   No                                              judul  \
+0   1  Airlangga Harap Kenaikan UMP Tingkatkan Daya B...   
+1   2  PT SIER Beri Penghargaan untuk 50 Tenant Terba...   
+2   3  Prabowo Bakal Bentuk Kementerian Penerimaan Ne...   
+3   4  Sinergi Kemenag &amp; BPJS Ketenagakerjaan Lindung...   
+4   5  Pemerintah Segera Bentuk Satgas PHK Usai Tetap...   
+
+                                              berita  \
+0  Menteri Koordinator (Menko) Bidang Perekonomia...   
+1  Dalam rangka memeriahkan hari jadi ke-50, PT S...   
+2  Wacana Presiden Prabowo Subianto akan membentu...   
+3  BPJS Ketenagakerjaan dan Kementerian Agama (Ke...   
+4  Pemerintah akan segera membentuk Satuan Tugas ...   
+
+                         tanggal kategori  \
+0  Minggu, 01 Des 2024 23:40 WIB  Ekonomi   
+1  Minggu, 01 Des 2024 20:45 WIB  Ekonomi   
+2  Minggu, 01 Des 2024 19:40 WIB  Ekonomi   
+3  Minggu, 01 Des 2024 19:03 WIB  Ekonomi   
+4  Minggu, 01 Des 2024 19:00 WIB  Ekonomi   
+
+                                                link  
+0  https://www.cnnindonesia.com/ekonomi/202412012...  
+1  https://www.cnnindonesia.com/ekonomi/202412012...  
+2  https://www.cnnindonesia.com/ekonomi/202412011...  
+3  https://www.cnnindonesia.com/ekonomi/202412011...  
+4  https://www.cnnindonesia.com/ekonomi/202412011...  
+
+Distribusi Kategori:
+kategori
+Ekonomi          375
+Olahraga         375
+Nasional         375
+Internasional    375
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="preprocessing-data">
+<h3>3.Preprocessing Data<a class="headerlink" href="#preprocessing-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">preprocess_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Preprocessing teks untuk LDA dan klasifikasi&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="c1"># Gabungkan judul dan berita</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+    <span class="c1"># Remove tanda baca, numbers, dan special characters</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^a-zA-Z\s]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+    <span class="c1"># Remove extra whitespace</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">text</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">tokenize_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Tokenisasi teks untuk LDA&quot;&quot;&quot;</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="c1"># Remove stopwords Indonesia</span>
+    <span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">))</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">token</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">token</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">tokens</span>
+
+<span class="c1"># Preprocessing data</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Preprocessing data...&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;teks_gabungan&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;judul&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;berita&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;teks_clean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;teks_gabungan&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">preprocess_text</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;tokens&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;teks_clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tokenize_text</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sample setelah preprocessing:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;judul&#39;</span><span class="p">,</span> <span class="s1">&#39;kategori&#39;</span><span class="p">,</span> <span class="s1">&#39;teks_clean&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Preprocessing data...
+Sample setelah preprocessing:
+                                               judul kategori  \
+0  Airlangga Harap Kenaikan UMP Tingkatkan Daya B...  Ekonomi   
+1  PT SIER Beri Penghargaan untuk 50 Tenant Terba...  Ekonomi   
+2  Prabowo Bakal Bentuk Kementerian Penerimaan Ne...  Ekonomi   
+3  Sinergi Kemenag &amp; BPJS Ketenagakerjaan Lindung...  Ekonomi   
+4  Pemerintah Segera Bentuk Satgas PHK Usai Tetap...  Ekonomi   
+
+                                          teks_clean  
+0  airlangga harap kenaikan ump tingkatkan daya b...  
+1  pt sier beri penghargaan untuk tenant terbaik ...  
+2  prabowo bakal bentuk kementerian penerimaan ne...  
+3  sinergi kemenag bpjs ketenagakerjaan lindungi ...  
+4  pemerintah segera bentuk satgas phk usai tetap...  
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="persiapan-untuk-training">
+<h3>4. Persiapan Untuk training<a class="headerlink" href="#persiapan-untuk-training" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Split data</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;teks_clean&#39;</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;kategori&#39;</span><span class="p">]</span>
+
+<span class="c1"># Encode labels</span>
+<span class="n">label_encoder</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">y_encoded</span> <span class="o">=</span> <span class="n">label_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Kategori: </span><span class="si">{</span><span class="n">label_encoder</span><span class="o">.</span><span class="n">classes_</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Shape X: </span><span class="si">{</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">, y: </span><span class="si">{</span><span class="n">y_encoded</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Split train-test</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y_encoded</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y_encoded</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Train size: </span><span class="si">{</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">, Test size: </span><span class="si">{</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kategori: [&#39;Ekonomi&#39; &#39;Internasional&#39; &#39;Nasional&#39; &#39;Olahraga&#39;]
+Shape X: (1500,), y: (1500,)
+Train size: (1050,), Test size: (450,)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="ekstraksi-fitur-dengan-lda">
+<h3>5. Ekstraksi Fitur dengan LDA<a class="headerlink" href="#ekstraksi-fitur-dengan-lda" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">prepare_lda_features</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">num_topics</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Mempersiapkan fitur LDA untuk training dan testing&quot;&quot;&quot;</span>
+
+    <span class="c1"># Tokenize untuk LDA</span>
+    <span class="n">train_tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">X_train</span><span class="p">]</span>
+    <span class="n">test_tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">X_test</span><span class="p">]</span>
+
+    <span class="c1"># Create dictionary</span>
+    <span class="n">dictionary</span> <span class="o">=</span> <span class="n">corpora</span><span class="o">.</span><span class="n">Dictionary</span><span class="p">(</span><span class="n">train_tokens</span><span class="p">)</span>
+    <span class="n">dictionary</span><span class="o">.</span><span class="n">filter_extremes</span><span class="p">(</span><span class="n">no_below</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">no_above</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+    <span class="c1"># Create corpus</span>
+    <span class="n">train_corpus</span> <span class="o">=</span> <span class="p">[</span><span class="n">dictionary</span><span class="o">.</span><span class="n">doc2bow</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span> <span class="k">for</span> <span class="n">tokens</span> <span class="ow">in</span> <span class="n">train_tokens</span><span class="p">]</span>
+    <span class="n">test_corpus</span> <span class="o">=</span> <span class="p">[</span><span class="n">dictionary</span><span class="o">.</span><span class="n">doc2bow</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span> <span class="k">for</span> <span class="n">tokens</span> <span class="ow">in</span> <span class="n">test_tokens</span><span class="p">]</span>
+
+    <span class="c1"># Train LDA model</span>
+    <span class="n">lda_model</span> <span class="o">=</span> <span class="n">LdaModel</span><span class="p">(</span>
+        <span class="n">corpus</span><span class="o">=</span><span class="n">train_corpus</span><span class="p">,</span>
+        <span class="n">id2word</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span>
+        <span class="n">num_topics</span><span class="o">=</span><span class="n">num_topics</span><span class="p">,</span>
+        <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
+        <span class="n">passes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Convert documents to topic distributions</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_topic_distribution</span><span class="p">(</span><span class="n">corpus</span><span class="p">,</span> <span class="n">lda_model</span><span class="p">,</span> <span class="n">num_topics</span><span class="p">):</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">corpus</span><span class="p">:</span>
+            <span class="n">topic_dist</span> <span class="o">=</span> <span class="n">lda_model</span><span class="o">.</span><span class="n">get_document_topics</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">minimum_probability</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">topic_vector</span> <span class="o">=</span> <span class="p">[</span><span class="n">prob</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">prob</span> <span class="ow">in</span> <span class="n">topic_dist</span><span class="p">]</span>
+            <span class="n">features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">topic_vector</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+
+    <span class="c1"># Extract features</span>
+    <span class="n">X_train_lda</span> <span class="o">=</span> <span class="n">get_topic_distribution</span><span class="p">(</span><span class="n">train_corpus</span><span class="p">,</span> <span class="n">lda_model</span><span class="p">,</span> <span class="n">num_topics</span><span class="p">)</span>
+    <span class="n">X_test_lda</span> <span class="o">=</span> <span class="n">get_topic_distribution</span><span class="p">(</span><span class="n">test_corpus</span><span class="p">,</span> <span class="n">lda_model</span><span class="p">,</span> <span class="n">num_topics</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;LDA Features - Train: </span><span class="si">{</span><span class="n">X_train_lda</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">, Test: </span><span class="si">{</span><span class="n">X_test_lda</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">X_train_lda</span><span class="p">,</span> <span class="n">X_test_lda</span><span class="p">,</span> <span class="n">lda_model</span><span class="p">,</span> <span class="n">dictionary</span>
+
+<span class="c1"># Ekstraksi fitur LDA</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ekstraksi fitur dengan LDA...&quot;</span><span class="p">)</span>
+<span class="n">X_train_lda</span><span class="p">,</span> <span class="n">X_test_lda</span><span class="p">,</span> <span class="n">lda_model</span><span class="p">,</span> <span class="n">dictionary</span> <span class="o">=</span> <span class="n">prepare_lda_features</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">num_topics</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ekstraksi fitur dengan LDA...
+LDA Features - Train: (1050, 15), Test: (450, 15)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X_train_lda</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1050, 15)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X_train_lda</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[3.08347791e-01, 1.13997165e-04, 1.92987645e-04, ...,
+        1.41992918e-04, 5.86755693e-01, 1.39208161e-04],
+       [2.16955916e-04, 1.62588549e-04, 9.97491837e-01, ...,
+        2.02517520e-04, 1.92274689e-04, 1.98545735e-04],
+       [2.81079527e-04, 2.10643309e-04, 9.96750534e-01, ...,
+        2.62373709e-04, 2.49103497e-04, 2.57228035e-04],
+       ...,
+       [2.87380331e-04, 2.15365173e-04, 3.64594714e-04, ...,
+        2.68255186e-04, 2.54687504e-04, 1.81650892e-01],
+       [1.63092054e-02, 2.24162810e-04, 4.46541846e-01, ...,
+        2.79213360e-04, 2.65091454e-04, 2.73737416e-04],
+       [3.25672678e-04, 2.44061754e-04, 4.13176080e-04, ...,
+        3.03999142e-04, 2.88623647e-04, 2.98037106e-04]], dtype=float32)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># def compute_coherence_values(dictionary, corpus, texts, limit, start=2, step=3):</span>
+
+<span class="c1">#     coherence_values = []</span>
+<span class="c1">#     model_list = []</span>
+<span class="c1">#     for num_topics in range(start, limit, step):</span>
+<span class="c1">#         model=gensim.models.LdaMulticore(corpus=corpus, id2word=dictionary, num_topics=num_topics)</span>
+<span class="c1">#         model_list.append(model)</span>
+<span class="c1">#         coherencemodel = CoherenceModel(model=model, texts=texts, dictionary=dictionary, coherence=&#39;c_v&#39;)</span>
+<span class="c1">#         coherence_values.append(coherencemodel.get_coherence())</span>
+
+<span class="c1">#     return model_list, coherence_values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># model_list, coherence_values = compute_coherence_values(dictionary=dictionary, texts=train_corpus, start=2, limit=40, step=6)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="training-dengan-naive-bayes">
+<h3>6. Training dengan naive bayes<a class="headerlink" href="#training-dengan-naive-bayes" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">train_naive_bayes</span><span class="p">(</span><span class="n">X_train_lda</span><span class="p">,</span> <span class="n">y_train</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Training Naive Bayes dengan kedua jenis fitur&quot;&quot;&quot;</span>
+
+    <span class="c1"># NB dengan fitur LDA</span>
+    <span class="n">nb_lda</span> <span class="o">=</span> <span class="n">MultinomialNB</span><span class="p">()</span>
+    <span class="n">nb_lda</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_lda</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+    <span class="c1"># # NB dengan fitur TF-IDF</span>
+    <span class="c1"># nb_tfidf = MultinomialNB()</span>
+    <span class="c1"># nb_tfidf.fit(X_train_tfidf, y_train)</span>
+
+    <span class="k">return</span> <span class="n">nb_lda</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training Naive Bayes...&quot;</span><span class="p">)</span>
+<span class="n">nb_lda</span> <span class="o">=</span> <span class="n">train_naive_bayes</span><span class="p">(</span><span class="n">X_train_lda</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Training Naive Bayes...
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="training-dengan-svm">
+<h3>7. Training dengan SVM<a class="headerlink" href="#training-dengan-svm" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">train_svm</span><span class="p">(</span><span class="n">X_train_lda</span><span class="p">,</span> <span class="n">y_train</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Training SVM dengan kedua jenis fitur&quot;&quot;&quot;</span>
+
+    <span class="c1"># SVM dengan fitur LDA</span>
+    <span class="n">svm_lda</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">probability</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">svm_lda</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_lda</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">svm_lda</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training SVM...&quot;</span><span class="p">)</span>
+<span class="n">svm_lda</span> <span class="o">=</span> <span class="n">train_svm</span><span class="p">(</span><span class="n">X_train_lda</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Training SVM...
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="evaluasi-model">
+<h3>8. Evaluasi Model<a class="headerlink" href="#evaluasi-model" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">evaluate_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">feature_type</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Evaluasi model dan return metrics&quot;&quot;&quot;</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="mi">50</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;EVALUASI: </span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2"> dengan </span><span class="si">{</span><span class="n">feature_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="mi">50</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Classification Report:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">label_encoder</span><span class="o">.</span><span class="n">classes_</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">accuracy</span><span class="p">,</span> <span class="n">y_pred</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_confusion_matrix</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">feature_type</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Plot confusion matrix&quot;&quot;&quot;</span>
+    <span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span>
+                <span class="n">xticklabels</span><span class="o">=</span><span class="n">label_encoder</span><span class="o">.</span><span class="n">classes_</span><span class="p">,</span>
+                <span class="n">yticklabels</span><span class="o">=</span><span class="n">label_encoder</span><span class="o">.</span><span class="n">classes_</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Confusion Matrix - </span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">feature_type</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;True Label&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Predicted Label&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Evaluasi semua model</span>
+<span class="n">results</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;EVALUASI SEMUA MODEL&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+
+<span class="c1"># Naive Bayes dengan LDA</span>
+<span class="n">acc_nb_lda</span><span class="p">,</span> <span class="n">y_pred_nb_lda</span> <span class="o">=</span> <span class="n">evaluate_model</span><span class="p">(</span><span class="n">nb_lda</span><span class="p">,</span> <span class="n">X_test_lda</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="s2">&quot;Naive Bayes&quot;</span><span class="p">,</span> <span class="s2">&quot;LDA Features&quot;</span><span class="p">)</span>
+<span class="n">results</span><span class="p">[</span><span class="s1">&#39;NB_LDA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">acc_nb_lda</span>
+<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_nb_lda</span><span class="p">,</span> <span class="s2">&quot;Naive Bayes&quot;</span><span class="p">,</span> <span class="s2">&quot;LDA Features&quot;</span><span class="p">)</span>
+
+<span class="c1"># Naive Bayes dengan TF-IDF</span>
+<span class="c1"># acc_nb_tfidf, y_pred_nb_tfidf = evaluate_model(nb_tfidf, X_test_tfidf, y_test, &quot;Naive Bayes&quot;, &quot;TF-IDF Features&quot;)</span>
+<span class="c1"># results[&#39;NB_TFIDF&#39;] = acc_nb_tfidf</span>
+<span class="c1"># plot_confusion_matrix(y_test, y_pred_nb_tfidf, &quot;Naive Bayes&quot;, &quot;TF-IDF Features&quot;)</span>
+
+<span class="c1"># SVM dengan LDA</span>
+<span class="n">acc_svm_lda</span><span class="p">,</span> <span class="n">y_pred_svm_lda</span> <span class="o">=</span> <span class="n">evaluate_model</span><span class="p">(</span><span class="n">svm_lda</span><span class="p">,</span> <span class="n">X_test_lda</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="s2">&quot;SVM&quot;</span><span class="p">,</span> <span class="s2">&quot;LDA Features&quot;</span><span class="p">)</span>
+<span class="n">results</span><span class="p">[</span><span class="s1">&#39;SVM_LDA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">acc_svm_lda</span>
+<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_svm_lda</span><span class="p">,</span> <span class="s2">&quot;SVM&quot;</span><span class="p">,</span> <span class="s2">&quot;LDA Features&quot;</span><span class="p">)</span>
+
+<span class="c1"># SVM dengan TF-IDF</span>
+<span class="c1"># acc_svm_tfidf, y_pred_svm_tfidf = evaluate_model(svm_tfidf, X_test_tfidf, y_test, &quot;SVM&quot;, &quot;TF-IDF Features&quot;)</span>
+<span class="c1"># results[&#39;SVM_TFIDF&#39;] = acc_svm_tfidf</span>
+<span class="c1"># plot_confusion_matrix(y_test, y_pred_svm_tfidf, &quot;SVM&quot;, &quot;TF-IDF Features&quot;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>EVALUASI SEMUA MODEL
+============================================================
+
+==================================================
+EVALUASI: Naive Bayes dengan LDA Features
+==================================================
+Accuracy: 0.8978
+
+Classification Report:
+               precision    recall  f1-score   support
+
+      Ekonomi       0.84      0.96      0.89       113
+Internasional       0.92      0.90      0.91       112
+     Nasional       0.86      0.75      0.80       113
+     Olahraga       0.98      0.98      0.98       112
+
+     accuracy                           0.90       450
+    macro avg       0.90      0.90      0.90       450
+ weighted avg       0.90      0.90      0.90       450
+</pre></div>
+</div>
+<img alt="_images/812ea425e507f7ca0de3cf05913fa1240011af5a7d8d6dc929c0347d0e7917be.png" src="_images/812ea425e507f7ca0de3cf05913fa1240011af5a7d8d6dc929c0347d0e7917be.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==================================================
+EVALUASI: SVM dengan LDA Features
+==================================================
+Accuracy: 0.8933
+
+Classification Report:
+               precision    recall  f1-score   support
+
+      Ekonomi       0.85      0.90      0.88       113
+Internasional       0.94      0.90      0.92       112
+     Nasional       0.81      0.79      0.80       113
+     Olahraga       0.98      0.98      0.98       112
+
+     accuracy                           0.89       450
+    macro avg       0.89      0.89      0.89       450
+ weighted avg       0.89      0.89      0.89       450
+</pre></div>
+</div>
+<img alt="_images/bd2e3fe346183a78f3075800210e1c273b51eb144af0c39a3f813f239cc6114a.png" src="_images/bd2e3fe346183a78f3075800210e1c273b51eb144af0c39a3f813f239cc6114a.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compare_models</span><span class="p">(</span><span class="n">results</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Perbandingan performa semua model&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PERBANDINGAN PERFORMAN SEMUA MODEL&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+
+    <span class="c1"># Create comparison dataframe</span>
+    <span class="n">comparison_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s1">&#39;Model&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span>
+        <span class="s1">&#39;Accuracy&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="p">})</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Accuracy&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">comparison_df</span><span class="p">)</span>
+
+    <span class="c1"># Plot comparison</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">models</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">accuracies</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+    <span class="n">bars</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">accuracies</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="s1">&#39;lightcoral&#39;</span><span class="p">,</span> <span class="s1">&#39;lightgreen&#39;</span><span class="p">,</span> <span class="s1">&#39;gold&#39;</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Perbandingan Akurasi Model&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Accuracy&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Model&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Add value labels on bars</span>
+    <span class="k">for</span> <span class="n">bar</span><span class="p">,</span> <span class="n">accuracy</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">bars</span><span class="p">,</span> <span class="n">accuracies</span><span class="p">):</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">bar</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span> <span class="o">+</span> <span class="mf">0.01</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">accuracy</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">comparison_df</span>
+
+<span class="c1"># Bandingkan semua model</span>
+<span class="n">comparison_df</span> <span class="o">=</span> <span class="n">compare_models</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>============================================================
+PERBANDINGAN PERFORMAN SEMUA MODEL
+============================================================
+     Model  Accuracy
+0   NB_LDA  0.897778
+1  SVM_LDA  0.893333
+</pre></div>
+</div>
+<img alt="_images/9d5ad4daaec3d073df16b855b87a7d148e9f6cda7b1d89644d682c374bb8a8aa.png" src="_images/9d5ad4daaec3d073df16b855b87a7d148e9f6cda7b1d89644d682c374bb8a8aa.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="tugas-2">
+<h2>Tugas 2<a class="headerlink" href="#tugas-2" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.feature_extraction.text</span><span class="w"> </span><span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.cluster</span><span class="w"> </span><span class="kn">import</span> <span class="n">KMeans</span><span class="p">,</span> <span class="n">DBSCAN</span><span class="p">,</span> <span class="n">AgglomerativeClustering</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.decomposition</span><span class="w"> </span><span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">silhouette_score</span><span class="p">,</span> <span class="n">calinski_harabasz_score</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.stem</span><span class="w"> </span><span class="kn">import</span> <span class="n">PorterStemmer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.tokenize</span><span class="w"> </span><span class="kn">import</span> <span class="n">word_tokenize</span>
+
+<span class="c1"># Download resources jika belum</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt_tab&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;wordnet&#39;</span><span class="p">)</span>
+
+<span class="c1"># Data yang Anda berikan</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/Semester 7/PPW/UTS/spam.csv&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin1&#39;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># Ambil 2 kolom pertama</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt_tab.zip.
+[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /root/nltk_data...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   id                                               Text
+0   1  Go until jurong point, crazy.. Available only ...
+1   2                      Ok lar... Joking wif u oni...
+2   3  Free entry in 2 a wkly comp to win FA Cup fina...
+3   4  U dun say so early hor... U c already then say...
+4   5  Nah I don&#39;t think he goes to usf, he lives aro...
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">texts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Text&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">texts</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    Go until jurong point, crazy.. Available only ...
+1                        Ok lar... Joking wif u oni...
+2    Free entry in 2 a wkly comp to win FA Cup fina...
+3    U dun say so early hor... U c already then say...
+4    Nah I don&#39;t think he goes to usf, he lives aro...
+Name: Text, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id1">
+<h3>1. Preprocessing data<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">preprocess_email</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Preprocessing khusus untuk data email&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="c1"># Case folding</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+    <span class="c1"># Remove special characters, numbers, but keep basic punctuation</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^\w\s\.\?\!]&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+    <span class="c1"># Remove extra whitespace</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">text</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">advanced_preprocessing</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Preprocessing lebih mendalam untuk clustering&quot;&quot;&quot;</span>
+    <span class="c1"># Basic cleaning</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">preprocess_email</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+    <span class="c1"># Tokenization</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+    <span class="c1"># Stopword removal</span>
+    <span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">))</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">token</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">token</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">]</span>
+
+    <span class="c1"># Stemming</span>
+    <span class="n">stemmer</span> <span class="o">=</span> <span class="n">PorterStemmer</span><span class="p">()</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">token</span><span class="p">)</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+
+<span class="c1"># Preprocessing data</span>
+<span class="n">emails</span> <span class="o">=</span> <span class="p">[</span><span class="n">preprocess_email</span><span class="p">(</span><span class="n">email</span><span class="p">)</span> <span class="k">for</span> <span class="n">email</span> <span class="ow">in</span> <span class="n">texts</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">email</span><span class="p">,</span> <span class="nb">str</span><span class="p">)]</span>
+<span class="n">advanced_emails</span> <span class="o">=</span> <span class="p">[</span><span class="n">advanced_preprocessing</span><span class="p">(</span><span class="n">email</span><span class="p">)</span> <span class="k">for</span> <span class="n">email</span> <span class="ow">in</span> <span class="n">texts</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">email</span><span class="p">,</span> <span class="nb">str</span><span class="p">)]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sample setelah preprocessing:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Original: </span><span class="si">{</span><span class="n">texts</span><span class="p">[</span><span class="n">i</span><span class="p">][:</span><span class="mi">50</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cleaned: </span><span class="si">{</span><span class="n">emails</span><span class="p">[</span><span class="n">i</span><span class="p">][:</span><span class="mi">50</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Advanced: </span><span class="si">{</span><span class="n">advanced_emails</span><span class="p">[</span><span class="n">i</span><span class="p">][:</span><span class="mi">50</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sample setelah preprocessing:
+Original: Go until jurong point, crazy.. Available only in b...
+Cleaned: go until jurong point crazy.. available only in bu...
+Advanced: jurong point crazi avail bugi great world buffet ....
+--------------------------------------------------
+Original: Ok lar... Joking wif u oni......
+Cleaned: ok lar... joking wif u oni......
+Advanced: lar ... joke wif oni ......
+--------------------------------------------------
+Original: Free entry in 2 a wkly comp to win FA Cup final tk...
+Cleaned: free entry in a wkly comp to win fa cup final tkts...
+Advanced: free entri wkli comp win cup final tkt may text re...
+--------------------------------------------------
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="eksplorasi-data">
+<h3>2. Eksplorasi Data<a class="headerlink" href="#eksplorasi-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">explore_data</span><span class="p">(</span><span class="n">emails</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Eksplorasi karakteristik data&quot;&quot;&quot;</span>
+    <span class="c1"># Panjang teks</span>
+    <span class="n">text_lengths</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">email</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="k">for</span> <span class="n">email</span> <span class="ow">in</span> <span class="n">emails</span><span class="p">]</span>
+
+    <span class="c1"># Kata unik</span>
+    <span class="n">all_words</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">emails</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">word_freq</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">all_words</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== EKSPLORASI DATA ===&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total emails: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">emails</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average words per email: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">text_lengths</span><span class="p">)</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total unique words: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">word_freq</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Most common words: </span><span class="si">{</span><span class="n">word_freq</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Visualisasi distribusi panjang teks</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">text_lengths</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Number of Words&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribution of Email Length&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">common_words</span> <span class="o">=</span> <span class="n">word_freq</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">words</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">common_words</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">counts</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightcoral&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Most Common Words&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">text_lengths</span><span class="p">,</span> <span class="n">word_freq</span>
+
+<span class="c1"># Eksplorasi data</span>
+<span class="n">text_lengths</span><span class="p">,</span> <span class="n">word_freq</span> <span class="o">=</span> <span class="n">explore_data</span><span class="p">(</span><span class="n">emails</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== EKSPLORASI DATA ===
+Total emails: 5572
+Average words per email: 15.7
+Total unique words: 10858
+Most common words: [(&#39;i&#39;, 2896), (&#39;to&#39;, 2229), (&#39;you&#39;, 2062), (&#39;a&#39;, 1441), (&#39;the&#39;, 1329), (&#39;u&#39;, 1074), (&#39;and&#39;, 972), (&#39;in&#39;, 877), (&#39;is&#39;, 875), (&#39;my&#39;, 755)]
+</pre></div>
+</div>
+<img alt="_images/8ef20f2e9570c75555bac86b6d340d35fe7771019080fa4749aed5db06437cb9.png" src="_images/8ef20f2e9570c75555bac86b6d340d35fe7771019080fa4749aed5db06437cb9.png" />
+</div>
+</div>
+</section>
+<section id="ekstraksi-fitur-dengan-tf-idf">
+<h3>3. Ekstraksi Fitur dengan TF-IDF<a class="headerlink" href="#ekstraksi-fitur-dengan-tf-idf" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">extract_features</span><span class="p">(</span><span class="n">emails</span><span class="p">,</span> <span class="n">max_features</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Ekstraksi fitur menggunakan TF-IDF&quot;&quot;&quot;</span>
+
+    <span class="c1"># TF-IDF Vectorizer</span>
+    <span class="n">tfidf_vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span>
+        <span class="n">max_features</span><span class="o">=</span><span class="n">max_features</span><span class="p">,</span>
+        <span class="n">stop_words</span><span class="o">=</span><span class="s1">&#39;english&#39;</span><span class="p">,</span>
+        <span class="n">min_df</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>  <span class="c1"># Ignore terms that appear in less than 2 documents</span>
+        <span class="n">max_df</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>  <span class="c1"># Ignore terms that appear in more than 80% of documents</span>
+        <span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Use unigrams and bigrams</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Fit and transform</span>
+    <span class="n">tfidf_matrix</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">emails</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;TF-IDF Matrix Shape: </span><span class="si">{</span><span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Feature names sample: </span><span class="si">{</span><span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">tfidf_vectorizer</span>
+
+<span class="c1"># Ekstraksi fitur</span>
+<span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">vectorizer</span> <span class="o">=</span> <span class="n">extract_features</span><span class="p">(</span><span class="n">emails</span><span class="p">,</span><span class="n">max_features</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TF-IDF Matrix Shape: (5572, 100)
+Feature names sample: [&#39;amp&#39; &#39;ask&#39; &#39;babe&#39; &#39;box&#39; &#39;buy&#39; &#39;care&#39; &#39;cash&#39; &#39;claim&#39; &#39;com&#39; &#39;come&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">extract_features</span><span class="p">(</span><span class="n">emails</span><span class="p">,</span> <span class="n">max_features</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Ekstraksi fitur menggunakan TF-IDF&quot;&quot;&quot;</span>
+
+    <span class="c1"># TF-IDF Vectorizer</span>
+    <span class="n">tfidf_vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span>
+        <span class="n">max_features</span><span class="o">=</span><span class="n">max_features</span><span class="p">,</span>
+        <span class="n">stop_words</span><span class="o">=</span><span class="s1">&#39;english&#39;</span><span class="p">,</span>
+        <span class="n">min_df</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>  <span class="c1"># Ignore terms that appear in less than 2 documents</span>
+        <span class="n">max_df</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>  <span class="c1"># Ignore terms that appear in more than 80% of documents</span>
+        <span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Use unigrams and bigrams</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Fit and transform</span>
+    <span class="n">tfidf_matrix</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">emails</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;TF-IDF Matrix Shape: </span><span class="si">{</span><span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Feature names sample: </span><span class="si">{</span><span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">tfidf_vectorizer</span>
+
+<span class="c1"># Ekstraksi fitur</span>
+<span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">vectorizer</span> <span class="o">=</span> <span class="n">extract_features</span><span class="p">(</span><span class="n">emails</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TF-IDF Matrix Shape: (5572, 1000)
+Feature names sample: [&#39;abiola&#39; &#39;able&#39; &#39;abt&#39; &#39;ac&#39; &#39;account&#39; &#39;account statement&#39; &#39;actually&#39;
+ &#39;address&#39; &#39;admirer&#39; &#39;aft&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menentukan-jumlah-cluster-optimal">
+<h3>4. Menentukan Jumlah Cluster Optimal<a class="headerlink" href="#menentukan-jumlah-cluster-optimal" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">find_optimal_clusters</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">max_k</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Menentukan jumlah cluster optimal menggunakan elbow method dan silhouette score&quot;&quot;&quot;</span>
+
+    <span class="n">inertias</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">silhouette_scores</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">k_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">k_range</span><span class="p">:</span>
+        <span class="c1"># KMeans clustering</span>
+        <span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">k</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">cluster_labels</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">)</span>
+
+        <span class="c1"># Calculate metrics</span>
+        <span class="n">inertias</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kmeans</span><span class="o">.</span><span class="n">inertia_</span><span class="p">)</span>
+
+        <span class="c1"># Silhouette score (hitung jika lebih dari 1 cluster dan tidak semua data di satu cluster)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">cluster_labels</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">silhouette_scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">silhouette_score</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">cluster_labels</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">silhouette_scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1"># Plot results</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+    <span class="c1"># Elbow curve</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k_range</span><span class="p">,</span> <span class="n">inertias</span><span class="p">,</span> <span class="s1">&#39;bo-&#39;</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Number of Clusters&#39;</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Inertia&#39;</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Elbow Method&#39;</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Silhouette scores</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k_range</span><span class="p">,</span> <span class="n">silhouette_scores</span><span class="p">,</span> <span class="s1">&#39;ro-&#39;</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Number of Clusters&#39;</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Silhouette Score&#39;</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Silhouette Score&#39;</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="c1"># Find optimal k</span>
+    <span class="n">optimal_k</span> <span class="o">=</span> <span class="n">k_range</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">silhouette_scores</span><span class="p">)]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Optimal number of clusters (based on silhouette): </span><span class="si">{</span><span class="n">optimal_k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">optimal_k</span><span class="p">,</span> <span class="n">inertias</span><span class="p">,</span> <span class="n">silhouette_scores</span>
+
+<span class="c1"># Cari jumlah cluster optimal</span>
+<span class="n">optimal_k</span><span class="p">,</span> <span class="n">inertias</span><span class="p">,</span> <span class="n">silhouette_scores</span> <span class="o">=</span> <span class="n">find_optimal_clusters</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/f5f890c5aa5f6ffeb6dbd6b331fa6d759502b92186cf554d9a9be0f21369eb72.png" src="_images/f5f890c5aa5f6ffeb6dbd6b331fa6d759502b92186cf554d9a9be0f21369eb72.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimal number of clusters (based on silhouette): 10
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="clustering-dengan-beberapa-algoritma">
+<h3>5. Clustering dengan beberapa algoritma<a class="headerlink" href="#clustering-dengan-beberapa-algoritma" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">perform_clustering</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Melakukan clustering dengan berbagai algoritma&quot;&quot;&quot;</span>
+
+    <span class="n">results</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># Convert to dense array for algorithms that don&#39;t support sparse matrix</span>
+    <span class="n">X_dense</span> <span class="o">=</span> <span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+
+    <span class="c1"># 1. KMeans</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Running KMeans clustering...&quot;</span><span class="p">)</span>
+    <span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">n_clusters</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">kmeans_labels</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="s1">&#39;KMeans&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kmeans_labels</span>
+
+    <span class="c1"># 2. Hierarchical Clustering</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Running Hierarchical clustering...&quot;</span><span class="p">)</span>
+    <span class="n">hierarchical</span> <span class="o">=</span> <span class="n">AgglomerativeClustering</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">n_clusters</span><span class="p">)</span>
+    <span class="n">hierarchical_labels</span> <span class="o">=</span> <span class="n">hierarchical</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X_dense</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="s1">&#39;Hierarchical&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">hierarchical_labels</span>
+
+    <span class="c1"># 3. DBSCAN</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Running DBSCAN clustering...&quot;</span><span class="p">)</span>
+    <span class="n">dbscan</span> <span class="o">=</span> <span class="n">DBSCAN</span><span class="p">(</span><span class="n">eps</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">min_samples</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">dbscan_labels</span> <span class="o">=</span> <span class="n">dbscan</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X_dense</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="s1">&#39;DBSCAN&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dbscan_labels</span>
+
+    <span class="k">return</span> <span class="n">results</span>
+
+<span class="c1"># Lakukan clustering dengan berbagai algoritma</span>
+<span class="n">clustering_results</span> <span class="o">=</span> <span class="n">perform_clustering</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">n_clusters</span><span class="o">=</span><span class="n">optimal_k</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running KMeans clustering...
+Running Hierarchical clustering...
+Running DBSCAN clustering...
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Evaluasi Clustering</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">evaluate_clustering</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">clustering_results</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Evaluasi hasil clustering&quot;&quot;&quot;</span>
+
+    <span class="n">evaluation</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">X_dense</span> <span class="o">=</span> <span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">method</span><span class="p">,</span> <span class="n">labels</span> <span class="ow">in</span> <span class="n">clustering_results</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="c1"># Skip evaluation if only one cluster or too many noise points</span>
+        <span class="n">unique_labels</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+        <span class="n">n_clusters</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_labels</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span> <span class="k">if</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">in</span> <span class="n">labels</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">n_clusters</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_labels</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">silhouette</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+                <span class="n">calinski</span> <span class="o">=</span> <span class="n">calinski_harabasz_score</span><span class="p">(</span><span class="n">X_dense</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">silhouette</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+                <span class="n">calinski</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">silhouette</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">calinski</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+        <span class="c1"># Count cluster distribution</span>
+        <span class="n">cluster_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+
+        <span class="n">evaluation</span><span class="p">[</span><span class="n">method</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;silhouette_score&#39;</span><span class="p">:</span> <span class="n">silhouette</span><span class="p">,</span>
+            <span class="s1">&#39;calinski_harabasz_score&#39;</span><span class="p">:</span> <span class="n">calinski</span><span class="p">,</span>
+            <span class="s1">&#39;n_clusters&#39;</span><span class="p">:</span> <span class="n">n_clusters</span><span class="p">,</span>
+            <span class="s1">&#39;cluster_distribution&#39;</span><span class="p">:</span> <span class="n">cluster_counts</span>
+        <span class="p">}</span>
+
+    <span class="c1"># Print evaluation results</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== CLUSTERING EVALUATION ===&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">method</span><span class="p">,</span> <span class="n">metrics</span> <span class="ow">in</span> <span class="n">evaluation</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Silhouette Score: </span><span class="si">{</span><span class="n">metrics</span><span class="p">[</span><span class="s1">&#39;silhouette_score&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Calinski-Harabasz Score: </span><span class="si">{</span><span class="n">metrics</span><span class="p">[</span><span class="s1">&#39;calinski_harabasz_score&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Number of Clusters: </span><span class="si">{</span><span class="n">metrics</span><span class="p">[</span><span class="s1">&#39;n_clusters&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Cluster Distribution: </span><span class="si">{</span><span class="nb">dict</span><span class="p">(</span><span class="n">metrics</span><span class="p">[</span><span class="s1">&#39;cluster_distribution&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">evaluation</span>
+
+<span class="c1"># Evaluasi clustering</span>
+<span class="n">evaluation_results</span> <span class="o">=</span> <span class="n">evaluate_clustering</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">clustering_results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== CLUSTERING EVALUATION ===
+
+KMeans:
+  Silhouette Score: 0.031
+  Calinski-Harabasz Score: 36.797
+  Number of Clusters: 10
+  Cluster Distribution: {2: 3535, 0: 199, 3: 585, 9: 165, 5: 159, 6: 193, 1: 218, 7: 138, 8: 202, 4: 178}
+
+Hierarchical:
+  Silhouette Score: 0.011
+  Calinski-Harabasz Score: 26.422
+  Number of Clusters: 10
+  Cluster Distribution: {2: 3970, 1: 756, 6: 107, 8: 58, 3: 383, 9: 156, 5: 41, 0: 38, 4: 45, 7: 18}
+
+DBSCAN:
+  Silhouette Score: 0.036
+  Calinski-Harabasz Score: 3.774
+  Number of Clusters: 489
+  Cluster Distribution: {-1: 3930, 0: 2, 1: 2, 2: 5, 3: 2, 4: 2, 5: 2, 6: 2, 7: 3, 8: 4, 9: 8, 10: 3, 11: 5, 12: 3, 13: 39, 14: 10, 15: 3, 16: 3, 17: 2, 18: 2, 19: 5, 20: 194, 21: 2, 22: 3, 23: 2, 24: 2, 25: 10, 26: 2, 27: 5, 28: 3, 29: 4, 30: 3, 31: 4, 32: 3, 33: 8, 34: 4, 35: 2, 36: 5, 37: 2, 38: 2, 39: 3, 40: 5, 41: 2, 42: 6, 43: 3, 44: 2, 45: 2, 46: 4, 47: 3, 48: 11, 49: 2, 50: 29, 51: 2, 52: 2, 53: 2, 54: 2, 55: 3, 56: 2, 57: 2, 58: 3, 59: 8, 60: 3, 61: 3, 62: 2, 63: 4, 64: 3, 65: 8, 66: 2, 67: 4, 68: 7, 69: 2, 70: 4, 71: 3, 72: 2, 73: 7, 74: 2, 75: 6, 76: 2, 77: 12, 78: 3, 79: 3, 80: 4, 81: 2, 82: 2, 83: 3, 84: 14, 85: 2, 86: 2, 87: 3, 88: 2, 89: 2, 90: 3, 91: 3, 92: 4, 93: 2, 94: 2, 95: 3, 96: 6, 97: 4, 98: 3, 99: 2, 100: 2, 101: 2, 102: 4, 103: 2, 104: 8, 105: 3, 106: 3, 107: 2, 108: 2, 109: 3, 110: 3, 111: 2, 112: 4, 113: 5, 114: 3, 115: 2, 116: 4, 117: 3, 118: 4, 119: 2, 120: 4, 121: 2, 122: 2, 123: 12, 124: 3, 125: 3, 126: 3, 127: 7, 128: 3, 129: 2, 130: 3, 131: 2, 132: 4, 133: 2, 134: 2, 135: 3, 136: 4, 137: 2, 138: 2, 139: 2, 140: 2, 141: 2, 142: 2, 143: 4, 144: 2, 145: 2, 146: 3, 147: 2, 148: 2, 149: 3, 150: 2, 151: 4, 152: 2, 153: 5, 154: 2, 155: 2, 156: 2, 157: 3, 158: 3, 159: 4, 160: 2, 161: 2, 162: 2, 163: 2, 164: 3, 165: 3, 166: 2, 167: 3, 168: 2, 169: 4, 170: 7, 171: 2, 172: 3, 173: 3, 174: 4, 175: 3, 176: 3, 177: 2, 178: 3, 179: 3, 180: 2, 181: 10, 182: 2, 183: 3, 184: 2, 185: 2, 186: 2, 187: 2, 188: 3, 189: 2, 190: 3, 191: 5, 192: 2, 193: 4, 194: 2, 195: 7, 196: 2, 197: 7, 198: 2, 199: 2, 200: 2, 201: 3, 202: 2, 203: 2, 204: 3, 205: 2, 206: 4, 207: 4, 208: 2, 209: 2, 210: 2, 211: 2, 212: 2, 213: 2, 214: 5, 215: 2, 216: 2, 217: 3, 218: 3, 219: 3, 220: 2, 221: 2, 222: 5, 223: 2, 224: 2, 225: 6, 226: 5, 227: 3, 228: 3, 229: 2, 230: 3, 231: 4, 232: 2, 233: 2, 234: 2, 235: 4, 236: 3, 237: 2, 238: 3, 239: 2, 240: 2, 241: 2, 242: 4, 243: 7, 244: 2, 245: 2, 246: 4, 247: 2, 248: 2, 249: 3, 250: 3, 251: 2, 252: 2, 253: 2, 254: 5, 255: 3, 256: 2, 257: 2, 258: 7, 259: 3, 260: 2, 261: 2, 262: 3, 263: 2, 264: 2, 265: 2, 266: 3, 267: 3, 268: 5, 269: 6, 270: 2, 271: 2, 272: 3, 273: 5, 274: 4, 275: 2, 276: 4, 277: 2, 278: 2, 279: 3, 280: 3, 281: 4, 282: 2, 283: 2, 284: 2, 285: 2, 286: 4, 287: 2, 288: 3, 289: 2, 290: 4, 291: 2, 292: 2, 293: 2, 294: 2, 295: 2, 296: 2, 297: 2, 298: 2, 299: 2, 300: 2, 301: 2, 302: 2, 303: 3, 304: 2, 305: 2, 306: 2, 307: 2, 308: 2, 309: 6, 310: 3, 311: 2, 312: 2, 313: 2, 314: 2, 315: 3, 316: 3, 317: 2, 318: 2, 319: 3, 320: 2, 321: 2, 322: 3, 323: 5, 324: 4, 325: 3, 326: 3, 327: 2, 328: 2, 329: 2, 330: 2, 331: 6, 332: 2, 333: 3, 334: 3, 335: 2, 336: 2, 337: 3, 338: 2, 339: 2, 340: 2, 341: 2, 342: 2, 343: 2, 344: 2, 345: 6, 346: 2, 347: 2, 348: 2, 349: 2, 350: 4, 351: 2, 352: 3, 353: 2, 354: 2, 355: 2, 356: 2, 357: 2, 358: 2, 359: 4, 360: 2, 361: 2, 362: 3, 363: 7, 364: 2, 365: 3, 366: 2, 367: 2, 368: 2, 369: 2, 370: 2, 371: 2, 372: 2, 373: 2, 374: 2, 375: 2, 376: 3, 377: 2, 378: 2, 379: 2, 380: 2, 381: 3, 382: 3, 383: 3, 384: 2, 385: 2, 386: 3, 387: 2, 388: 4, 389: 2, 390: 3, 391: 2, 392: 2, 393: 2, 394: 2, 395: 2, 396: 2, 397: 2, 398: 2, 399: 4, 400: 2, 401: 2, 402: 2, 403: 3, 404: 2, 405: 2, 406: 2, 407: 2, 408: 2, 409: 2, 410: 2, 411: 2, 412: 2, 413: 2, 414: 3, 415: 2, 416: 2, 417: 3, 418: 2, 419: 2, 420: 3, 421: 3, 422: 2, 423: 2, 424: 3, 425: 2, 426: 2, 427: 2, 428: 5, 429: 2, 430: 3, 431: 4, 432: 2, 433: 2, 434: 2, 435: 2, 436: 2, 437: 2, 438: 2, 439: 3, 440: 2, 441: 2, 442: 2, 443: 2, 444: 2, 445: 2, 446: 2, 447: 2, 448: 2, 449: 2, 450: 2, 451: 2, 452: 2, 453: 2, 454: 2, 455: 2, 456: 2, 457: 2, 458: 2, 459: 2, 460: 2, 461: 2, 462: 2, 463: 2, 464: 2, 465: 2, 466: 2, 467: 2, 468: 2, 469: 2, 470: 2, 471: 2, 472: 2, 473: 2, 474: 2, 475: 2, 476: 2, 477: 2, 478: 2, 479: 2, 480: 2, 481: 2, 482: 2, 483: 2, 484: 2, 485: 2, 486: 2, 487: 2, 488: 2}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualisasi-hasil-clustering">
+<h3>7. Visualisasi hasil clustering<a class="headerlink" href="#visualisasi-hasil-clustering" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">visualize_clusters</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">clustering_results</span><span class="p">,</span> <span class="n">emails</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Visualisasi hasil clustering dengan PCA&quot;&quot;&quot;</span>
+
+    <span class="c1"># Reduce dimensions untuk visualisasi</span>
+    <span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+    <span class="n">X_pca</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+
+    <span class="c1"># Plot untuk setiap metode clustering</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+    <span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+
+    <span class="n">methods</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">clustering_results</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">method</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">methods</span><span class="p">):</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="n">clustering_results</span><span class="p">[</span><span class="n">method</span><span class="p">]</span>
+
+        <span class="n">scatter</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_pca</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X_pca</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span>
+                                 <span class="n">c</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s1"> Clustering</span><span class="se">\n</span><span class="s1">(Silhouette: </span><span class="si">{</span><span class="n">evaluation_results</span><span class="p">[</span><span class="n">method</span><span class="p">][</span><span class="s2">&quot;silhouette_score&quot;</span><span class="p">]</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;PCA Component 1&#39;</span><span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;PCA Component 2&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+    <span class="c1"># Hide unused subplots</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">methods</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">axes</span><span class="p">)):</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">X_pca</span>
+
+<span class="c1"># Visualisasi hasil</span>
+<span class="n">X_pca</span> <span class="o">=</span> <span class="n">visualize_clusters</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">clustering_results</span><span class="p">,</span> <span class="n">emails</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/7b0a2ca6715edca156407303db7434268f31591179da9e7d1d73e203f23ac214.png" src="_images/7b0a2ca6715edca156407303db7434268f31591179da9e7d1d73e203f23ac214.png" />
+</div>
+</div>
+</section>
+<section id="analisis-cluster-dengan-kmeans">
+<h3>8. Analisis Cluster dengan KMeans<a class="headerlink" href="#analisis-cluster-dengan-kmeans" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">analyze_clusters_kmeans</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">vectorizer</span><span class="p">,</span> <span class="n">emails</span><span class="p">,</span> <span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Analisis mendalam cluster menggunakan KMeans&quot;&quot;&quot;</span>
+
+    <span class="c1"># Fit KMeans</span>
+    <span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">n_clusters</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">kmeans_labels</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">)</span>
+
+    <span class="c1"># Get feature names</span>
+    <span class="n">feature_names</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== ANALISIS CLUSTER KMEANS ===&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Analisis setiap cluster</span>
+    <span class="k">for</span> <span class="n">cluster_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_clusters</span><span class="p">):</span>
+        <span class="c1"># Get indices of documents in this cluster</span>
+        <span class="n">cluster_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">kmeans_labels</span> <span class="o">==</span> <span class="n">cluster_id</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📊 CLUSTER </span><span class="si">{</span><span class="n">cluster_id</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Jumlah dokumen: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">cluster_indices</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Persentase: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">cluster_indices</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">emails</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Get top terms for this cluster</span>
+        <span class="n">cluster_tfidf</span> <span class="o">=</span> <span class="n">tfidf_matrix</span><span class="p">[</span><span class="n">cluster_indices</span><span class="p">]</span>
+        <span class="n">cluster_tfidf_sum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">cluster_tfidf</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+        <span class="n">top_term_indices</span> <span class="o">=</span> <span class="n">cluster_tfidf_sum</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[</span><span class="o">-</span><span class="mi">10</span><span class="p">:][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">top_terms</span> <span class="o">=</span> <span class="p">[</span><span class="n">feature_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">top_term_indices</span><span class="p">]</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Top 10 Terms: </span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">top_terms</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Show sample documents</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Sample Documents:&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cluster_indices</span><span class="p">[:</span><span class="mi">3</span><span class="p">]):</span>  <span class="c1"># Show first 3 documents</span>
+            <span class="n">sample_text</span> <span class="o">=</span> <span class="n">emails</span><span class="p">[</span><span class="n">idx</span><span class="p">][:</span><span class="mi">100</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;...&quot;</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">emails</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">100</span> <span class="k">else</span> <span class="n">emails</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;     </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">sample_text</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">kmeans_labels</span>
+
+<span class="c1"># Analisis cluster dengan KMeans</span>
+<span class="n">kmeans_labels</span> <span class="o">=</span> <span class="n">analyze_clusters_kmeans</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">vectorizer</span><span class="p">,</span> <span class="n">emails</span><span class="p">,</span> <span class="n">n_clusters</span><span class="o">=</span><span class="n">optimal_k</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== ANALISIS CLUSTER KMEANS ===
+
+📊 CLUSTER 0:
+   Jumlah dokumen: 199
+   Persentase: 3.6%
+   Top 10 Terms: ok, ok lor, lor, thanx, ur, leave, said, yup, time, ask
+   Sample Documents:
+     1. ok lar... joking wif u oni...
+     2. yup... ok i go home look at the timings then i msg ì_ again... xuhui going to learn on nd may too bu...
+     3. ok i am on the way to home hi hi
+
+📊 CLUSTER 1:
+   Jumlah dokumen: 218
+   Persentase: 3.9%
+   Top 10 Terms: gt, lt, lt gt, gt min, lt decimal, decimal gt, decimal, like lt, like, ll
+   Sample Documents:
+     1. great! i hope you like your man well endowed. i am lt gt inches...
+     2. a gram usually runs like lt gt a half eighth is smarter though and gets you almost a whole second gr...
+     3. do you know what mallika sherawat did yesterday? find out now lt url gt
+
+📊 CLUSTER 2:
+   Jumlah dokumen: 3535
+   Persentase: 63.4%
+   Top 10 Terms: just, got, going, good, da, time, home, lor, want, day
+   Sample Documents:
+     1. go until jurong point crazy.. available only in bugis n great world la e buffet... cine there got am...
+     2. u dun say so early hor... u c already then say...
+     3. nah i don t think he goes to usf he lives around here though
+
+📊 CLUSTER 3:
+   Jumlah dokumen: 585
+   Persentase: 10.5%
+   Top 10 Terms: ur, free, text, txt, send, stop, reply, mobile, www, nokia
+   Sample Documents:
+     1. free entry in a wkly comp to win fa cup final tkts st may . text fa to to receive entry question std...
+     2. had your mobile months or more? u r entitled to update to the latest colour mobiles with camera for ...
+     3. six chances to win cash! from to pounds txt csh and send to . cost p day days tsandcs apply reply hl...
+
+📊 CLUSTER 4:
+   Jumlah dokumen: 178
+   Persentase: 3.2%
+   Top 10 Terms: come, home, want come, tomorrow, come tomorrow, time, want, ì_, come home, ok
+   Sample Documents:
+     1. sorry my roommates took forever it ok if i come by now?
+     2. ela kano. il download come wen ur free..
+     3. why you dint come with us.
+
+📊 CLUSTER 5:
+   Jumlah dokumen: 159
+   Persentase: 2.9%
+   Top 10 Terms: love, babe, day, amp, hope, good, miss, goes, life, ya
+   Sample Documents:
+     1. did you catch the bus ? are you frying an egg ? did you make a tea? are you eating your mom s left o...
+     2. did i forget to tell you ? i want you i need you i crave you ... but most of all ... i love you my s...
+     3. umma my life and vava umma love you lot dear
+
+📊 CLUSTER 6:
+   Jumlah dokumen: 193
+   Persentase: 3.5%
+   Top 10 Terms: know, let know, let, don know, don, dont know, dont, need, want, ll
+   Sample Documents:
+     1. i m back amp we re packing the car now i ll let you know if there s room
+     2. oops i ll let you know when my roommate s done
+     3. u don t know how stubborn i am. i didn t even want to go to the hospital. i kept telling mark i m no...
+
+📊 CLUSTER 7:
+   Jumlah dokumen: 138
+   Persentase: 2.5%
+   Top 10 Terms: hey, morning, good morning, good, day, meet, great, tmr, going, sat
+   Sample Documents:
+     1. k fyi x has a ride early tomorrow morning but he s crashing at our place tonight
+     2. hey girl. how r u? hope u r well me an del r bak! again long time no c! give me a call sum time from...
+     3. is your hamster dead? hey so tmr i meet you at pm orchard mrt?
+
+📊 CLUSTER 8:
+   Jumlah dokumen: 202
+   Persentase: 3.6%
+   Top 10 Terms: ll, sorry, later, ll later, sorry ll, meeting, yeah, aight, text, just
+   Sample Documents:
+     1. wow. i never realized that you were so embarassed by your accomodations. i thought you liked it sinc...
+     2. sorry i ll call later in meeting.
+     3. sorry i ll call later
+
+📊 CLUSTER 9:
+   Jumlah dokumen: 165
+   Persentase: 3.0%
+   Top 10 Terms: like, just, feel like, dat, feel, think, dun, know, sounds, ok
+   Sample Documents:
+     1. freemsg hey there darling it s been week s now and no word back! i d like some fun you up for it sti...
+     2. even my brother is not like to speak with me. they treat me like aids patent.
+     3. ahhh. work. i vaguely remember that! what does it feel like? lol
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="interpretasi-cluster">
+<h3>9. Interpretasi Cluster<a class="headerlink" href="#interpretasi-cluster" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">interpret_clusters</span><span class="p">(</span><span class="n">kmeans_labels</span><span class="p">,</span> <span class="n">emails</span><span class="p">,</span> <span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">vectorizer</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Interpretasi dan penamaan cluster berdasarkan konten&quot;&quot;&quot;</span>
+
+    <span class="n">feature_names</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+    <span class="n">n_clusters</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">kmeans_labels</span><span class="p">))</span>
+
+    <span class="n">cluster_interpretation</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== INTERPRETASI CLUSTER ===&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">cluster_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_clusters</span><span class="p">):</span>
+        <span class="n">cluster_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">kmeans_labels</span> <span class="o">==</span> <span class="n">cluster_id</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1"># Analyze content</span>
+        <span class="n">cluster_docs</span> <span class="o">=</span> <span class="p">[</span><span class="n">emails</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">cluster_indices</span><span class="p">]</span>
+        <span class="n">cluster_tfidf</span> <span class="o">=</span> <span class="n">tfidf_matrix</span><span class="p">[</span><span class="n">cluster_indices</span><span class="p">]</span>
+
+        <span class="c1"># Get distinctive terms</span>
+        <span class="n">cluster_tfidf_sum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">cluster_tfidf</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+        <span class="n">overall_tfidf_sum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+        <span class="c1"># Calculate term distinctiveness (TF-IDF ratio)</span>
+        <span class="n">term_ratio</span> <span class="o">=</span> <span class="n">cluster_tfidf_sum</span> <span class="o">/</span> <span class="p">(</span><span class="n">overall_tfidf_sum</span> <span class="o">+</span> <span class="mf">1e-6</span><span class="p">)</span>
+        <span class="n">distinctive_terms_indices</span> <span class="o">=</span> <span class="n">term_ratio</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[</span><span class="o">-</span><span class="mi">8</span><span class="p">:][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">distinctive_terms</span> <span class="o">=</span> <span class="p">[</span><span class="n">feature_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">distinctive_terms_indices</span><span class="p">]</span>
+
+        <span class="c1"># Determine cluster type based on terms and content</span>
+        <span class="n">cluster_terms_str</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cluster_docs</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+        <span class="c1"># Simple rule-based classification</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">term</span> <span class="ow">in</span> <span class="n">cluster_terms_str</span> <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;free&#39;</span><span class="p">,</span> <span class="s1">&#39;win&#39;</span><span class="p">,</span> <span class="s1">&#39;prize&#39;</span><span class="p">,</span> <span class="s1">&#39;cash&#39;</span><span class="p">,</span> <span class="s1">&#39;reward&#39;</span><span class="p">]):</span>
+            <span class="n">cluster_type</span> <span class="o">=</span> <span class="s2">&quot;Promotional/Spam&quot;</span>
+        <span class="k">elif</span> <span class="nb">any</span><span class="p">(</span><span class="n">term</span> <span class="ow">in</span> <span class="n">cluster_terms_str</span> <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;call&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="s1">&#39;mobile&#39;</span><span class="p">]):</span>
+            <span class="n">cluster_type</span> <span class="o">=</span> <span class="s2">&quot;Communication&quot;</span>
+        <span class="k">elif</span> <span class="nb">any</span><span class="p">(</span><span class="n">term</span> <span class="ow">in</span> <span class="n">cluster_terms_str</span> <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;love&#39;</span><span class="p">,</span> <span class="s1">&#39;miss&#39;</span><span class="p">,</span> <span class="s1">&#39;dear&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">]):</span>
+            <span class="n">cluster_type</span> <span class="o">=</span> <span class="s2">&quot;Personal/Relationship&quot;</span>
+        <span class="k">elif</span> <span class="nb">any</span><span class="p">(</span><span class="n">term</span> <span class="ow">in</span> <span class="n">cluster_terms_str</span> <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;sorry&#39;</span><span class="p">]):</span>
+            <span class="n">cluster_type</span> <span class="o">=</span> <span class="s2">&quot;Casual Conversation&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cluster_type</span> <span class="o">=</span> <span class="s2">&quot;General/Miscellaneous&quot;</span>
+
+        <span class="n">cluster_interpretation</span><span class="p">[</span><span class="n">cluster_id</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="n">cluster_type</span><span class="p">,</span>
+            <span class="s1">&#39;distinctive_terms&#39;</span><span class="p">:</span> <span class="n">distinctive_terms</span><span class="p">,</span>
+            <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">cluster_indices</span><span class="p">),</span>
+            <span class="s1">&#39;sample_docs&#39;</span><span class="p">:</span> <span class="n">cluster_docs</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># First 2 documents as samples</span>
+        <span class="p">}</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🎯 Cluster </span><span class="si">{</span><span class="n">cluster_id</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">cluster_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Distinctive Terms: </span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">distinctive_terms</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Size: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">cluster_indices</span><span class="p">)</span><span class="si">}</span><span class="s2"> documents&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">cluster_interpretation</span>
+
+<span class="c1"># Interpretasi cluster</span>
+<span class="n">cluster_interpretation</span> <span class="o">=</span> <span class="n">interpret_clusters</span><span class="p">(</span><span class="n">kmeans_labels</span><span class="p">,</span> <span class="n">emails</span><span class="p">,</span> <span class="n">tfidf_matrix</span><span class="p">,</span> <span class="n">vectorizer</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== INTERPRETASI CLUSTER ===
+
+🎯 Cluster 0: Promotional/Spam
+   Distinctive Terms: ok lor, ok, prob, thanx, treat, askd, todays, lor
+   Size: 199 documents
+
+🎯 Cluster 1: Promotional/Spam
+   Distinctive Terms: gt min, gt lt, lt gt, like lt, lt, gt, lt decimal, decimal gt
+   Size: 218 documents
+
+🎯 Cluster 2: Promotional/Spam
+   Distinctive Terms: okie, sunday, gotta, sae, wasn, wana, await collection, prize claim
+   Size: 3535 documents
+
+🎯 Cluster 3: Promotional/Spam
+   Distinctive Terms: vouchers, txt word, free text, txt stop, free entry, txts, right pls, phone right
+   Size: 585 documents
+
+🎯 Cluster 4: Promotional/Spam
+   Distinctive Terms: come tomorrow, want come, come, come home, search, gal, il, dreams
+   Size: 178 documents
+
+🎯 Cluster 5: Promotional/Spam
+   Distinctive Terms: goes day, love, good afternoon, goes, sea, crave, clean, wonder
+   Size: 159 documents
+
+🎯 Cluster 6: Promotional/Spam
+   Distinctive Terms: dont know, don know, let know, know, dating service, dating, let, sunshine
+   Size: 193 documents
+
+🎯 Cluster 7: Promotional/Spam
+   Distinctive Terms: good morning, hey, morning, blue, gave, leaves, gud mrng, mrng
+   Size: 138 documents
+
+🎯 Cluster 8: Promotional/Spam
+   Distinctive Terms: ll later, sorry ll, ll text, ll, sorry, later, mrt, aight
+   Size: 202 documents
+
+🎯 Cluster 9: Promotional/Spam
+   Distinctive Terms: feel like, like, fr, sounds, dat, eyes, information, asking
+   Size: 165 documents
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualisasi-akhir-dengan-interpretasi">
+<h3>10. Visualisasi Akhir dengan Interpretasi<a class="headerlink" href="#visualisasi-akhir-dengan-interpretasi" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">final_visualization</span><span class="p">(</span><span class="n">X_pca</span><span class="p">,</span> <span class="n">kmeans_labels</span><span class="p">,</span> <span class="n">cluster_interpretation</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Visualisasi akhir dengan interpretasi cluster&quot;&quot;&quot;</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+    <span class="c1"># Create color map based on cluster types</span>
+    <span class="n">cluster_types</span> <span class="o">=</span> <span class="p">[</span><span class="n">cluster_interpretation</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cluster_interpretation</span><span class="p">))]</span>
+    <span class="n">unique_types</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">cluster_types</span><span class="p">))</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Set3</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_types</span><span class="p">)))</span>
+
+    <span class="n">color_map</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cluster_type</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">unique_types</span><span class="p">):</span>
+        <span class="n">color_map</span><span class="p">[</span><span class="n">cluster_type</span><span class="p">]</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="c1"># Plot each cluster with its interpretation</span>
+    <span class="k">for</span> <span class="n">cluster_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cluster_interpretation</span><span class="p">)):</span>
+        <span class="n">cluster_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">kmeans_labels</span> <span class="o">==</span> <span class="n">cluster_id</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">cluster_type</span> <span class="o">=</span> <span class="n">cluster_interpretation</span><span class="p">[</span><span class="n">cluster_id</span><span class="p">][</span><span class="s1">&#39;type&#39;</span><span class="p">]</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_pca</span><span class="p">[</span><span class="n">cluster_indices</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X_pca</span><span class="p">[</span><span class="n">cluster_indices</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+                   <span class="n">c</span><span class="o">=</span><span class="p">[</span><span class="n">color_map</span><span class="p">[</span><span class="n">cluster_type</span><span class="p">]],</span>
+                   <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Cluster </span><span class="si">{</span><span class="n">cluster_id</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">cluster_type</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                   <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;PCA Component 1&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;PCA Component 2&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Email Clustering Results with Interpretation</span><span class="se">\n</span><span class="s1">(TF-IDF Features + KMeans)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Visualisasi akhir</span>
+<span class="n">final_visualization</span><span class="p">(</span><span class="n">X_pca</span><span class="p">,</span> <span class="n">kmeans_labels</span><span class="p">,</span> <span class="n">cluster_interpretation</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/fb5558d12a419360d77db327c98c3be8ddac08e66b54dfa16d8227944b842605.png" src="_images/fb5558d12a419360d77db327c98c3be8ddac08e66b54dfa16d8227944b842605.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="topikModeling.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Load Data dati yang sudah di preprocessing sebelumnya</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uts-ppw">UTS PPW</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nama-wahyu-rohmatul-abidin">Nama : Wahyu Rohmatul Abidin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nim-220411100198">Nim  : 220411100198</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-1">Tugas 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-yang-diperlukan">1. Import Library yang Diperlukan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-dan-eksplorasi-data">2. Load dan Eksplorasi Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data">3.Preprocessing Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#persiapan-untuk-training">4. Persiapan Untuk training</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ekstraksi-fitur-dengan-lda">5. Ekstraksi Fitur dengan LDA</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#training-dengan-naive-bayes">6. Training dengan naive bayes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#training-dengan-svm">7. Training dengan SVM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model">8. Evaluasi Model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-2">Tugas 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1. Preprocessing data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eksplorasi-data">2. Eksplorasi Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ekstraksi-fitur-dengan-tf-idf">3. Ekstraksi Fitur dengan TF-IDF</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-jumlah-cluster-optimal">4. Menentukan Jumlah Cluster Optimal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clustering-dengan-beberapa-algoritma">5. Clustering dengan beberapa algoritma</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-hasil-clustering">7. Visualisasi hasil clustering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-cluster-dengan-kmeans">8. Analisis Cluster dengan KMeans</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretasi-cluster">9. Interpretasi Cluster</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-akhir-dengan-interpretasi">10. Visualisasi Akhir dengan Interpretasi</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

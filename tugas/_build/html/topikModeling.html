@@ -60,6 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'topikModeling';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ldaklasifikasiAndClusteringUTS" href="ldaklasifikasiAndClusteringUTS.html" />
     <link rel="prev" title="preProcessingAbstrakIDN" href="preProcessingAbstrakIDN.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -190,6 +191,7 @@
 
 
 
+<li class="toctree-l1"><a class="reference internal" href="ldaklasifikasiAndClusteringUTS.html">ldaklasifikasiAndClusteringUTS</a></li>
 </ul>
 
     </div>
@@ -416,11 +418,99 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: gensim in /usr/local/lib/python3.12/dist-packages (4.3.3)
-Requirement already satisfied: numpy&lt;2.0,&gt;=1.18.5 in /usr/local/lib/python3.12/dist-packages (from gensim) (1.26.4)
-Requirement already satisfied: scipy&lt;1.14.0,&gt;=1.7.0 in /usr/local/lib/python3.12/dist-packages (from gensim) (1.13.1)
-Requirement already satisfied: smart-open&gt;=1.8.1 in /usr/local/lib/python3.12/dist-packages (from gensim) (7.3.1)
-Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages (from smart-open&gt;=1.8.1-&gt;gensim) (1.17.3)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting gensim
+  Downloading gensim-4.3.3.tar.gz (23.3 MB)
+     ---------------------------------------- 0.0/23.3 MB ? eta -:--:--
+      --------------------------------------- 0.5/23.3 MB 4.1 MB/s eta 0:00:06
+     --- ------------------------------------ 1.8/23.3 MB 5.2 MB/s eta 0:00:05
+     ---- ----------------------------------- 2.6/23.3 MB 4.5 MB/s eta 0:00:05
+     ------ --------------------------------- 3.7/23.3 MB 4.7 MB/s eta 0:00:05
+     -------- ------------------------------- 4.7/23.3 MB 4.8 MB/s eta 0:00:04
+     --------- ------------------------------ 5.5/23.3 MB 4.9 MB/s eta 0:00:04
+     ----------- ---------------------------- 6.6/23.3 MB 4.6 MB/s eta 0:00:04
+     ------------ --------------------------- 7.3/23.3 MB 4.6 MB/s eta 0:00:04
+     ------------- -------------------------- 8.1/23.3 MB 4.5 MB/s eta 0:00:04
+     --------------- ------------------------ 8.9/23.3 MB 4.4 MB/s eta 0:00:04
+     ---------------- ----------------------- 9.7/23.3 MB 4.3 MB/s eta 0:00:04
+     ------------------ --------------------- 10.5/23.3 MB 4.3 MB/s eta 0:00:03
+     ------------------ --------------------- 11.0/23.3 MB 4.2 MB/s eta 0:00:03
+     -------------------- ------------------- 12.1/23.3 MB 4.2 MB/s eta 0:00:03
+     ---------------------- ----------------- 12.8/23.3 MB 4.2 MB/s eta 0:00:03
+     ----------------------- ---------------- 13.6/23.3 MB 4.1 MB/s eta 0:00:03
+     ------------------------- -------------- 14.7/23.3 MB 4.2 MB/s eta 0:00:03
+     -------------------------- ------------- 15.2/23.3 MB 4.1 MB/s eta 0:00:02
+     --------------------------- ------------ 16.0/23.3 MB 4.1 MB/s eta 0:00:02
+     ---------------------------- ----------- 16.5/23.3 MB 4.0 MB/s eta 0:00:02
+     ---------------------------- ----------- 16.8/23.3 MB 4.0 MB/s eta 0:00:02
+     ----------------------------- ---------- 17.3/23.3 MB 3.8 MB/s eta 0:00:02
+     ------------------------------ --------- 17.6/23.3 MB 3.7 MB/s eta 0:00:02
+     ------------------------------ --------- 17.8/23.3 MB 3.6 MB/s eta 0:00:02
+     ------------------------------- -------- 18.1/23.3 MB 3.5 MB/s eta 0:00:02
+     -------------------------------- ------- 18.9/23.3 MB 3.5 MB/s eta 0:00:02
+     --------------------------------- ------ 19.4/23.3 MB 3.4 MB/s eta 0:00:02
+     ---------------------------------- ----- 19.9/23.3 MB 3.4 MB/s eta 0:00:01
+     ----------------------------------- ---- 20.7/23.3 MB 3.4 MB/s eta 0:00:01
+     ------------------------------------- -- 21.8/23.3 MB 3.4 MB/s eta 0:00:01
+     ---------------------------------------  22.8/23.3 MB 3.5 MB/s eta 0:00:01
+     ---------------------------------------- 23.3/23.3 MB 3.5 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status &#39;done&#39;
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status &#39;done&#39;
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status &#39;done&#39;
+Collecting numpy&lt;2.0,&gt;=1.18.5 (from gensim)
+  Downloading numpy-1.26.4.tar.gz (15.8 MB)
+     ---------------------------------------- 0.0/15.8 MB ? eta -:--:--
+     - -------------------------------------- 0.5/15.8 MB 2.4 MB/s eta 0:00:07
+     -- ------------------------------------- 1.0/15.8 MB 2.6 MB/s eta 0:00:06
+     ----- ---------------------------------- 2.1/15.8 MB 3.5 MB/s eta 0:00:04
+     --------- ------------------------------ 3.9/15.8 MB 5.2 MB/s eta 0:00:03
+     ----------------- ---------------------- 7.1/15.8 MB 7.2 MB/s eta 0:00:02
+     ------------------------- -------------- 10.0/15.8 MB 8.4 MB/s eta 0:00:01
+     ---------------------------------- ----- 13.6/15.8 MB 9.8 MB/s eta 0:00:01
+     --------------------------------------- 15.8/15.8 MB 10.0 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status &#39;done&#39;
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status &#39;done&#39;
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status &#39;done&#39;
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status &#39;error&#39;
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  error: subprocess-exited-with-error
+  
+  × Preparing metadata (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─&gt; [13 lines of output]
+      + c:\Users\wahyu\AppData\Local\Programs\Python\Python313\python.exe C:\Users\wahyu\AppData\Local\Temp\pip-install-1jvtrrtg\numpy_2e0cdeb1ea1e4c90aa946ec73d8d50c7\vendored-meson\meson\meson.py setup C:\Users\wahyu\AppData\Local\Temp\pip-install-1jvtrrtg\numpy_2e0cdeb1ea1e4c90aa946ec73d8d50c7 C:\Users\wahyu\AppData\Local\Temp\pip-install-1jvtrrtg\numpy_2e0cdeb1ea1e4c90aa946ec73d8d50c7\.mesonpy-hmh152g5 -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md --native-file=C:\Users\wahyu\AppData\Local\Temp\pip-install-1jvtrrtg\numpy_2e0cdeb1ea1e4c90aa946ec73d8d50c7\.mesonpy-hmh152g5\meson-python-native-file.ini
+      The Meson build system
+      Version: 1.2.99
+      Source dir: C:\Users\wahyu\AppData\Local\Temp\pip-install-1jvtrrtg\numpy_2e0cdeb1ea1e4c90aa946ec73d8d50c7
+      Build dir: C:\Users\wahyu\AppData\Local\Temp\pip-install-1jvtrrtg\numpy_2e0cdeb1ea1e4c90aa946ec73d8d50c7\.mesonpy-hmh152g5
+      Build type: native build
+      Project name: NumPy
+      Project version: 1.26.4
+      Activating VS 17.13.0
+      
+      ..\meson.build:1:0: ERROR: Compiler cl cannot compile programs.
+      
+      A full log can be found at C:\Users\wahyu\AppData\Local\Temp\pip-install-1jvtrrtg\numpy_2e0cdeb1ea1e4c90aa946ec73d8d50c7\.mesonpy-hmh152g5\meson-logs\meson-log.txt
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+
+[notice] A new release of pip is available: 24.3.1 -&gt; 25.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─&gt; See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
 </pre></div>
 </div>
 </div>
@@ -713,6 +803,15 @@ Words: 0.000*&quot;immaterill&quot; + 0.000*&quot;bpk&quot; + 0.000*&quot;juurus
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">preProcessingAbstrakIDN</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="ldaklasifikasiAndClusteringUTS.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">ldaklasifikasiAndClusteringUTS</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
