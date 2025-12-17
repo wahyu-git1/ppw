@@ -1,0 +1,1579 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>keywordExtraction &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'keywordExtraction_uas';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="ldaklasifikasiAndClusteringUTS" href="ldaklasifikasiAndClusteringUTS.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pengantar.html">pengantar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawling.html">crawling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_1_crawlingPTAUTM.html">02_1_crawlingPTAUTM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_2_crawlingBerita.html">02_1_crawlingPTAUTM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_3_itb_link_mapping.html">02_3_itb_link_mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preProcessingAbstrakIDN.html">preProcessingAbstrakIDN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topikModeling.html">Load Data dati yang sudah di preprocessing sebelumnya</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="ldaklasifikasiAndClusteringUTS.html">ldaklasifikasiAndClusteringUTS</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">keywordExtraction</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FkeywordExtraction_uas.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/keywordExtraction_uas.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>keywordExtraction</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">1. Load data </a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning-lanjutan">Cleaning lanjutan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#speechecker">Speechecker</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-stopworld">Preprocessing Stopworld</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-final">Preprocessing Final</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-graph">Build Graph</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opsional-jika-ingin-menampilkan-semua-node">Opsional jika ingin menampilkan semua node</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="keywordextraction">
+<h1>keywordExtraction<a class="headerlink" href="#keywordextraction" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pypdf</span>
+<span class="err">!</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">ftfy</span>
+<span class="err">!</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pyspellchecker</span>
+<span class="err">!</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">nltk</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pypdf in /usr/local/lib/python3.12/dist-packages (6.4.2)
+Requirement already satisfied: ftfy in /usr/local/lib/python3.12/dist-packages (6.3.1)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.12/dist-packages (from ftfy) (0.2.14)
+Requirement already satisfied: pyspellchecker in /usr/local/lib/python3.12/dist-packages (0.8.4)
+Requirement already satisfied: nltk in /usr/local/lib/python3.12/dist-packages (3.9.1)
+Requirement already satisfied: click in /usr/local/lib/python3.12/dist-packages (from nltk) (8.3.1)
+Requirement already satisfied: joblib in /usr/local/lib/python3.12/dist-packages (from nltk) (1.5.2)
+Requirement already satisfied: regex&gt;=2021.8.3 in /usr/local/lib/python3.12/dist-packages (from nltk) (2025.11.3)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.12/dist-packages (from nltk) (4.67.1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pypdf</span><span class="w"> </span><span class="kn">import</span> <span class="n">PdfReader</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">ftfy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">unicodedata</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spellchecker</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpellChecker</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.stem</span><span class="w"> </span><span class="kn">import</span> <span class="n">WordNetLemmatizer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.collocations</span><span class="w"> </span><span class="kn">import</span> <span class="n">BigramCollocationFinder</span><span class="p">,</span> <span class="n">BigramAssocMeasures</span>
+<span class="c1"># --- PERSIAPAN ---</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">nltk</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;corpora/wordnet&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">LookupError</span><span class="p">:</span>
+    <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;wordnet&#39;</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+
+
+<span class="c1">#  --- KONFIGURASI NLTK ---</span>
+<span class="c1"># Memastikan resource tokenizer tersedia</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">nltk</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;tokenizers/punkt&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">LookupError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[INFO] Mengunduh data NLTK...&quot;</span><span class="p">)</span>
+    <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+    <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt_tab&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /root/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+</pre></div>
+</div>
+</div>
+</div>
+<section id="load-data">
+<h2>1. Load data </br><a class="headerlink" href="#load-data" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>membaca data pdf </br></p></li>
+<li><p>menghapus kata kata noise, hapus baris yang terlalu pendek<br></p></li>
+<li><p>memotong refference/daftar pustaka<br></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">extract_text_from_pdf</span><span class="p">(</span><span class="n">pdf_path</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Membaca PDF, lalu memperbaiki encoding (ftfy) dan normalisasi Unicode.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">reader</span> <span class="o">=</span> <span class="n">PdfReader</span><span class="p">(</span><span class="n">pdf_path</span><span class="p">)</span>
+        <span class="n">full_text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="n">reader</span><span class="o">.</span><span class="n">pages</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">extract_text</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">text</span><span class="p">:</span>
+                <span class="c1"># 1. FTFY: Perbaiki encoding teks yang rusak (mojibake)</span>
+                <span class="c1"># Ini memperbaiki karakter aneh sebelum diproses lebih lanjut</span>
+                <span class="n">text</span> <span class="o">=</span> <span class="n">ftfy</span><span class="o">.</span><span class="n">fix_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+                <span class="c1"># 2. Unicode Normalization: Memecah ligatures (ﬁ -&gt; f i)</span>
+                <span class="n">text</span> <span class="o">=</span> <span class="n">unicodedata</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="s1">&#39;NFKD&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+                <span class="n">full_text</span> <span class="o">+=</span> <span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">full_text</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ERROR] Gagal membaca PDF: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">clean_journal_text</span><span class="p">(</span><span class="n">raw_text</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Membersihkan noise, header/footer, dan memotong bagian referensi.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">raw_text</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="c1"># 1. Normalisasi Awal</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">raw_text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="c1"># --- TAHAP 1: MENGHAPUS NOISE UMUM (REGEX) ---</span>
+    <span class="c1"># Menghapus citasi angka standar ex: [1], [1, 2], [1-3]</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\[[\d,\s\-]+\]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="c1"># Menghapus URL dan DOI</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;http\S+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;doi: \S+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+    <span class="c1"># Menghapus simbol LaTeX/Matematika ($...$)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\$.*?\$&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+    <span class="c1"># --- TAHAP 2: MENGHAPUS HEADER/FOOTER &amp; METADATA PER BARIS ---</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">cleaned_lines</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># Daftar pola noise di header/footer (Sesuaikan jika ada pola lain)</span>
+    <span class="n">noise_patterns</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="sa">r</span><span class="s1">&#39;^\d+\s*of\s*\d+$&#39;</span><span class="p">,</span>         <span class="c1"># Halaman: &quot;1 of 24&quot;</span>
+        <span class="sa">r</span><span class="s1">&#39;^\d+$&#39;</span><span class="p">,</span>                    <span class="c1"># Halaman: Angka saja &quot;12&quot;</span>
+        <span class="sa">r</span><span class="s1">&#39;Diagnostics 2024&#39;</span><span class="p">,</span>         <span class="c1"># Nama Jurnal/Tahun</span>
+        <span class="sa">r</span><span class="s1">&#39;Authorized licensed use&#39;</span><span class="p">,</span>  <span class="c1"># License info</span>
+        <span class="sa">r</span><span class="s1">&#39;Downloaded on&#39;</span><span class="p">,</span>            <span class="c1"># Timestamp download</span>
+        <span class="sa">r</span><span class="s1">&#39;Creative Commons&#39;</span><span class="p">,</span>         <span class="c1"># Copyright</span>
+        <span class="sa">r</span><span class="s1">&#39;©&#39;</span><span class="p">,</span>                        <span class="c1"># Simbol copyright</span>
+        <span class="sa">r</span><span class="s1">&#39;IEEE Xplore&#39;</span><span class="p">,</span>
+        <span class="sa">r</span><span class="s1">&#39;MDPI&#39;</span><span class="p">,</span>
+        <span class="sa">r</span><span class="s1">&#39;Vol\.\s*\d+&#39;</span><span class="p">,</span>              <span class="c1"># Volume info</span>
+        <span class="sa">r</span><span class="s1">&#39;ISSN\s*\d+&#39;</span><span class="p">,</span>               <span class="c1"># ISSN</span>
+    <span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">is_noise</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="c1"># Cek pola noise</span>
+        <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">noise_patterns</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">):</span>
+                <span class="n">is_noise</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">break</span>
+
+        <span class="c1"># Hapus baris yang terlalu pendek (sisa potongan) kecuali Judul Bab (Huruf Besar)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">4</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^[A-Z0-9\.]+$&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
+            <span class="n">is_noise</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">is_noise</span><span class="p">:</span>
+            <span class="n">cleaned_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+    <span class="c1"># Gabungkan kembali baris yang sudah bersih</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cleaned_lines</span><span class="p">)</span>
+
+    <span class="c1"># --- TAHAP 3: STRUKTURISASI &amp; PERBAIKAN KATA ---</span>
+
+    <span class="c1"># a. Mencari posisi awal (Abstract)</span>
+    <span class="c1"># Catatan: Jika ingin mengambil Judul paling atas, matikan bagian ini.</span>
+    <span class="c1"># Namun, biasanya bagian atas penuh dengan nama penulis/afiliasi yang sulit dibersihkan.</span>
+    <span class="n">start_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(Abstract|Abstrak)[-—:.]?&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">start_match</span><span class="p">:</span>
+        <span class="c1"># Ambil teks mulai dari kata &quot;Abstract&quot;</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="n">start_match</span><span class="o">.</span><span class="n">start</span><span class="p">():]</span>
+
+    <span class="c1"># b. Perbaiki kata terpotong (Hyphenation) sebelum tokenisasi</span>
+    <span class="c1"># Contoh: &quot;process-\ning&quot; menjadi &quot;processing&quot;</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;-\n\s*&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+    <span class="c1"># c. Jadikan satu baris panjang (Single paragraph flow)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="c1"># --- TAHAP 4: MEMOTONG BAGIAN AKHIR (REFERENCES) MENGGUNAKAN NLTK ---</span>
+
+    <span class="c1"># Pecah teks menjadi daftar kalimat</span>
+    <span class="n">sentences</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+    <span class="c1"># Pola Regex untuk mendeteksi Header Bagian Akhir</span>
+    <span class="n">header_pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;^\s*(?:\d+\.?\s*)?(References|Daftar Pustaka|Bibliography|Acknowledgments|Ucapan Terima Kasih|Funding|Conflicts of Interest|Rujukan)\b&#39;</span>
+
+    <span class="n">cutoff_index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+    <span class="c1"># Loop setiap kalimat</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sent</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sentences</span><span class="p">):</span>
+        <span class="c1"># Cek kalimat pendek yang mengandung kata kunci header</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sent</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1000</span> <span class="ow">and</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">header_pattern</span><span class="p">,</span> <span class="n">sent</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[LOG] Memotong teks mulai dari: &#39;</span><span class="si">{</span><span class="n">sent</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+            <span class="n">cutoff_index</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="k">break</span> <span class="c1"># Stop di temuan pertama</span>
+        <span class="k">else</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tidak ditemukan&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Potong list kalimat</span>
+    <span class="k">if</span> <span class="n">cutoff_index</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">final_sentences</span> <span class="o">=</span> <span class="n">sentences</span><span class="p">[:</span><span class="n">cutoff_index</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">final_sentences</span> <span class="o">=</span> <span class="n">sentences</span>
+
+    <span class="c1"># Gabungkan kembali</span>
+    <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">final_sentences</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">input_pdf</span> <span class="o">=</span> <span class="s2">&quot;/content/drive/MyDrive/Semester 7/PPW/UAS_PROJEK/Classifying_Alzheimer_Disease_using_VGG19.pdf&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sedang memproses: </span><span class="si">{</span><span class="n">input_pdf</span><span class="si">}</span><span class="s2"> ...&quot;</span><span class="p">)</span>
+<span class="c1"># 1. Ekstrak teks mentah dari PDF</span>
+<span class="n">raw_text</span> <span class="o">=</span> <span class="n">extract_text_from_pdf</span><span class="p">(</span><span class="n">input_pdf</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">raw_text</span><span class="p">:</span>
+    <span class="c1"># 2. Bersihkan teks</span>
+    <span class="n">clean_text</span> <span class="o">=</span> <span class="n">clean_journal_text</span><span class="p">(</span><span class="n">raw_text</span><span class="p">)</span>
+
+    <span class="c1"># 3. Tampilkan atau Simpan Hasil</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HASIL PREPROCESSING BERSIH&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">clean_text</span><span class="p">[:</span><span class="mi">1000</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;...</span><span class="se">\n</span><span class="s2">(dan seterusnya)&quot;</span><span class="p">)</span> <span class="c1"># Print 1000 karakter pertama</span>
+
+    <span class="c1"># Opsi: Simpan ke file teks</span>
+    <span class="n">output_filename</span> <span class="o">=</span> <span class="s2">&quot;hasil_bersih2.txt&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">clean_text</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">[SUKSES] Hasil bersih disimpan ke &#39;</span><span class="si">{</span><span class="n">output_filename</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[GAGAL] Tidak ada teks yang bisa diekstrak.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sedang memproses: /content/drive/MyDrive/Semester 7/PPW/UAS_PROJEK/Classifying_Alzheimer_Disease_using_VGG19.pdf ...
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+tidak ditemukan
+[LOG] Memotong teks mulai dari: &#39;REFERENCES H. S. Zaina, S. Brahim Belhaouari, T. Stanko, and V. Gorovoy, &quot;An Exemplar Pyramid Feature Extraction Based Alzheimer Disease 2022, R. Sharma and H. K. Meena, &quot;Utilizing graph Fourier transform for automatic Alzheime r&#39;s disease detection from EEG signals,&quot; Int.&#39;
+
+========================================
+HASIL PREPROCESSING BERSIH
+========================================
+Abstract— A disease called as Alzheimer, always put health agencies in alarming situation and thus necessitating targeted interventions. This study employs the VGG19 convolutional neural network (CNN) in conjunction with the ADNI dataset to enhance the precision of Alzheimer&#39;s detection. The ADNI dataset, a comprehensive repository of neuroimaging data spanning various cognitive states, serves as the foundation for robust Alzheimer&#39;s detection. Leveraging the VGG19 CNN architecture renowned for its image classification capabilities, we analyze three-dimensional MRI scans to discern subtle patterns indicative of Alzheimer &#39;s disease. Through fine-tuning and transfer learning, our research adapts VGG19 to accurately detect Alzheimer&#39;s disease and its several subclasses. Further this study tries to illuminate rapid progression of the concerned disease. Despite challenges such as Alzheimer&#39;s complexity, high-dimensional MRI data, and ethical considerations, our findings represent a signifi...
+(dan seterusnya)
+
+[SUKSES] Hasil bersih disimpan ke &#39;hasil_bersih2.txt&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="cleaning-lanjutan">
+<h3>Cleaning lanjutan<a class="headerlink" href="#cleaning-lanjutan" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">advanced_preprocessing</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Melakukan pembersihan mendalam khusus untuk keperluan Keyword Extraction.</span>
+<span class="sd">    Fitur:</span>
+<span class="sd">    1. Hapus sitasi (Author, Year)</span>
+<span class="sd">    2. Hapus email/URL</span>
+<span class="sd">    3. Hapus kalimat kotor (banyak angka/simbol)</span>
+<span class="sd">    4. Hapus kalimat terlalu pendek</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># --- TAHAP 1: PEMBERSIHAN POLA REGEX (LEVEL TEKS) ---</span>
+
+    <span class="c1"># 1. Hapus Email</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\S+@\S+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+    <span class="c1"># 2. Hapus URL (www, http, https)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;http\S+|www\.\S+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+    <span class="c1"># 3. Hapus Sitasi format (Name et al., 2012) atau (Name, 2012)</span>
+    <span class="c1"># Logika: Cari kurung yang diakhiri dengan 4 digit angka (tahun)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\([^)]*?\d</span><span class="si">{4}</span><span class="s1">\)&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+    <span class="c1"># 4. Hapus referensi [1], [12] (backup jika tahap sebelumnya lolos)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\[\d+(?:,\s*\d+)*\]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+    <span class="c1"># 5. Hapus kata-kata sisa referensi umum</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b(et al\.|Ibid\.|Vol\.|pp\.|Fig\.|Table)\b&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+
+    <span class="c1"># --- TAHAP 2: FILTERING PER KALIMAT ---</span>
+
+    <span class="n">sentences</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">clean_sentences</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">sent</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">:</span>
+        <span class="c1"># A. Hapus kalimat yang terlalu pendek (Ide Anda)</span>
+        <span class="c1"># Kita hitung jumlah kata (token)</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="n">sent</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="k">continue</span> <span class="c1"># Skip kalimat ini</span>
+
+        <span class="c1"># B. Hapus kalimat &quot;Matematika/Tabel&quot; (Ide Anda)</span>
+        <span class="c1"># Logika: Jika jumlah angka dan simbol &gt; 30% dari total karakter kalimat, buang.</span>
+        <span class="n">num_digits</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d&#39;</span><span class="p">,</span> <span class="n">sent</span><span class="p">))</span>
+        <span class="n">num_symbols</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[+\-*/%=&lt;&gt;±]&#39;</span><span class="p">,</span> <span class="n">sent</span><span class="p">))</span> <span class="c1"># Simbol math</span>
+        <span class="n">total_chars</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sent</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">total_chars</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">ratio_noise</span> <span class="o">=</span> <span class="p">(</span><span class="n">num_digits</span> <span class="o">+</span> <span class="n">num_symbols</span><span class="p">)</span> <span class="o">/</span> <span class="n">total_chars</span>
+            <span class="k">if</span> <span class="n">ratio_noise</span> <span class="o">&gt;</span> <span class="mf">0.25</span><span class="p">:</span> <span class="c1"># Jika lebih dari 25% isinya angka/simbol</span>
+                <span class="k">continue</span> <span class="c1"># Skip kalimat ini (kemungkinan besar tabel atau rumus)</span>
+
+        <span class="c1"># C. Pembersihan akhir per kalimat (Spasi ganda &amp; trim)</span>
+        <span class="n">sent</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">sent</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+        <span class="n">clean_sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sent</span><span class="p">)</span>
+
+    <span class="c1"># Gabungkan kembali</span>
+    <span class="n">final_text</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">clean_sentences</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">final_text</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">clean_result</span> <span class="o">=</span> <span class="n">advanced_preprocessing</span><span class="p">(</span><span class="n">clean_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">final_polishing</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    TAHAP 3 (FINAL): Menghapus ANGKA dan SEMUA SIMBOL TANDA BACA.</span>
+<span class="sd">    Hanya menyisakan huruf (a-z, A-Z) dan spasi.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+    <span class="c1"># 1. KHUSUS APOSTROPHE: Hapus (ganti dengan empty string) agar nyambung</span>
+    <span class="c1"># Kita handle tanda kutip lurus (&#39;) dan kutip miring/smart quote (’) yang sering ada di PDF</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[&#39;’]&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="c1"># 1. Hapus Angka (0-9)</span>
+    <span class="c1"># Contoh: &quot;VGG19&quot; -&gt; &quot;VGG&quot;, &quot;2024&quot; -&gt; &quot;&quot;</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+    <span class="c1"># 2. Hapus semua simbol &amp; tanda baca (selain huruf dan spasi)</span>
+    <span class="c1"># Regex [^a-zA-Z\s] berarti: &quot;Hapus karakter apa pun KECUALI huruf dan spasi&quot;</span>
+    <span class="c1"># Kita ganti dengan spasi &#39; &#39; agar kata tidak menempel (word1/word2 -&gt; word1 word2)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^a-zA-Z\s]&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+    <span class="c1"># 3. Normalisasi Spasi (hapus double space akibat penghapusan simbol)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">text</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">final_cleaned_text</span> <span class="o">=</span> <span class="n">final_polishing</span><span class="p">(</span><span class="n">clean_result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="speechecker">
+<h3>Speechecker<a class="headerlink" href="#speechecker" title="Link to this heading">#</a></h3>
+<p>memperbaiki kata yang typo atau terpisah dengan spasi akibat cleaning</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">smart_word_merge</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Menggabungkan kata yang terputus (misal: &#39;classi cation&#39; -&gt; &#39;classification&#39;)</span>
+<span class="sd">    dengan mengecek validitas kata gabungan di kamus bahasa Inggris.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">spell</span> <span class="o">=</span> <span class="n">SpellChecker</span><span class="p">()</span>
+
+    <span class="c1"># 1. Tokenisasi sederhana (pisahkan berdasarkan spasi)</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">merged_words</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">skip_next</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">skip_next</span><span class="p">:</span>
+            <span class="n">skip_next</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">continue</span>
+
+        <span class="n">current_word</span> <span class="o">=</span> <span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+        <span class="c1"># Cek apakah ini kata terakhir</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+            <span class="n">next_word</span> <span class="o">=</span> <span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+
+            <span class="c1"># Bersihkan tanda baca untuk pengecekan kamus</span>
+            <span class="c1"># Kita hanya ingin cek inti katanya (misal: &quot;classi&quot; dan &quot;fication.&quot;)</span>
+            <span class="n">curr_clean</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^a-zA-Z]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">current_word</span><span class="p">)</span>
+            <span class="n">next_clean</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^a-zA-Z]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">next_word</span><span class="p">)</span>
+
+            <span class="n">combined_clean</span> <span class="o">=</span> <span class="n">curr_clean</span> <span class="o">+</span> <span class="n">next_clean</span>
+
+            <span class="c1"># --- LOGIKA UTAMA ---</span>
+            <span class="c1"># Jika kata gabungan (combined) ADA di kamus (known)</span>
+            <span class="c1"># DAN kata saat ini (current) TIDAK ADA di kamus (unknown/typo)</span>
+            <span class="c1"># Maka kemungkinan besar itu adalah kata yang putus.</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">combined_clean</span> <span class="ow">in</span> <span class="n">spell</span><span class="o">.</span><span class="n">known</span><span class="p">([</span><span class="n">combined_clean</span><span class="p">]))</span> <span class="ow">and</span> \
+               <span class="p">(</span><span class="n">curr_clean</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">spell</span><span class="o">.</span><span class="n">known</span><span class="p">([</span><span class="n">curr_clean</span><span class="p">])):</span>
+
+                <span class="c1"># Gabungkan!</span>
+                <span class="c1"># Kita pakai combined_clean agar bersih, atau gabung raw stringnya</span>
+                <span class="c1"># Disini kita gabung raw string tapi hapus spasi diantaranya</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[AUTO-FIX] Menggabungkan: &#39;</span><span class="si">{</span><span class="n">current_word</span><span class="si">}</span><span class="s2">&#39; + &#39;</span><span class="si">{</span><span class="n">next_word</span><span class="si">}</span><span class="s2">&#39; -&gt; &#39;</span><span class="si">{</span><span class="n">combined_clean</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+                <span class="n">merged_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">combined_clean</span><span class="p">)</span>
+                <span class="n">skip_next</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># Karena kata berikutnya sudah kita makan</span>
+                <span class="k">continue</span>
+
+        <span class="n">merged_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_word</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">merged_words</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pengecekan_kata</span> <span class="o">=</span> <span class="n">smart_word_merge</span><span class="p">(</span><span class="n">final_cleaned_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[AUTO-FIX] Menggabungkan: &#39;commun&#39; + &#39;ities&#39; -&gt; &#39;communities&#39;
+[AUTO-FIX] Menggabungkan: &#39;rapi&#39; + &#39;d&#39; -&gt; &#39;rapid&#39;
+[AUTO-FIX] Menggabungkan: &#39;diagnosi&#39; + &#39;ng&#39; -&gt; &#39;diagnosing&#39;
+[AUTO-FIX] Menggabungkan: &#39;brai&#39; + &#39;n&#39; -&gt; &#39;brain&#39;
+[AUTO-FIX] Menggabungkan: &#39;probabilis&#39; + &#39;tic&#39; -&gt; &#39;probabilistic&#39;
+[AUTO-FIX] Menggabungkan: &#39;learni&#39; + &#39;ng&#39; -&gt; &#39;learning&#39;
+[AUTO-FIX] Menggabungkan: &#39;proba&#39; + &#39;bilities&#39; -&gt; &#39;probabilities&#39;
+[AUTO-FIX] Menggabungkan: &#39;indica&#39; + &#39;tes&#39; -&gt; &#39;indicates&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="preprocessing-stopworld">
+<h3>Preprocessing Stopworld<a class="headerlink" href="#preprocessing-stopworld" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">stopwords</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">remove_stopwords</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    TAHAP TERAKHIR: Menghapus Stopwords (kata umum tidak bermakna).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># 1. Ambil daftar stopwords bahasa Inggris</span>
+    <span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">))</span>
+
+    <span class="c1"># Tambahkan stopword custom spesifik jurnal jika perlu</span>
+    <span class="n">custom_stops</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;et&#39;</span><span class="p">,</span> <span class="s1">&#39;al&#39;</span><span class="p">,</span> <span class="s1">&#39;study&#39;</span><span class="p">,</span> <span class="s1">&#39;based&#39;</span><span class="p">,</span> <span class="s1">&#39;using&#39;</span><span class="p">,</span> <span class="s1">&#39;proposed&#39;</span><span class="p">,</span> <span class="s1">&#39;method&#39;</span><span class="p">,</span> <span class="s1">&#39;paper&#39;</span><span class="p">}</span>
+    <span class="n">stop_words</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_stops</span><span class="p">)</span>
+
+    <span class="c1"># 2. Tokenisasi kata</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+    <span class="c1"># 3. Filter</span>
+    <span class="n">filtered_words</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="c1"># Ubah ke lowercase untuk pengecekan stopword</span>
+        <span class="n">w_lower</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+        <span class="c1"># Syarat masuk:</span>
+        <span class="c1"># - Bukan stopword</span>
+        <span class="c1"># - Panjang kata &gt; 2 huruf (menghindari sisa-sisa &#39;x&#39;, &#39;y&#39;, &#39;de&#39;)</span>
+        <span class="k">if</span> <span class="n">w_lower</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">w_lower</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">filtered_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="c1"># Simpan kata aslinya (boleh w atau w_lower)</span>
+
+    <span class="k">return</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">filtered_words</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">stopwords</span> <span class="o">=</span> <span class="n">remove_stopwords</span><span class="p">(</span><span class="n">pengecekan_kata</span><span class="p">)</span>
+
+<span class="n">output_final</span><span class="o">=</span> <span class="s2">&quot;CleaningFInal.txt&quot;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_final</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">stopwords</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[SUKSES] Final cleaned text disimpan ke &#39;</span><span class="si">{</span><span class="n">stopwords</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[SUKSES] Final cleaned text disimpan ke &#39;Abstract disease called Alzheimer always put health agencies alarming situation thus necessitating targeted interventions employs VGG convolutional neural network CNN conjunction ADNI dataset enhance precision Alzheimers detection ADNI dataset comprehensive repository neuroimaging data spanning various cognitive states serves foundation robust Alzheimers detection Leveraging VGG CNN architecture renowned image classification capabilities analyze three dimensional MRI scans discern subtle patterns indicative Alzheimer disease fine tuning transfer learning research adapts VGG accurately detect Alzheimers disease several subclasses tries illuminate rapid progression concerned disease Despite challenges Alzheimers complexity high dimensional MRI data ethical considerations findings represent significant advancement Alzheimers disease identification integrating technology medicine research enhances diagnostic accuracy also contributes broader understanding Alzheimers disease Keywords Visual Geometry Group Alzheimer Disease Cognitive Impairments Alzheimer Disease Neuroimaging Initiative INTRODUCTION Alzheimer becomes common type dementia nowadays collection symptoms known dementia progressive chronic nature impairing ones capacity comprehend information ideas beyond typical ageing Dementia impairs thinking memory orientation learning ability calculation language problems understanding judging Control emotions social activity behavior motivation cognitive functions often linked need impairment cognitive function found approximately million people worldwide suffering Dementia according report among belongs middle low salaried families count estimated rise million report million Sudden growth cases significantly affects individuals health relatives communities effects Dementia ychological physical social symptoms Dementia classified three stages Early stage first years Middle Staged considered second years Late stage years recent works Alzheimers disease detection EEG signals done pathophysiology Alzheimer directly linked injury sometimes death neurons several parts brain starts hippocampus area brain responsible learning memory moves remaining parts brain era economic growth advancement computer technology doctors need rapid accurate diagnostic methods diagnose treat disease get rid said disease patients contrast traditional methods disease diagnosis conventional methods diagnosing disease patients undergo different levels severity prior declared disease However may delayed diagnosing earlier patient condition becomes serious late stage disease Early diagnosis extremely important patients helps take precautionary measures helps clinicians identify risk progression also helps patients understand seriousness disease take preventive measures including lifestyle changes drugs prevalence Alzheimers disease continues rise effects individuals society economies becoming increasingly apparent handle issue proposing novel methodologies Machine Learning Deep Learning employed neurologists detect Alzheimer disease early stages prevent progression late stages particularly context limited availability trained personnel rapid rise number individuals Alzheimers disease Neuroimaging technologies include several methods deep learning common efficient way diagnosing categorising disorders large datasets However current work performs poorly data sets noise problem overfitting requires training time computational effort proposes VGG prediction approach MRI image takes less time train provides better accuracy RELATED WORK Zaina used MLPs mostly used tabular data lack inherent ability capture spatial information present neuroimaging data MRI scans literature various segmentation techniques used analyze image data Morphological opeartors used authors Angela Lombardi used SHAP Shapley Addictive Explanations algorithm employed elucidate choices made random forest didnt give much thought explainable machine learning models could make results harder understand believe Fuadah used Alexnet According result model showed increasing value learning rate may cause raising value loss named overshooting Nitika Goenka used MIRIAD dataset DCNN framework include details size features dataset research offer understanding regarding practicality framework generalizing datasets populations practical use Regularised Extreme Learning Machine RELM Import Vec tor Machine IVM Support Vector Machine SVM evaluated compared performance ADNI dataset conducted Sudharsan colleagues However early detection Alzheimers utilizing different classification strategies challenging Ramzan used ResNet increased processing time noises neuro images remove noises used high pass filter InNoemi Massetti used Random Forest ADNI dataset algorithm efficaciously foretold non converting ncMCI subjects Emina Alickovic used Random Forest outcomes trials demonstrate Random Forest tell difference control people accuracy Khvostikov used CNN sMRI DTI dataset imbalance datasets root cause overfitting problem caused fact various classes varying capabilities Kazemi used Alexnet fMRI remove noises neuro images Spatial smoothing used Gaussian kernel high pass filter used Yang colleagues used autoencoder first followed Convolutional Neural Network CNN extract features separately attributes combined completely connected layer thorough increases time consumption computational complexity due large number features extracted initiatives designed improve sickness detection treatment ultimate goal supporting perhaps saving patient lives researcher described patients experience multiple phases receiving diagnosis contrast traditional diagnostic techniques Due varying diagnosis phases may take longer patient may reach later stage illness order help patients take preventative action help doctors determine risk progression early diagnosis crucial Additionally supports people realizing severity condition implementing preventative measures medication lifestyle modifications Alzheimers disease becoming common comes consequences people communities economies AbdulAzeem used deep learning algorithms particularly Convo lutional Neural Networks CNN classification Alzheimers disease MRI scans highlight current gap effective disease modifying treatments Alzheimers disease also pointing hopeful role fluid biomarkers could play believe indicators potential help design effective medications pave way personalised approach treatment provides comprehensive literature review techniques early Alzheimers Disease detection brain image datasets employing machine learning algorithms leveraging smartphone sensors computer hardware software tools ultimately achieving successful detection classification probabilistic atlas salient points images detecting classifying hippocampal structural changes biomarker Alzheimers disease achieving accuracy AUC detecting mild cases among cognitively normal individuals aged Islam colleagues offer revolutionary deep learning model detecting classifying Alzheimers disease across many classes Brain MRI data model makes use advanced deep convolutional networks effectiveness demonstrated Open Access Series Imaging Studies OASIS database Many researchers also contributed various applications disease prediction machine learning OBJECTIVE RESEARCH WORK proposal seeks detect categorise stages Alzheimers disease people aged older goal accurately distinguish five stages Alzheimers progression Cognitive Normal Early Mild Cognitive Impairment Late Mild Cognitive Impairment Mild Cognitive Impairment Alzheimers Disease data Alzheimers Disease Neuroimaging Initiative ADNI dataset project aims make major advances medical diagnoses combining VGG model huge ADNI ataset aims provide reliable technique early detection Alzheimers disease increasing ssibility better care outcomes patients METHODOLOGY Figure depicts step system architecture uses VGG detect Alzheimer Disease shown Fig utilizes ADNI dataset Structural MRI Images resized classification disease VGG different classes EMCI LMCI MCI done description steps involved detecting Alzheimer Disease follows Data Preparation Collect ADNI dataset containing neuroimaging data preprocessed dataset Preprocess data Standardize image dimensions Data Split Training Testing Validation Feature Extraction VGG Load pre trained VGG architecture Deriving key characteristics neuroimaging data VGG convolution max pooling layers Custom Classification Dense Layers output layer activated softmax activation class probabilities Model Training Evaluation Train model training data monitoring validation performance Evaluate models accuracy precision recall score test set Deploy trained model Alzheimers disease detection Fig Chronological Order Disease Detection Input MRI Image ADNI dataset preprocessed Output Classification Alzheimer Disease classes LMCI EMCI MCI Step Import required libraries insert dataset Step Divide dataset train test data Step Pre process dataset Resize images Step Load VGG pre trained model input dimension Iterate layers VGG transfer learning trainable property false Create flattened layer takes features derived VGG model input Add fully connected output layer prediction classes softmax activation function Create new model deep learning frameworks function takes VGG input outputs Display extraction models architecture Step Validate data check accuracy save model file Fig VGG model Alzheimers Detection Figure depicts process used VGG model feature extraction classification Alzheimer Disease Classes EMCI LMCI MCI Module Convolutional yers Conv Conv layers made filters Fig MaxPooling done sliding window MRI image orientation stride Module Convolutional Layers Conv Conv module consists Conv Conv layers composed filters stage complex features learned Additionally MaxPool layer reduces spatial dimensions Fig Module Convolutional Layers Conv Conv Conv Convolutional layers composed filters layer captures features represent structures MRI images module max pooling layer spatial reduction layer extracts higher level features Fig Module Convolutional Layers Conv Conv Conv Convolutional layers composed filters layer captures intricate structure details module max pooling layer spatial reduction layer retailing essential information Fig Module Convolutional Layers Conv Conv Conv Convolutional layers composed filters layer captures high level structure details module max pooling layer spatial reduction layer Fig Flattening passing module convolution max pooling layers features extracted flattened array size input fully connected Layers Fig Fully Connected Layer Dense Layers bottom network usually three dense layers connected together prediction output layer three dense layers responsible taking highlevel data making predictions neurons respectively Fig Output Layer output layer produces class probabilities detect Alzheimers disease number output neurons viz EMCI LMCI MCI Softmax activation often convert networks output probabilities Fig System Performance Assessment assessed system performance metrics accuracy recall precision processes computing performance indicators detailed accordingly Accuracy Precision Recall FScore context represents true positive outcomes denotes true negative outcomes Similarly correspond false positive false negative outcomes respectively models training accuracy loss depicted Fig shows increase accuracy ere decrease loss shows overfitting problem looked MRI images Alzheimers cognitive normal mild early mild late mild cognitive impairment utilized images training data images test data images trained VGG Adam optimizer measured functioning metrics accuracy recall accuracy precision score model VGG recognize EMCI LMCI conditions accuracy loss demonstrates confusion matrix true labels mod els predictions MRI images tested MRI classified correctly indicates Alzheimers Disease indicates Cogni tive Normal indicates Early Mild Cognitive Impairment EMCI indicates Late Mild Cognitive Impairment LMCI indicates Mild Cognitive Impairment MCI classes axis respectively Figure depicts precision recall scores within range indicating low level error indicates Alzheimers Disease indicates Cognitive Normal indicates Early Mild Cognitive Impairment EMCI indicates Late Mild Cognitive Impairment LMCI indicates Mild Cognitive Impairment MCI respectively Fig Training Validation Accuracy Loss epoch Fig Testing Data Confusion Matrix Fig Performance VGG model shows comparative analysis CONCLUSION research employed Convolutional Neural Network CNN leveraging VGG architecture diagnose Alzheimers disease advanced deep learning methodologies combining learning neuroimaging data researchers aimed etect signs condition help medical professionals understand disease better improve lives living experiment showed Adam optimizer model classify MRI Alzheimers datasets Alzheimer disease cognitive normal early mild late mild mild cognitive impairment conditions accuracy loss future use cutting edge deep learning methods different datasets combine one make prediction efficient effective earlier stages also use ensemble models get different deep learning architectures like VGG ResNet Inception get best results&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="preprocessing-final">
+<h3>Preprocessing Final<a class="headerlink" href="#preprocessing-final" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Lemizitation<br></p></li>
+<li><p>bigram<br></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">advanced_token_processing</span><span class="p">(</span><span class="n">text_bersih</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    PIPELINE UTAMA:</span>
+<span class="sd">    1. Tokenisasi</span>
+<span class="sd">    2. Lemmatization (networkS -&gt; network)</span>
+<span class="sd">    3. Bigram Formation (neural + network -&gt; neural_network)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># 1. TOKENISASI</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">text_bersih</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+    <span class="c1"># 2. LEMMATIZATION (Dilakukan SEBELUM Bigram)</span>
+    <span class="c1"># Tujuannya agar bentuk jamak (plural) menjadi tunggal dulu</span>
+    <span class="n">lemmatizer</span> <span class="o">=</span> <span class="n">WordNetLemmatizer</span><span class="p">()</span>
+    <span class="n">lemma_tokens</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">:</span>
+        <span class="c1"># Lemmatize noun (kata benda)</span>
+        <span class="n">lemma</span> <span class="o">=</span> <span class="n">lemmatizer</span><span class="o">.</span><span class="n">lemmatize</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="s1">&#39;n&#39;</span><span class="p">)</span>
+        <span class="c1"># Lemmatize verb (kata kerja) - opsional tapi bagus untuk jurnal</span>
+        <span class="n">lemma</span> <span class="o">=</span> <span class="n">lemmatizer</span><span class="o">.</span><span class="n">lemmatize</span><span class="p">(</span><span class="n">lemma</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="s1">&#39;v&#39;</span><span class="p">)</span>
+        <span class="n">lemma_tokens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lemma</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[DEBUG] Contoh Lemma: </span><span class="si">{</span><span class="n">lemma_tokens</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># 3. BIGRAM FORMATION (Penggabungan Kata)</span>
+    <span class="c1"># Menggunakan statistik PMI (Pointwise Mutual Information)</span>
+    <span class="n">bigram_measures</span> <span class="o">=</span> <span class="n">BigramAssocMeasures</span><span class="p">()</span>
+
+    <span class="c1"># Cari bigram dari token yang SUDAH di-lemma</span>
+    <span class="n">finder</span> <span class="o">=</span> <span class="n">BigramCollocationFinder</span><span class="o">.</span><span class="n">from_words</span><span class="p">(</span><span class="n">lemma_tokens</span><span class="p">)</span>
+
+    <span class="c1"># Filter: Pasangan kata minimal muncul 2 kali (agar tidak menangkap typo)</span>
+    <span class="n">finder</span><span class="o">.</span><span class="n">apply_freq_filter</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="c1"># Ambil 50 Bigram terbaik berdasarkan skor PMI</span>
+    <span class="n">top_bigrams</span> <span class="o">=</span> <span class="n">finder</span><span class="o">.</span><span class="n">nbest</span><span class="p">(</span><span class="n">bigram_measures</span><span class="o">.</span><span class="n">pmi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+    <span class="c1"># Ubah list bigram menjadi Set agar pencarian cepat</span>
+    <span class="n">bigram_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">top_bigrams</span><span class="p">)</span>
+
+    <span class="n">final_tokens</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">skip_next</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lemma_tokens</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">skip_next</span><span class="p">:</span>
+            <span class="n">skip_next</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">continue</span>
+
+        <span class="n">word1</span> <span class="o">=</span> <span class="n">lemma_tokens</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">word2</span> <span class="o">=</span> <span class="n">lemma_tokens</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="c1"># Cek apakah pasangan ini ada di daftar Bigram Top</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">word1</span><span class="p">,</span> <span class="n">word2</span><span class="p">)</span> <span class="ow">in</span> <span class="n">bigram_set</span><span class="p">:</span>
+            <span class="c1"># GABUNGKAN!</span>
+            <span class="n">merged_word</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">word1</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">word2</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">final_tokens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">merged_word</span><span class="p">)</span>
+            <span class="n">skip_next</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Jika tidak, masukkan sebagai Unigram (kata tunggal)</span>
+            <span class="n">final_tokens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word1</span><span class="p">)</span>
+
+    <span class="c1"># Handle kata terakhir</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">skip_next</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">lemma_tokens</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">final_tokens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lemma_tokens</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">final_tokens</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bigram</span> <span class="o">=</span> <span class="n">advanced_token_processing</span><span class="p">(</span><span class="n">stopwords</span><span class="p">)</span>
+<span class="n">output_final2</span> <span class="o">=</span> <span class="s2">&quot;hasil_bigram.txt&quot;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_final2</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">bigram</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[DEBUG] Contoh Lemma: [&#39;Abstract&#39;, &#39;disease&#39;, &#39;call&#39;, &#39;Alzheimer&#39;, &#39;always&#39;, &#39;put&#39;, &#39;health&#39;, &#39;agency&#39;, &#39;alarm&#39;, &#39;situation&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="build-graph">
+<h3>Build Graph<a class="headerlink" href="#build-graph" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">build_graph</span><span class="p">(</span><span class="n">tokens</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+    <span class="c1"># Tambah semua node</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">:</span>
+        <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+    <span class="c1"># Tambah edge berdasarkan sliding window</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span> <span class="o">-</span> <span class="n">window_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">window</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="n">i</span> <span class="p">:</span> <span class="n">i</span><span class="o">+</span><span class="n">window_size</span><span class="p">]</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">window</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">end</span> <span class="ow">in</span> <span class="n">window</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+            <span class="k">if</span> <span class="n">start</span> <span class="o">!=</span> <span class="n">end</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">G</span><span class="o">.</span><span class="n">has_edge</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+                    <span class="n">G</span><span class="p">[</span><span class="n">start</span><span class="p">][</span><span class="n">end</span><span class="p">][</span><span class="s1">&#39;weight&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">G</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_all_metrics</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Menghitung metrik sentralitas...&quot;</span><span class="p">)</span>
+    <span class="c1"># 1. PageRank (Relevansi Global)</span>
+    <span class="n">pagerank</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="s1">&#39;weight&#39;</span><span class="p">)</span>
+
+    <span class="c1"># 2. Degree Centrality (Popularitas Lokal - banyak koneksi langsung)</span>
+    <span class="n">degree</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">degree_centrality</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+    <span class="c1"># 3. Betweenness Centrality (Jembatan Informasi - penghubung antar kluster)</span>
+    <span class="n">betweenness</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">betweenness_centrality</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+    <span class="c1"># 4. Closeness Centrality (Pusat Penyebaran - mudah dijangkau)</span>
+    <span class="n">closeness</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">closeness_centrality</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">pagerank</span><span class="p">,</span> <span class="n">degree</span><span class="p">,</span> <span class="n">betweenness</span><span class="p">,</span> <span class="n">closeness</span>
+
+<span class="c1"># --- 3. VISUALIZATION ---</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">visualize_graph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pagerank_scores</span><span class="p">,</span> <span class="n">top_n</span><span class="o">=</span><span class="mi">40</span><span class="p">):</span>
+    <span class="c1"># Ambil Top N node berdasarkan PageRank tertinggi untuk divisualisasikan</span>
+    <span class="n">top_nodes</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">pagerank_scores</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="n">top_n</span><span class="p">]</span>
+    <span class="n">top_keys</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">top_nodes</span><span class="p">]</span>
+
+    <span class="c1"># Buat Subgraph (agar gambar tidak terlalu ruwet)</span>
+    <span class="n">subgraph</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">subgraph</span><span class="p">(</span><span class="n">top_keys</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+
+    <span class="c1"># Layout algoritma &#39;spring&#39; agar node menyebar otomatis secara estetis</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">subgraph</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+    <span class="c1"># Ukuran node berdasarkan skor PageRank (makin penting makin besar)</span>
+    <span class="n">node_sizes</span> <span class="o">=</span> <span class="p">[</span><span class="n">pagerank_scores</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10000</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">subgraph</span><span class="o">.</span><span class="n">nodes</span><span class="p">()]</span>
+
+    <span class="c1"># Gambar Nodes</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">subgraph</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="n">node_sizes</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;#66c2a5&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+
+    <span class="c1"># Gambar Edges (Ketebalan berdasarkan bobot co-occurrence)</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="n">subgraph</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">v</span><span class="p">][</span><span class="s1">&#39;weight&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">u</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">subgraph</span><span class="o">.</span><span class="n">edges</span><span class="p">()]</span>
+    <span class="n">max_w</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span> <span class="k">if</span> <span class="n">weights</span> <span class="k">else</span> <span class="mi">1</span>
+    <span class="n">widths</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span><span class="o">/</span><span class="n">max_w</span> <span class="o">*</span> <span class="mi">3</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">weights</span><span class="p">]</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">subgraph</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">widths</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Gambar Label</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">subgraph</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">font_family</span><span class="o">=</span><span class="s2">&quot;sans-serif&quot;</span><span class="p">,</span> <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Visualisasi Graph - Top </span><span class="si">{</span><span class="n">top_n</span><span class="si">}</span><span class="s2"> Keywords&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Simpan ke file</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;keyword_graph.png&quot;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;PNG&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">filename</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;2. Membangun Graph dari </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">bigram</span><span class="p">)</span><span class="si">}</span><span class="s2"> token...&quot;</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">build_graph</span><span class="p">(</span><span class="n">bigram</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># Hitung Metrik</span>
+<span class="n">pr</span><span class="p">,</span> <span class="n">deg</span><span class="p">,</span> <span class="n">bet</span><span class="p">,</span> <span class="n">clo</span> <span class="o">=</span> <span class="n">calculate_all_metrics</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+<span class="c1"># Fungsi Helper untuk print top 10</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">print_top</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">metric_dict</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2"> ---&quot;</span><span class="p">)</span>
+    <span class="n">sorted_items</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">metric_dict</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="mi">10</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">w</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sorted_items</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   - </span><span class="si">{</span><span class="n">w</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">s</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Tampilkan Hasil Teks</span>
+<span class="n">print_top</span><span class="p">(</span><span class="s2">&quot;PageRank (Keyword Utama)&quot;</span><span class="p">,</span> <span class="n">pr</span><span class="p">)</span>
+<span class="n">print_top</span><span class="p">(</span><span class="s2">&quot;Degree Centrality (Paling Terhubung)&quot;</span><span class="p">,</span> <span class="n">deg</span><span class="p">)</span>
+<span class="n">print_top</span><span class="p">(</span><span class="s2">&quot;Betweenness Centrality (Jembatan Topik)&quot;</span><span class="p">,</span> <span class="n">bet</span><span class="p">)</span>
+<span class="n">print_top</span><span class="p">(</span><span class="s2">&quot;Closeness Centrality (Pusat Informasi)&quot;</span><span class="p">,</span> <span class="n">clo</span><span class="p">)</span>
+
+<span class="c1"># Tampilkan Graph</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">3. Membuat Visualisasi Graph...&quot;</span><span class="p">)</span>
+<span class="n">jumlah_node</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">bigram</span><span class="p">)</span>
+<span class="c1"># img_path = visualize_graph(G, pr, top_n=jumlah_node)</span>
+<span class="n">img_path</span> <span class="o">=</span> <span class="n">visualize_graph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pr</span><span class="p">,</span> <span class="n">top_n</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   [SUKSES] Gambar disimpan ke: </span><span class="si">{</span><span class="n">img_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2. Membangun Graph dari 1433 token...
+Menghitung metrik sentralitas...
+
+--- PageRank (Keyword Utama) ---
+   - disease: 0.0182
+   - Alzheimers: 0.0160
+   - VGG: 0.0116
+   - use: 0.0113
+   - model: 0.0101
+   - layer: 0.0075
+   - data: 0.0068
+   - Fig: 0.0059
+   - train: 0.0053
+   - image: 0.0052
+
+--- Degree Centrality (Paling Terhubung) ---
+   - disease: 0.1270
+   - Alzheimers: 0.1085
+   - VGG: 0.0913
+   - use: 0.0820
+   - model: 0.0714
+   - layer: 0.0556
+   - data: 0.0503
+   - Fig: 0.0489
+   - ADNI dataset: 0.0410
+   - image: 0.0410
+
+--- Betweenness Centrality (Jembatan Topik) ---
+   - disease: 0.2000
+   - Alzheimers: 0.1559
+   - VGG: 0.1270
+   - use: 0.1036
+   - model: 0.0870
+   - Fig: 0.0497
+   - data: 0.0467
+   - layer: 0.0403
+   - ADNI dataset: 0.0370
+   - stage: 0.0352
+
+--- Closeness Centrality (Pusat Informasi) ---
+   - disease: 0.4370
+   - Alzheimers: 0.4288
+   - VGG: 0.4257
+   - model: 0.4104
+   - use: 0.3838
+   - Fig: 0.3812
+   - data: 0.3776
+   - different: 0.3748
+   - take: 0.3704
+   - accuracy: 0.3686
+
+3. Membuat Visualisasi Graph...
+   [SUKSES] Gambar disimpan ke: keyword_graph.png
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">print_top_keywords</span><span class="p">(</span><span class="n">metrics_dict</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2"> (Top </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">) ---&quot;</span><span class="p">)</span>
+    <span class="c1"># Urutkan dari nilai terbesar ke terkecil</span>
+    <span class="n">sorted_keywords</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">metrics_dict</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="n">n</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sorted_keywords</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="c1"># Ganti underscore dengan spasi agar bigram terbaca enak (misal: neural_network -&gt; neural network)</span>
+        <span class="n">readable_word</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">readable_word</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">score</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+<span class="c1"># Panggil fungsi</span>
+<span class="n">print_top_keywords</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="s2">&quot;PageRank Keywords&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">print_top_keywords</span><span class="p">(</span><span class="n">deg</span><span class="p">,</span> <span class="s2">&quot;Degree Centrality Keywords&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- PageRank Keywords (Top 20) ---
+1. disease (0.0182)
+2. Alzheimers (0.0160)
+3. VGG (0.0116)
+4. use (0.0113)
+5. model (0.0101)
+6. layer (0.0075)
+7. data (0.0068)
+8. Fig (0.0059)
+9. train (0.0053)
+10. image (0.0052)
+11. stage (0.0050)
+12. ADNI dataset (0.0050)
+13. patient (0.0049)
+14. detection (0.0046)
+15. take (0.0046)
+16. dataset (0.0043)
+17. output (0.0041)
+18. Disease (0.0039)
+19. feature (0.0039)
+20. filter (0.0038)
+
+--- Degree Centrality Keywords (Top 20) ---
+1. disease (0.1270)
+2. Alzheimers (0.1085)
+3. VGG (0.0913)
+4. use (0.0820)
+5. model (0.0714)
+6. layer (0.0556)
+7. data (0.0503)
+8. Fig (0.0489)
+9. ADNI dataset (0.0410)
+10. image (0.0410)
+11. train (0.0397)
+12. patient (0.0384)
+13. take (0.0384)
+14. stage (0.0370)
+15. feature (0.0357)
+16. dataset (0.0344)
+17. detection (0.0331)
+18. accuracy (0.0317)
+19. datasets (0.0317)
+20. class (0.0317)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="opsional-jika-ingin-menampilkan-semua-node">
+<h2>Opsional jika ingin menampilkan semua node<a class="headerlink" href="#opsional-jika-ingin-menampilkan-semua-node" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">visualize_full_graph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pagerank_scores</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;full_graph_viz2.png&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Visualisasi seluruh node dengan strategi &#39;Sparse Labels&#39; dan &#39;Heatmap Coloring&#39;</span>
+<span class="sd">    agar tetap terbaca meskipun datanya padat.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sedang merender visualisasi untuk </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span><span class="si">}</span><span class="s2"> node... (Mungkin butuh waktu)&quot;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span> <span class="c1"># Ukuran kanvas ekstra besar</span>
+
+    <span class="c1"># 1. Layout yang Menyebar (k=0.15 agar tidak terlalu padat)</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+    <span class="c1"># 2. Persiapan Atribut Visual</span>
+    <span class="c1"># Urutkan node berdasarkan PageRank untuk pewarnaan dan labeling</span>
+    <span class="n">sorted_nodes</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">pagerank_scores</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">top_100_nodes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sorted_nodes</span><span class="p">[:</span><span class="mi">10</span><span class="p">]])</span> <span class="c1"># Hanya labeli 100 teratas</span>
+
+    <span class="c1"># List warna dan ukuran sesuai urutan G.nodes()</span>
+    <span class="n">node_sizes</span> <span class="o">=</span> <span class="p">[</span><span class="n">pagerank_scores</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">*</span> <span class="mi">8000</span> <span class="o">+</span> <span class="mi">20</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">()]</span> <span class="c1"># +20 agar node kecil tetap kelihatan</span>
+    <span class="n">node_colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">pagerank_scores</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">()]</span>
+
+    <span class="c1"># 3. Gambar Nodes (Pakai colormap &#39;viridis&#39; atau &#39;plasma&#39;)</span>
+    <span class="n">nodes</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span>
+                                   <span class="n">node_size</span><span class="o">=</span><span class="n">node_sizes</span><span class="p">,</span>
+                                   <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span>
+                                   <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">plasma</span><span class="p">,</span>
+                                   <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+
+    <span class="c1"># 4. Gambar Edges (Tipis dan Transparan)</span>
+    <span class="c1"># Hanya gambar edge jika bobotnya cukup berarti untuk mengurangi kekusutan</span>
+    <span class="n">edges_to_draw</span> <span class="o">=</span> <span class="p">[(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;weight&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="n">G</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">v</span><span class="p">][</span><span class="s1">&#39;weight&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">edges_to_draw</span><span class="p">]</span>
+    <span class="n">max_w</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span> <span class="k">if</span> <span class="n">weights</span> <span class="k">else</span> <span class="mi">1</span>
+    <span class="c1"># Normalisasi ketebalan: garis tipis sekali (0.2) sampai agak tebal (2.0)</span>
+    <span class="n">widths</span> <span class="o">=</span> <span class="p">[(</span><span class="n">w</span> <span class="o">/</span> <span class="n">max_w</span> <span class="o">*</span> <span class="mi">30</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.1</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">weights</span><span class="p">]</span>
+
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span>
+                           <span class="n">edgelist</span><span class="o">=</span><span class="n">edges_to_draw</span><span class="p">,</span>
+                           <span class="n">width</span><span class="o">=</span><span class="n">widths</span><span class="p">,</span>
+                           <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span>  <span class="c1"># Sangat transparan</span>
+                           <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;#AAAAAA&#39;</span><span class="p">)</span> <span class="c1"># Warna abu-abu netral</span>
+
+    <span class="c1"># 5. Labeling Selektif (Hanya Top 100)</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="p">{</span><span class="n">n</span><span class="p">:</span> <span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">top_100_nodes</span><span class="p">}</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">font_family</span><span class="o">=</span><span class="s2">&quot;sans-serif&quot;</span><span class="p">,</span> <span class="n">font_weight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Tambahkan Colorbar sebagai legenda pentingnya node</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PageRank Score&quot;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Full Keyword Co-occurrence Graph (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span><span class="si">}</span><span class="s2"> Nodes)</span><span class="se">\n</span><span class="s2">Top 100 Labels Shown&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;PNG&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">filename</span>
+<span class="n">img_path</span> <span class="o">=</span> <span class="n">visualize_full_graph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sedang merender visualisasi untuk 757 node... (Mungkin butuh waktu)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ldaklasifikasiAndClusteringUTS.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">ldaklasifikasiAndClusteringUTS</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">1. Load data </a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning-lanjutan">Cleaning lanjutan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#speechecker">Speechecker</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-stopworld">Preprocessing Stopworld</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-final">Preprocessing Final</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-graph">Build Graph</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opsional-jika-ingin-menampilkan-semua-node">Opsional jika ingin menampilkan semua node</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
